@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Thumbs, FreeMode, Navigation } from "swiper/modules";
+import {
+  EffectCoverflow,
+  Pagination,
+  Thumbs,
+  FreeMode,
+  Navigation,
+} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -44,7 +50,7 @@ const videoList = [
     title: "Another Aviation Clip",
     thumbnail: GallaryFour,
     videoUrl: "https://www.youtube.com/embed/jWF2y3qpudo",
-    duration: "12:40",  
+    duration: "12:40",
   },
   {
     id: 5,
@@ -76,7 +82,6 @@ const Gallary = () => {
     setModalOpen(false);
   };
 
-
   return (
     <>
       <section id="gallary" className="w-full py-20">
@@ -96,38 +101,39 @@ const Gallary = () => {
           </div>
 
           <Swiper
-            effect={"coverflow"}
+            effect="coverflow"
             grabCursor={true}
             centeredSlides={true}
-            slidesPerView={"auto"}
+            slidesPerView="auto"
+            loop={true}
+            navigation={true}
             coverflowEffect={{
-              rotate: 50,
+              rotate: 30,
               stretch: 0,
-              depth: 100,
-              modifier: 4,
+              depth: 200,
+              modifier: 1,
               slideShadows: true,
             }}
             modules={[EffectCoverflow, Navigation]}
-            navigation
             className="mySwiper"
           >
-            {videoList.map((video,index) => (
+            {videoList.map((video, index) => (
               <SwiperSlide
                 key={video.id}
-                className="relative w-[300px]"
+                className="relative w-[200px] cursor-pointer"
                 onClick={() => openModal(index)}
               >
                 <img
                   src={video.thumbnail}
                   alt={video.title}
-                  className="rounded-lg"
+                  className="rounded-lg object-cover w-full"
                 />
-                <div className="absolute bottom-2 right-2 bg-black text-white text-xs px-2 py-1 rounded">
+                {/* <div className="absolute bottom-2 right-2 bg-black text-white text-xs px-2 py-1 rounded">
                   {video.duration}
                 </div>
                 <div className="absolute bottom-2 left-2 bg-black text-white text-sm font-bold px-2 py-1 rounded">
                   {video.title}
-                </div>
+                </div> */}
               </SwiperSlide>
             ))}
           </Swiper>

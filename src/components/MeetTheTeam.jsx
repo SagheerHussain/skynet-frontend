@@ -22,7 +22,7 @@ const MeetTheTeam = () => {
     <>
       <section id="meetTheTeam" className="py-20">
         <div className="container px-5">
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-extrabold uppercase opacity-30 flex items-center">
+          {/* <h2 className="text-3xl md:text-5xl lg:text-7xl font-extrabold uppercase opacity-30 flex items-center">
             <span
               className="text-transparent stroke-text"
               style={{
@@ -32,7 +32,7 @@ const MeetTheTeam = () => {
               Meet
             </span>
             <TypewriterEffectSmooth words={words} />
-          </h2>
+          </h2> */}
 
           <div className="md:flex items-center justify-center">
             <div className="team-content md:w-[40%] lg:w-[30%]">
@@ -53,9 +53,9 @@ const MeetTheTeam = () => {
                           stiffness: 100,
                           delay: 0.6,
                         }}
-                        className="block"
+                        className="block text-tertiary_color text-4xl"
                       >
-                        From
+                        MEET THE TEAM
                       </motion.span>
 
                       <motion.span
@@ -67,9 +67,9 @@ const MeetTheTeam = () => {
                           stiffness: 100,
                           delay: 0.4,
                         }}
-                        className="block"
+                        className="block text-3xl"
                       >
-                        San Antonio
+                        From
                       </motion.span>
 
                       <motion.span
@@ -81,23 +81,9 @@ const MeetTheTeam = () => {
                           stiffness: 100,
                           delay: 0.2,
                         }}
-                        className="block"
+                        className="block text-3xl"
                       >
-                        to
-                      </motion.span>
-
-                      <motion.span
-                        initial={{ y: media ? -50 : -100, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: false }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 100,
-                          delay: 0,
-                        }}
-                        className="block"
-                      >
-                        Duluth
+                        San Antonio To Duluth
                       </motion.span>
                     </h2>
                   </div>
@@ -107,7 +93,7 @@ const MeetTheTeam = () => {
                 <Button buttonLabel="Meet The Team" isWidthFull={true} onClick="/team" />
               </div>
             </div>
-            <div className="team-banner md:w-[60%] lg:w-[70%] grayscale-[100%] hover:grayscale-0 transition-all duration-500">
+            <div className="team-banner md:w-[60%] lg:w-[70%] transition-all duration-500">
               <img src={teamBanner} alt="" />
             </div>
           </div>
