@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#111218] py-10 px-4">
+    <footer className="bg-[#15161c] py-10 px-4">
       <div className="container px-5">
         <div className="flex md:flex-row flex-col justify-between gap-6">
           {/* Logo Section */}
@@ -56,8 +56,8 @@ const Footer = () => {
           <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 gap-6 text-sm">
             {/* Company Links */}
             <div>
-              <h3 className="text-white text-base font-semibold mb-6">
-                COM<span className="text-tertiary_color">PANY</span>
+              <h3 className="capitalize text-lg font-semibold mb-6 text-white">
+                Company
               </h3>
               <ul className="text-txt_light_color space-y-6">
                 <li className="hover:text-tertiary_color text-[1.1rem] cursor-pointer transition">
@@ -80,8 +80,8 @@ const Footer = () => {
 
             {/* Locations */}
             <div>
-              <h3 className="text-white text-base font-semibold mb-6">
-                LOC<span className="text-tertiary_color">ATIONS</span>
+              <h3 className="capitalize text-lg font-semibold mb-6 text-white">
+                Locations
               </h3>
               <ul className="text-txt_light_color space-y-6">
                 <li className="text-[1.1rem] transition">Birmingham, AL</li>
@@ -94,8 +94,8 @@ const Footer = () => {
 
             {/* Principal Office */}
             <div>
-              <h3 className="text-white text-base font-semibold mb-6">
-                PRINCIPAL<span className="text-tertiary_color">OFFICE</span>
+              <h3 className="capitalize text-lg font-semibold mb-6 text-white">
+                Principal Office
               </h3>
               <p className="text-txt_light_color text-[1.1rem] mb-6">
                 322 Boerne Stage Airfield Boerne, Texas 78006
