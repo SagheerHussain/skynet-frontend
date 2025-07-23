@@ -108,9 +108,9 @@ const Gallary = () => {
             loop={true}
             navigation={true}
             coverflowEffect={{
-              rotate: 30,
+              rotate: 40,
               stretch: 0,
-              depth: 200,
+              depth: 100,
               modifier: 1,
               slideShadows: true,
             }}
@@ -126,7 +126,7 @@ const Gallary = () => {
                 <img
                   src={video.thumbnail}
                   alt={video.title}
-                  className="rounded-lg object-cover w-full"
+                  className="rounded-lg object-contain w-full"
                 />
                 {/* <div className="absolute bottom-2 right-2 bg-black text-white text-xs px-2 py-1 rounded">
                   {video.duration}

@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import Button from "./Button";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const team = [
   {
@@ -112,55 +112,50 @@ const TeamSection = () => {
           </div>
         </div>
 
-        <h1 className="text-5xl mt-12 font-bold text-[#fff] mb-10">
-          The{" "}
-          <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
-            Team
-          </span>
-        </h1>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {team.map((member, idx) => (
-            <div className="relative team-card rounded-xl overflow-hidden group">
-              <div className="relative w-full">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-[400px] object-cover"
-                />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-[0]"></div>
-              </div>
-              <div className="absolute top-[-20%] group-hover:top-[20%] transition-all duration-500 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <Link to={`/team/${idx}`}>
+              <div className="relative team-card rounded-xl overflow-hidden group">
+                <div className="relative w-full">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-[400px] object-cover"
+                  />
+                  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-[0]"></div>
+                </div>
+                {/* <div className="absolute top-[-20%] group-hover:top-[20%] transition-all duration-500 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <Button buttonLabel="View" onClick={`/team/2`} />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[130px] group-hover:h-[190px] transition-all duration-500">
-                <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3">
-                  <div className="glass-filter"></div>
-                  <div className="glass-overlay"></div>
-                  <div className="glass-specular"></div>
+              </div> */}
+                <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[130px] group-hover:h-[190px] transition-all duration-500">
+                  <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3">
+                    <div className="glass-filter"></div>
+                    <div className="glass-overlay"></div>
+                    <div className="glass-specular"></div>
 
-                  <div className="glass-content glass-content--inline justify-center">
-                    <div className="relative w-full py-5 px-2">
-                      <h2 className="text-2xl font-semibold text-white">
-                        {member.name}
-                      </h2>
-                      <h2 className="text-sm py-2 font-semibold text-white">
-                        {member.email}
-                      </h2>
-                      <p className="text-sm text-gray-400 mb-4">
-                        {member.title}
-                      </p>
-                      <div className="social-icons flex items-center gap-4 justify-center">
-                        <FaFacebook className="hover:text-[#0866ff] text-xl transition cursor-pointer" />
-                        <FaTwitter className="hover:text-[#00b7ff] text-xl transition cursor-pointer" />
-                        <FaInstagram className="hover:text-[#c3407b] text-xl transition cursor-pointer" />
-                        <FaLinkedin className="hover:text-[#0a66c2] text-xl transition cursor-pointer" />
+                    <div className="glass-content glass-content--inline justify-center">
+                      <div className="relative w-full py-5 px-2">
+                        <h2 className="text-2xl font-semibold text-white">
+                          {member.name}
+                        </h2>
+                        <h2 className="text-sm py-2 font-semibold text-white">
+                          {member.email}
+                        </h2>
+                        <p className="text-sm text-gray-400 mb-4">
+                          {member.title}
+                        </p>
+                        <div className="social-icons flex items-center gap-4 justify-center">
+                          <FaFacebook className="hover:text-[#0866ff] text-xl transition cursor-pointer" />
+                          <FaTwitter className="hover:text-[#00b7ff] text-xl transition cursor-pointer" />
+                          <FaInstagram className="hover:text-[#c3407b] text-xl transition cursor-pointer" />
+                          <FaLinkedin className="hover:text-[#0a66c2] text-xl transition cursor-pointer" />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

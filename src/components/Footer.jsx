@@ -33,24 +33,6 @@ const Footer = () => {
               we are committed to excellence in every flight and every client
               relationship.
             </p>
-            <div className="social-icons flex items-center gap-4 mt-10">
-              <FaLinkedinIn
-                size={24}
-                className="text-white hover:text-blue-400 cursor-pointer transition"
-              />
-              <FaFacebookF
-                size={24}
-                className="text-white hover:text-blue-400 cursor-pointer transition"
-              />
-              <FaInstagram
-                size={24}
-                className="text-white hover:text-pink-400 cursor-pointer transition"
-              />
-              <FaYoutube
-                size={24}
-                className="text-white hover:text-red-500 cursor-pointer transition"
-              />
-            </div>
           </div>
 
           <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 gap-6 text-sm">
@@ -94,17 +76,29 @@ const Footer = () => {
 
             {/* Principal Office */}
             <div>
-              <h3 className="capitalize text-lg font-semibold mb-6 text-white">
-                Principal Office
-              </h3>
-              <p className="text-txt_light_color text-[1.1rem] mb-6">
-                322 Boerne Stage Airfield Boerne, Texas 78006
-              </p>
               <img
                 src="https://static.wixstatic.com/media/04f737_cf652212a66e4f93a1dc1bf4607bd7aa~mv2.png/v1/fill/w_137,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Veteran%20Owned.png"
                 alt="Veteran Owned"
                 className=""
               />
+              <div className="social-icons flex items-center gap-4 mt-10">
+                <FaLinkedinIn
+                  size={24}
+                  className="text-white hover:text-blue-400 cursor-pointer transition"
+                />
+                <FaFacebookF
+                  size={24}
+                  className="text-white hover:text-blue-400 cursor-pointer transition"
+                />
+                <FaInstagram
+                  size={24}
+                  className="text-white hover:text-pink-400 cursor-pointer transition"
+                />
+                <FaYoutube
+                  size={24}
+                  className="text-white hover:text-red-500 cursor-pointer transition"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -112,7 +106,9 @@ const Footer = () => {
 
       <div className="container px-5">
         <div className="w-full mt-12 border-t border-white/20 pt-4 flex md:flex-row flex-col md:justify-between justify-center items-center gap-4 text-white text-xl">
-          <p className="text-base text-center">© 2025 Mason Amelia. All rights reserved.</p>
+          <p className="text-base text-center">
+            © 2025 Mason Amelia. All rights reserved.
+          </p>
           <div className="flex sm:flex-row flex-col items-center gap-6">
             {/* Location */}
             <div className="flex items-center gap-3">
@@ -120,7 +116,10 @@ const Footer = () => {
                 <FaMapMarkerAlt size={20} className="text-white" />
               </div>
               <div>
-                <p className="text-sm text-txt_light_color max-w-[17rem]">Birmingham, AL Duluth, MN San Antonio, TX Scottsdale, AZ Upstate, NY</p>
+                <p className="text-sm text-txt_light_color max-w-[17rem]">
+                  Birmingham, AL Duluth, MN San Antonio, TX Scottsdale, AZ
+                  Upstate, NY
+                </p>
               </div>
             </div>
 

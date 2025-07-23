@@ -160,6 +160,19 @@ h1,h2,h3,h4,h5,h6 {
   z-index: 0;
 }
 
+@media (max-width: 768px) {
+  .liquid-glass {
+    background: #1112186b !important; 
+    border-radius: 30px;
+  }
+  .liquid-glass--bend {
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+    filter: none !important;
+    z-index: 0;
+  }
+}
+
 /* .liquid-glass--face {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15), 0 0 12px rgba(255, 255, 255, 0.08);
   z-index: 1;

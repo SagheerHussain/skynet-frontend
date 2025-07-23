@@ -14,10 +14,13 @@ import featuredOne from "/images/featured/one.png";
 import featuredTwo from "/images/featured/two.png";
 import featuredThree from "/images/featured/three.png";
 import featuredFour from "/images/featured/four.png";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Slider = () => {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
+
+  const media = useMediaQuery("(max-width: 768px)");
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -40,24 +43,48 @@ const Slider = () => {
       title: "WANTED: Premier 1A (Two Acquisitions)",
       description:
         "Step into a timeless workhorse that’s just as comfortable cruising over mountains as it is hopping across small-town airstrips. The Cessna 182 has long been a cornerstone of general aviation, and N1323E is a prime example. It’s rugged, reliable, and ready to roll. Whether you're stepping up, scaling back, or buying your first plane, it hits that sweet spot of performance, utility, and modern tech with a full Garmin glass panel.",
+      feature: [
+        "Airframe: 2500",
+        "Engine: 2665",
+        "Propeller: 2022",
+      ],
+      avionics: ["Flight Deck Model", "G3X TOUCH", "ADS-B Equipped"],
     },
     {
       image: featuredTwo,
       title: "WANTED: Citation Mustang",
       description:
         "Step into a timeless workhorse that’s just as comfortable cruising over mountains as it is hopping across small-town airstrips. The Cessna 182 has long been a cornerstone of general aviation, and N1323E is a prime example. It’s rugged, reliable, and ready to roll. Whether you're stepping up, scaling back, or buying your first plane, it hits that sweet spot of performance, utility, and modern tech with a full Garmin glass panel.",
+      feature: [
+        "Airframe: 2500",
+        "Engine: 2665",
+        "Propeller: 2022",
+      ],
+      avionics: ["Flight Deck Model", "G3X TOUCH", "ADS-B Equipped"],
     },
     {
       image: featuredThree,
       title: "N550BC 1997 Cessna Citation Bravo",
       description:
         "Step into a timeless workhorse that’s just as comfortable cruising over mountains as it is hopping across small-town airstrips. The Cessna 182 has long been a cornerstone of general aviation, and N1323E is a prime example. It’s rugged, reliable, and ready to roll. Whether you're stepping up, scaling back, or buying your first plane, it hits that sweet spot of performance, utility, and modern tech with a full Garmin glass panel.",
+      feature: [
+        "Airframe: 2500",
+        "Engine: 2665",
+        "Propeller: 2022",
+      ],
+      avionics: ["Flight Deck Model", "G3X TOUCH", "ADS-B Equipped"],
     },
     {
       image: featuredFour,
       title: "WANTED: Citation Mustang",
       description:
         "Step into a timeless workhorse that’s just as comfortable cruising over mountains as it is hopping across small-town airstrips. The Cessna 182 has long been a cornerstone of general aviation, and N1323E is a prime example. It’s rugged, reliable, and ready to roll. Whether you're stepping up, scaling back, or buying your first plane, it hits that sweet spot of performance, utility, and modern tech with a full Garmin glass panel.",
+      feature: [
+        "Airframe: 2500",
+        "Engine: 2665",
+        "Propeller: 2022",
+      ],
+      avionics: ["Flight Deck Model", "G3X TOUCH", "ADS-B Equipped"],
     },
   ];
 
@@ -133,7 +160,7 @@ const Slider = () => {
                         delay: 0.4,
                       }}
                     >
-                      <div className="liquid-glass--bend z-[0]" />
+                      <div className="showroom-blur liquid-glass--bend z-[0]" />
                       <div className="liquid-glass--face z-[0]" />
                       <div className="liquid-glass--edge z-[0]" />
                       <div
@@ -177,12 +204,9 @@ const Slider = () => {
                             h-full w-full
                           "
                         >
-                          <img
-                            src="https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_180,h_65,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png"
-                            className="max-w-[100px] max-h-[40px] sm:max-w-[180px] md:max-w-[200px] md:max-h-[60px] lg:max-h-[50px] xl:max-h-[70px] lg:scale-[.85]"
-                            alt=""
-                            loading="lazy"
-                          />
+                          {slide?.feature.map((feature, index) => (
+                            <span className="text-white" key={index}>{feature}</span>
+                          ))}
                         </div>
                       </div>
                     </motion.div>
@@ -211,7 +235,9 @@ const Slider = () => {
                             h-full w-full
                           "
                         >
-                          <RiDoubleQuotesL size={120} color="#fff" />
+                          {slide?.avionics?.map((avionics, index) => (
+                            <span className="text-white" key={index}>{avionics}</span>
+                          ))}
                         </div>
                       </div>
                     </motion.div>

@@ -158,7 +158,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <div className="md:col-span-2 text-right">
-                <Button buttonLabel="Send" />
+                <Button buttonLabel="Send" isContact={true} />
               </div>
             </form>
           </div>
