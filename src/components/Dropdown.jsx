@@ -34,7 +34,7 @@ const Dropdown = ({ items = [], className, onMouseLeave }) => {
             <Link
               key={idx}
               to={item.link}
-              className="uppercase block px-4 py-4 my-2 text-white duration-150 transition hover:text-[#ff8a41]"
+              className="uppercase block px-4 py-4 my-2 text-white duration-150 transition hover:text-tertiary_color"
             >
               {item.text}
             </Link>

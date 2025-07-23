@@ -1,7 +1,9 @@
 import React from "react";
 import { Tabs } from "./ui/tabs";
 import TabContent from "./TabContent";
-import Button from "./Button";
+import featureOne from "/images/feature-one.png";
+import featureTwo from "/images/feature-two.png";
+import featureThree from "/images/feature-three.png";
 
 function WhyChoosUs() {
   const services = [
@@ -37,7 +39,9 @@ function WhyChoosUs() {
     },
   ];
 
-  const tabs = services.map((service) => ({
+  const images = [featureOne, featureTwo, featureThree];
+
+  const tabs = services.map((service, index) => ({
     title: service.title,
     value: service?.title
       ?.split(" ")
@@ -46,9 +50,7 @@ function WhyChoosUs() {
     content: (
       <TabContent
         title={service.title}
-        src={
-          "https://cdn.prod.website-files.com/64c2db8601707a81c0d28ff5/64e67ebffb32deb5a66c7725_SJ%20Partners%20in%20Suits.webp"
-        }
+        src={images[index]}
         description={service.description}
         features={service.features}
       />
@@ -83,7 +85,7 @@ function WhyChoosUs() {
           </div>
         </div>
 
-        <div className="h-[550px] [perspective:1000px] relative flex flex-col mx-auto w-full items-start justify-start">
+        <div className="h-[1100px] sm:h-[900px] md:h-[550px] [perspective:1000px] relative flex flex-col mx-auto w-full items-start justify-start">
           <Tabs tabs={tabs} />
         </div>
       </div>

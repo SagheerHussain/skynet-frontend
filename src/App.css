@@ -9,6 +9,10 @@ body {
   background-color: #111218;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 600 !important;
+}
+
 .container {
   max-width: 1400px !important;
   width: 100% !important;
@@ -28,7 +32,7 @@ body {
   color: #fff;
   letter-spacing: 3px;
   overflow: hidden;
-  background: #ffffff04;
+  background: #ffffff15;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.179);
   border-radius: 30px;
 }
@@ -509,6 +513,7 @@ body {
   height: 100%;
   transition: all 0.5s ease;
   transform: scale(0);
+  border-radius: 20px;
 }
 
 .glassmorphism_card:hover .glassmorphism_effect_hover {

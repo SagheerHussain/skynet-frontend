@@ -8,7 +8,7 @@ export default function Button({
   return (
     <Link to={onClick}>
       <button
-        className={`${isWidthFull ? "btn-main w-full" : "btn-main"} ${
+        className={`${isWidthFull ? "btn-main w-full z-[20]" : "btn-main z-[20]"} ${
           isNormalPedding
             ? "py-[.5rem] px-[1.5rem] text-sm capitalize"
             : "py-[1rem] px-[2rem] text-base"

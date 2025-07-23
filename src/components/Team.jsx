@@ -76,51 +76,64 @@ const team = [
 ];
 
 const TeamSection = () => {
-
   const navigate = useNavigate();
 
   return (
-    <section id="team" className="text-white py-14 px-4 md:px-10">
-      <div className="flex flex-col justify-center items-center mb-4">
-        <h2 className="text-5xl mt-12 font-bold text-[#fff]">Meet The Team</h2>
-        <p className="text-base mt-4 max-w-xl text-center mx-auto">
-          Get to know the faces behind Mason Amelia — a team driven by
-          expertise, precision, and a passion for aviation. Together, we turn
-          missions into milestones for clients worldwide.
-        </p>
-      </div>
+    <section id="team" className="text-white py-20 px-4 md:px-10">
+      <div className="container px-5">
+        <div className="flex flex-col justify-center items-center mb-20">
+          <div
+            className={`glass-container w-full`}
+            style={{
+              borderRadius: "20px",
+              boxShadow:
+                "0 6px 6px rgba(0, 0, 0, 0.02), 0 0 20px rgba(0, 0, 0, 0.1);",
+            }}
+          >
+            <div className="glass-filter"></div>
+            <div className="glass-overlay"></div>
+            <div className="glass-specular"></div>
+            <div
+              className="glass-content h-full flex flex-col"
+              style={{ padding: "3rem 1rem" }}
+            >
+              <h2 className="text-2xl sm:text-4xl lg:text-6xl mt-12 font-bold text-[#fff]">
+                A Team of Pilots and{" "}
+                <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
+                  Aviation Experts
+                </span>
+              </h2>
+              <p className="text-base sm:text-xl text-center max-w-2xl mt-4 font-light">
+                Built by aviators with decades of insight, Mason Amelia delivers
+                unmatched clarity, strategy, and confidence in every aircraft
+                transaction.
+              </p>
+            </div>
+          </div>
+        </div>
 
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        modules={[EffectCoverflow, Navigation]}
-        navigation
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        spaceBetween={30}
-      >
-        {team.map((member, idx) => (
-          <SwiperSlide key={idx}>
+        <h1 className="text-5xl mt-12 font-bold text-[#fff] mb-10">
+          The{" "}
+          <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
+            Team
+          </span>
+        </h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {team.map((member, idx) => (
             <div className="relative team-card rounded-xl overflow-hidden group">
               <div className="relative w-full">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-[400px]"
+                  className="w-full h-[400px] object-cover"
                 />
                 <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-[0]"></div>
               </div>
               <div className="absolute top-[-20%] group-hover:top-[20%] transition-all duration-500 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <Button buttonLabel="View" onClick={`/team/2`} />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-0 group-hover:h-[200px] transition-all duration-500">
+              <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[130px] group-hover:h-[190px] transition-all duration-500">
                 <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3">
                   <div className="glass-filter"></div>
                   <div className="glass-overlay"></div>
@@ -138,19 +151,19 @@ const TeamSection = () => {
                         {member.title}
                       </p>
                       <div className="social-icons flex items-center gap-4 justify-center">
-                        <FaFacebook className="hover:text-[#0866ff] text-xl" />
-                        <FaTwitter className="hover:text-[#00b7ff] text-xl" />
-                        <FaInstagram className="hover:text-[#c3407b] text-xl" />
-                        <FaLinkedin className="hover:text-[#0a66c2] text-xl" />
+                        <FaFacebook className="hover:text-[#0866ff] text-xl transition cursor-pointer" />
+                        <FaTwitter className="hover:text-[#00b7ff] text-xl transition cursor-pointer" />
+                        <FaInstagram className="hover:text-[#c3407b] text-xl transition cursor-pointer" />
+                        <FaLinkedin className="hover:text-[#0a66c2] text-xl transition cursor-pointer" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

@@ -5,6 +5,7 @@ import Team from "../components/Team";
 import bgPlane from "/images/team/banner.avif"; // Replace with your path
 import Contact from "../components/Contact";
 import ScrollToTop from "../components/ScrollToTop";
+import CTABanner from "../components/CTABanner";
 
 const TeamPage = () => {
   return (
@@ -17,6 +18,7 @@ const TeamPage = () => {
         <div className="container px-5">
           <Navbar />
           <Team />
+          <CTABanner />
         </div>
       </section>
       <Contact />
