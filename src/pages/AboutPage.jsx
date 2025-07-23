@@ -10,6 +10,7 @@ import { FaJetFighterUp } from "react-icons/fa6";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import WhatSetsUsApart from "../components/WhatSetsApart";
 import aboutBanner from "/images/about/banner.avif";
+import WhyChoosUs from "../components/WhyChoosUs";
 
 const AboutPage = () => {
   const data = [
@@ -127,11 +128,17 @@ const AboutPage = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
           }}
           className="py-20 relative z-[10]"
         >
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
           <Timeline data={data} />
+        </section>
+        <section className="py-20">
+          <div className="container px-5">
+            <WhyChoosUs />
+          </div>
         </section>
       </main>
       <Footer />

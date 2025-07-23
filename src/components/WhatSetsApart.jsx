@@ -7,69 +7,72 @@ import {
   FaLightbulb,
 } from "react-icons/fa";
 import SpotlightCard from "./ui/SpotlightEffect";
+import Button from "./Button";
 
 const features = [
   {
-    icon: <FaUserAlt className="text-5xl mb-5 text-white" />,
+    icon: <FaUserAlt className="text-4xl mb-5 text-tertiary_color" />,
     title: "Personal Commitment",
     desc: (
       <>
-        Our name is our promise. We treat every client and every aircraft with
-        the same dedication, integrity, and personal care from start to finish,
-        building lasting relationships.
+        Our name is our promise. Every client and aircraft receives the same
+        dedication, integrity, and personal care from start to finish, building
+        lasting trust. We are delivering exceptional results.
       </>
     ),
   },
   {
-    icon: <FaBriefcase className="text-5xl mb-5 text-white" />,
+    icon: <FaBriefcase className="text-4xl mb-5 text-tertiary_color" />,
     title: "Unmatched Experience",
     desc: (
       <>
-        With decades in aviation and hundreds of successful transactions, our
-        deep industry expertise ensures clients receive knowledgeable guidance
-        and outstanding results every time.
+        With decades in aviation and hundreds of transactions, our expertise
+        ensures every client receives knowledgeable guidance and outstanding
+        results, every time.
       </>
     ),
   },
   {
-    icon: <FaPlayCircle className="text-5xl mb-5 text-white" />,
+    icon: <FaPlayCircle className="text-4xl mb-5 text-tertiary_color" />,
     title: "Modern Marketing",
     desc: (
       <>
-        Our YouTube channel, “Looking for Higher,” transforms aircraft sales—
-        delivering innovative marketing, expert insights, and powerful reach to
-        connect with buyers nationwide.
+        Our YouTube channel, “Looking for Higher,” transforms aircraft
+        sales—delivering innovative marketing, expert insights, and powerful
+        reach to connect with buyers nationwide today.
       </>
     ),
   },
   {
-    icon: <FaGlobeAmericas className="text-5xl mb-5 text-white" />,
+    icon: <FaGlobeAmericas className="text-4xl mb-5 text-tertiary_color" />,
     title: "Coast-to-Coast Presence",
     desc: (
       <>
         With a nationwide team, Mason Amelia represents aircraft and clients
-        from coast to coast, delivering truly personalized service everywhere.
+        from coast to coast, delivering truly personalized service and expert
+        attention wherever you are.
       </>
     ),
   },
   {
-    icon: <FaShieldAlt className="text-5xl mb-5 text-white" />,
+    icon: <FaShieldAlt className="text-4xl mb-5 text-tertiary_color" />,
     title: "Transparent Process",
     desc: (
       <>
-        Honesty and transparency are at the core of our business — we guide you
-        with clear communication and open-book integrity at every step.
+        Honesty and transparency are at our core. We guide you with clear
+        communication and open-book integrity at every step of your aircraft
+        journey. We are committed to building trust.
       </>
     ),
   },
   {
-    icon: <FaLightbulb className="text-5xl mb-5 text-white" />,
+    icon: <FaLightbulb className="text-4xl mb-5 text-tertiary_color" />,
     title: "Innovative Solutions",
     desc: (
       <>
-        We embrace the latest technology and creative strategies to ensure your
-        aircraft sale or purchase is seamless, efficient, and rewarding,
-        delivering exceptional value and peace of mind.
+        We embrace the latest technology and creative strategies, making your
+        aircraft sale or purchase seamless, efficient, and rewarding, delivering
+        exceptional value every time.
       </>
     ),
   },
@@ -80,9 +83,32 @@ export default function WhatSetsUsApart() {
     <section className="w-full flex justify-center items-center py-20">
       <div className="container px-5">
         <div className="rounded-2xl py-8 w-full">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">
-            What Sets Us Apart
-          </h2>
+          <div className="w-full mb-20 px-4 flex flex-col md:flex-row justify-between items-center">
+            {/* Left Side: Headline */}
+            <div className="md:w-1/2">
+              <h4 className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold mb-6">
+                Expert Guidance
+              </h4>
+              <h2 className="text-4xl xl:text-5xl font-bold text-white mb-4">
+                Let Mason Amelia guide your next aircraft journey{" "}
+                <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
+                  with confidence and clarity.
+                </span>
+              </h2>
+            </div>
+            {/* Right Side: Paragraph + Button */}
+            <div className="md:w-1/2 flex flex-col justify-center items-start mt-8 md:mt-0 md:pl-12">
+              <p className="text-lg text-neutral-300 mb-8 max-w-xl">
+                As aviation specialists driven by trust and experience, we
+                deliver truly personalized service for every client and every
+                mission. From first inquiry to final handshake, our expert team
+                listens to your needs, tailors solutions, protects your
+                interests, and makes your transition to a new aircraft seamless
+                and stress-free.
+              </p>
+              <Button buttonLabel="Contact Us" />
+            </div>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
             {features.map((card, idx) => (
               <div className={`glass-container w-full`}>
@@ -96,13 +122,13 @@ export default function WhatSetsUsApart() {
                   <div className="glass-content h-full">
                     <div
                       key={idx}
-                      className="rounded-xl p-7 flex flex-col items-center w-full relative"
+                      className="rounded-xl p-2 flex flex-col items-center w-full relative"
                     >
                       {card.icon}
-                      <h3 className="text-xl font-bold text-white mb-2 text-center">
+                      <h3 className="text-xl 2xl:text-2xl font-bold text-white mb-2 text-center">
                         {card.title}
                       </h3>
-                      <p className="text-white text-center text-base font-light">
+                      <p className="text-white text-center lg:text-sm 2xl:text-base font-light">
                         {card.desc}
                       </p>
                     </div>
