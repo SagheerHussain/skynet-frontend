@@ -24,7 +24,7 @@ const SliderWrapper = () => {
       img: bannerOne,
       title: (
         <>
-          <span className="bg-gradient-to-r from-[#da5c0d] to-[#ffa251] bg-clip-text text-transparent">Aircraft Transactions</span> are
+          <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">Aircraft Transactions</span> are
           complex and involve significant financial exposure.
         </>
       ),
@@ -34,7 +34,7 @@ const SliderWrapper = () => {
       title: (
         <>
           Mason Amelia is your expert wingman with a{" "}
-          <span className="bg-gradient-to-r from-[#da5c0d] to-[#ffa251] bg-clip-text text-transparent">Proven Track Record</span> and
+          <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">Proven Track Record</span> and
           reputation.
         </>
       ),
@@ -43,7 +43,7 @@ const SliderWrapper = () => {
       img: bannerThree,
       title: (
         <>
-          Our <span className="bg-gradient-to-r from-[#da5c0d] to-[#ffa251] bg-clip-text text-transparent">scrupulous oversight</span>{" "}
+          Our <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">scrupulous oversight</span>{" "}
           and personalized service gets the most out of your transaction.
         </>
       ),

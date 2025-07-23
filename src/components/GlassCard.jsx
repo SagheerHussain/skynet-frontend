@@ -5,12 +5,12 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function GlassCard({ icon, title, description, buttonLabel }) {
   const media = useMediaQuery("(max-width: 500px)");
-  const mediumScreen = useMediaQuery("(max-width: 768px)");
+  const mediaHeight = useMediaQuery("(max-height: 680px)");
 
   return (
     <div className="glass_card">
       <div
-        className="glass-container w-full xl:translate-y-0 md:translate-y-[150px] sm:translate-y-[250px] translate-y-[250px]"
+        className={`glass-container w-full ${mediaHeight ? "translate-y-[220px] md:translate-y-[80px]" : "md:translate-y-0 translate-y-[100px]"}`}
         style={{
           borderRadius: "20px",
           boxShadow:

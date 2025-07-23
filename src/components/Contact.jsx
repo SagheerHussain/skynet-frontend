@@ -124,7 +124,7 @@ const Contact = () => {
                 <input
                   type="text"
                   className="w-full p-3 text-white focus:outline-none bg-transparent border border-gray-600 rounded-lg mt-1"
-                  placeholder="034********"
+                  placeholder="Enter Phone Number"
                 />
               </div>
               <div className="md:col-span-2">
@@ -134,7 +134,7 @@ const Contact = () => {
                 <input
                   type="email"
                   className="w-full p-3 text-white focus:outline-none bg-transparent border border-gray-600 rounded-lg mt-1"
-                  placeholder="@gmail.com"
+                  placeholder="Enter Email"
                 />
               </div>
               <div className="md:col-span-2">

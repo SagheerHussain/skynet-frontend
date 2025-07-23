@@ -1,8 +1,11 @@
 import React from "react";
 import HeroSection from "./HeroSection";
 import Navbar from "./Navbar";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Showcase = () => {
+  const mobileMedia = useMediaQuery("(max-width: 450px)");
+
   return (
     <div className="relative w-screen z-10">
       <div
@@ -33,7 +36,7 @@ const Showcase = () => {
       <div className="sm:static fixed container z-20 px-4">
         <Navbar />
       </div>
-      <div className="sm:pt-0 pt-[40%]">
+      <div className={mobileMedia ? "sm:pt-0 pt-[250px]" : "sm:pt-0 pt-[250px]"}>
         <HeroSection />
       </div>
     </div>

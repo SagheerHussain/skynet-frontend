@@ -6,8 +6,9 @@ export default {
       colors: {
         primary_theme: "#111218",
         secondary_theme: "#fff",
-        tertiary_color: "#ff8a41",
+        tertiary_color: "#49a8fc",
         quaternary_color: "#1777cb",
+        txt_light_color: "#7d8ba1"
       },
       screens: {
         "3xl": "1700px",

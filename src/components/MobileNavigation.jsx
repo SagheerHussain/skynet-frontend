@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -7,115 +7,119 @@ import Typography from "@mui/material/Typography";
 import { FaXmark } from "react-icons/fa6";
 
 const MobileNavigation = ({ isOpen, setIsOpen }) => {
-  return (
-    <>
-      <div className="fixed top-0 left-0 w-screen z-[99999]">
-        <div
-          className={`glass-container flex items-center h-screen justify-center glass-container--rounded px-4 py-3 transition-all duration-300 ease-in-out transform ${
-            isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-          }`}
-        >
-          <div
-            className="glass-filter"
-            style={{ backdropFilter: "blur(20px)" }}
-          ></div>
-          <div className="glass-overlay"></div>
-          <div className="glass-specular"></div>
+  const [expanded, setExpanded] = useState(null);
 
-          <div className="glass-content glass-content--inline flex-col justify-center">
-            <div className="nav-menus flex-col flex gap-8">
-              <div className="flex items-center justify-end">
-                <FaXmark
-                  onClick={() => setIsOpen(false)}
-                  size={22}
-                  color="#fff"
-                />
-              </div>
-              <Link
-                to="/"
-                className="uppercase text-3xl hover:text-tertiary_color transition duration-50"
-              >
-                Home
-              </Link>
-              <Link
-                to="/showroom"
-                className="uppercase text-3xl hover:text-tertiary_color transition duration-50"
-              >
-                Showroom
-              </Link>
-              <Accordion>
-                <AccordionSummary
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                >
-                  <Typography component="span">
-                    Services <span className="ms-4">+</span>
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails className="flex flex-col gap-4">
-                  <Link
-                    to="/acquisition"
-                    className="uppercase text-white text-xl hover:text-tertiary_color transition duration-50"
-                  >
-                    Acquisition
-                  </Link>
-                  <Link
-                    to="/brokerage"
-                    className="uppercase text-white text-xl hover:text-tertiary_color transition duration-50"
-                  >
-                    Brokerage
-                  </Link>
-                </AccordionDetails>
-              </Accordion>
-              <Link
-                to="/skynet"
-                className="uppercase text-3xl hover:text-tertiary_color transition duration-50"
-              >
-                Skynet
-              </Link>
-              <Accordion>
-                <AccordionSummary
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                >
-                  <Link to="/about">
-                    <Typography component="span">
-                      ABOUT MA <span className="ms-4">+</span>
-                    </Typography>
-                  </Link>
-                </AccordionSummary>
-                <AccordionDetails className="flex flex-col gap-4">
-                  <Link
-                    to="/team"
-                    className="uppercase text-white text-xl hover:text-tertiary_color transition duration-50"
-                  >
-                    Meet The Team
-                  </Link>
-                  <Link
-                    to="/higher"
-                    className="uppercase text-white text-xl hover:text-tertiary_color transition duration-50"
-                  >
-                    Looking For Higher
-                  </Link>
-                  <Link
-                    to="/testimonial"
-                    className="uppercase text-white text-xl hover:text-tertiary_color transition duration-50"
-                  >
-                    Testimonials
-                  </Link>
-                </AccordionDetails>
-              </Accordion>
-              <Link
-                to="/contact"
-                className="uppercase text-3xl hover:text-tertiary_color transition duration-50"
-              >
-                Contact
-              </Link>
-            </div>
+  const toggleAccordion = (panel) => {
+    setExpanded((prev) => (prev === panel ? null : panel));
+  };
+
+  return (
+    <div
+      className={`
+        fixed top-0 left-0 w-full h-screen bg-primary_theme z-[99999]
+        transition-all duration-500 ease-in-out
+        ${isOpen ? "translate-y-0" : "-translate-y-full"}
+      `}
+    >
+      <div className="nav-menus flex-col flex gap-8 p-8">
+        <div className="flex items-center justify-end">
+          <FaXmark onClick={() => setIsOpen(false)} size={22} color="#fff" />
+        </div>
+
+        <Link
+          to="/"
+          className="uppercase text-xl hover:text-tertiary_color transition duration-50"
+        >
+          Home
+        </Link>
+        <Link
+          to="/showroom"
+          className="uppercase text-xl hover:text-tertiary_color transition duration-50"
+        >
+          Showroom
+        </Link>
+
+        <div className="text-white">
+          <div
+            className="uppercase text-xl cursor-pointer flex items-center"
+            onClick={() => toggleAccordion("services")}
+          >
+            <span>Services</span>
+            <span className="ms-4 transition-transform duration-300">
+              {expanded === "services" ? "-" : "+"}
+            </span>
+          </div>
+          <div
+            className={`flex flex-col gap-2 mt-2 transition-all duration-300 overflow-hidden ${
+              expanded === "services" ? "max-h-40" : "max-h-0"
+            }`}
+          >
+            <Link
+              to="/acquisition"
+              className="text-white text-base ps-4 hover:text-tertiary_color relative"
+            >
+              <span className="w-2 h-[1px] bg-white absolute top-1/2 left-0"></span> Acquisition
+            </Link>
+            <Link
+              to="/brokerage"
+              className="text-white text-base ps-4 hover:text-tertiary_color relative"
+            >
+              <span className="w-2 h-[1px] bg-white absolute top-1/2 left-0"></span> Brokerage
+            </Link>
           </div>
         </div>
+
+        <Link
+          to="/skynet"
+          className="uppercase text-xl hover:text-tertiary_color transition duration-50"
+        >
+          Skynet
+        </Link>
+
+        <div className="text-white">
+          <div
+            className="uppercase text-xl cursor-pointer flex items-center"
+            onClick={() => toggleAccordion("about")}
+          >
+            <Link to="/about">ABOUT MA</Link>
+            <span className="ms-4 transition-transform duration-300">
+              {expanded === "about" ? "-" : "+"}
+            </span>
+          </div>
+          <div
+            className={`flex flex-col gap-2 mt-2 transition-all duration-300 overflow-hidden ${
+              expanded === "about" ? "max-h-40" : "max-h-0"
+            }`}
+          >
+            <Link
+              to="/team"
+              className="text-white text-base ps-4 hover:text-tertiary_color relative"
+            >
+              <span className="w-2 h-[1px] bg-white absolute top-1/2 left-0"></span> Meet The Team
+            </Link>
+            <Link
+              to="/higher"
+              className="text-white text-base ps-4 hover:text-tertiary_color relative"
+            >
+              <span className="w-2 h-[1px] bg-white absolute top-1/2 left-0"></span> Looking For Higher
+            </Link>
+            <Link
+              to="/testimonial"
+              className="text-white text-base ps-4 hover:text-tertiary_color relative"
+            >
+              <span className="w-2 h-[1px] bg-white absolute top-1/2 left-0"></span> Testimonials
+            </Link>
+          </div>
+        </div>
+
+        <Link
+          to="/contact"
+          className="uppercase text-xl hover:text-tertiary_color transition duration-50"
+        >
+          Contact
+        </Link>
       </div>
-    </>
+    </div>
   );
 };
 

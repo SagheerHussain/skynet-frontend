@@ -8,22 +8,22 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 const HeroSection = () => {
 
-  const media = useMediaQuery("(max-width: 500px)");
+  const mediaHeight = useMediaQuery("(max-height: 680px)");
 
   return (
     <div
       className="
-            w-full h-[130vh] sm:h-[120vh] xl:h-screen
+            w-full h-[130vh] sm:h-[120vh] lg:h-screen
             flex justify-center
             relative 
           "
     >
-      <div className="container z-20 px-4">
+      <div className="container z-10 px-4">
         <div className="px-6 py-12 flex flex-col xl:gap-8 justify-end h-[90vh] relative text-center text-white my-auto">
           <GlassCard />
           <div className="w-full flex justify-between mt-8">
             <div
-              className="glass-container w-full xl:translate-y-0 md:translate-y-[150px] sm:translate-y-[250px] translate-y-[250px]"
+              className={`glass-container w-full ${mediaHeight ? "translate-y-[200px] md:translate-y-[80px]" : "md:translate-y-0 translate-y-[100px]"}`}
               style={{ borderRadius: "20px" }}
             >
               <div
@@ -44,7 +44,7 @@ const HeroSection = () => {
                       <FaPlane
                         size={40}
                         color="#111218"
-                        className="-mt-8 bg-tertiary_color p-2 rounded-[5px] rotate-45"
+                        className="-mt-8 bg-tertiary_color p-2 rounded-[50%]"
                       />
                     }
                     customClasses="w-full"
@@ -55,7 +55,7 @@ const HeroSection = () => {
                   <GlassmorphismCircularCard
                     title="Buy My Plane"
                     tagline="Acquisition Services"
-                    icon={<FaUsers size={40} color="#111218" className="-mt-8 bg-tertiary_color p-2 rounded-[5px] rotate-45" />}
+                    icon={<FaUsers size={40} color="#111218" className="-mt-8 bg-tertiary_color p-2 rounded-[50%]" />}
                     customClasses="w-full"
                   />
                   <div className="z-[-1] glassmorphism_effect_line w-0 md:w-[1px] h-[60%] bg-white/20 absolute right-[0px] top-1/2 -translate-y-1/2"></div>
@@ -68,7 +68,7 @@ const HeroSection = () => {
                       <FaHandsHelping
                         size={40}
                         color="#111218"
-                        className="-mt-8 bg-tertiary_color p-2 rounded-[5px] rotate-45"
+                        className="-mt-8 bg-tertiary_color p-2 rounded-[50%]"
                       />
                     }
                     customClasses="w-full"
@@ -83,7 +83,7 @@ const HeroSection = () => {
                       <FiTrendingUp
                         size={40}
                         color="#111218"
-                        className="-mt-8 bg-tertiary_color p-2 rounded-[5px] rotate-45"
+                        className="-mt-8 bg-tertiary_color p-2 rounded-[50%]"
                       />
                     }
                     customClasses="w-full"

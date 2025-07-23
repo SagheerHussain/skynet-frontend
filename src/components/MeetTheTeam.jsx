@@ -53,7 +53,7 @@ const MeetTheTeam = () => {
                           stiffness: 100,
                           delay: 0.6,
                         }}
-                        className="block text-tertiary_color text-4xl"
+                        className="block bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent text-4xl md:text-3xl xl:text-4xl"
                       >
                         MEET THE TEAM
                       </motion.span>
@@ -67,7 +67,7 @@ const MeetTheTeam = () => {
                           stiffness: 100,
                           delay: 0.4,
                         }}
-                        className="block text-3xl"
+                        className="block text-3xl md:text-xl xl:text-3xl"
                       >
                         From
                       </motion.span>
@@ -81,7 +81,7 @@ const MeetTheTeam = () => {
                           stiffness: 100,
                           delay: 0.2,
                         }}
-                        className="block text-3xl"
+                        className="block text-3xl md:text-xl xl:text-3xl"
                       >
                         San Antonio To Duluth
                       </motion.span>

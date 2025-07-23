@@ -522,3 +522,31 @@ body {
 .swiper-3d .swiper-slide-shadow-right {
   background-image: none !important;
 }
+
+.flip-container {
+  perspective: 800px;
+}
+
+.flip-icon {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.group:hover .flip-icon {
+  transform: rotateY(180deg);
+}
+
+.MuiAccordionSummary-content {
+  justify-content: start !important;
+  color: #ffffff !important;
+  margin-left: 0 !important;
+}
+.MuiAccordionSummary-gutters {
+  padding: 0 !important;
+}
+.MuiTypography-root {
+  font-size: 1.2rem !important;
+}
+.MuiAccordionSummary-content {
+  margin: 0 !important;
+}
