@@ -1,0 +1,46 @@
+import React from "react";
+import banner from "/images/intro/banner.png";
+import Button from "./Button";
+
+const Intro = () => {
+  return (
+    <>
+      <section className="relative w-screen lg:h-[65vh] xl:h-[55vh] bg-black text-white flex items-center">
+        {/* Background Image Right Side */}
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: `linear-gradient(to right, #15161c 40%, rgba(21, 22, 28,0.3)), url(${banner})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center right",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></div>
+
+        {/* Content */}
+        <div className="container relative z-10 max-w-6xl w-full flex flex-col md:flex-row items-center h-full px-5">
+          <div className="md:w-1/2 space-y-6">
+            <h4 className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold">
+              Who We Are
+            </h4>
+            <h2
+              className="lg:text-[3rem] xl:text-[3.5rem] 2xl:text-7xl font-bold text-white lg:max-w-[25rem] xl:max-w-[30rem] 2xl:max-w-xl"
+              style={{ lineHeight: "1.1" }}
+            >
+              Charting a new flight as a{" "}
+              <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
+                global leader in aviation
+              </span>
+            </h2>
+
+            <div className="mt-12">
+              <Button buttonLabel="Meet the Team" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Intro;
