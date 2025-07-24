@@ -5,7 +5,7 @@ import Button from "./Button";
 const Intro = () => {
   return (
     <>
-      <section className="relative w-screen lg:h-[65vh] xl:h-[55vh] bg-black text-white flex items-center">
+      <section className="relative w-screen lg:h-[65vh] xl:h-[60vh] bg-black text-white flex items-center">
         {/* Background Image Right Side */}
         <div
           className="absolute inset-0 w-full h-full"

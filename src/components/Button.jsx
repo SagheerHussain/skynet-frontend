@@ -7,15 +7,15 @@ export default function Button({
   isContact = false,
 }) {
   return (
-    <Link to={onClick}>
+    <Link to={onClick} className="z-[9999]">
       <button
         className={`${
-          isWidthFull ? "btn-main w-full z-[20]" : "btn-main z-[20]"
+          isWidthFull ? "btn-main w-full z-[20]" : "btn-main "
         } ${
           isNormalPedding
             ? "py-[.5rem] px-[1.5rem] text-sm capitalize"
             : "py-[1rem] px-[2rem] text-base"
-        }`}
+        } z-[9999]`}
         style={isContact ? { backgroundColor: "#ffffff3f" } : {}}
       >
         {/* Background layers */}

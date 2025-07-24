@@ -44,7 +44,7 @@ const SliderWrapper = () => {
 
   return (
     <>
-      <section className="relative w-screen h-full xl:h-[70vh] z-[-1] py-20 xl:py-0">
+      <section className="relative w-screen h-full xl:h-[70vh] py-20 xl:py-0">
         <div className="absolute w-screen top-0 left-0 h-full">
           <div className="absolute w-screen h-full bg-black opacity-70 z-[10]"></div>
           <Swiper
@@ -148,7 +148,9 @@ const SliderWrapper = () => {
                       <p className="text-txt_light_color mb-4">
                         {card.description}
                       </p>
-                      <Button buttonLabel="Let Us Help" onClick="/contact" />
+                      <div className="z-[9999]">
+                        <Button buttonLabel="Let Us Help" />
+                      </div>
                     </div>
                   </div>
                 </div>

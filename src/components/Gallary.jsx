@@ -28,42 +28,42 @@ const videoList = [
     id: 1,
     title: "Climb to FL340 in 14 Mins!",
     thumbnail: GallaryOne,
-    videoUrl: "https://www.youtube.com/embed/jWF2y3qpudo",
+    videoUrl: "https://www.youtube.com/embed/AHF7354Fr1w?si=i_KCQVf8MgJ10GZe",
     duration: "24:10",
   },
   {
     id: 2,
     title: "Is the 940 the Ultimate TBM?",
     thumbnail: GallaryTwo,
-    videoUrl: "https://www.youtube.com/embed/jWF2y3qpudo",
+    videoUrl: "https://www.youtube.com/embed/Bux2lUoqEow?si=NqzvBBzWuRn8i2T8",
     duration: "08:10",
   },
   {
     id: 3,
     title: "Time to Climb FL270",
     thumbnail: GallaryThree,
-    videoUrl: "https://www.youtube.com/embed/jWF2y3qpudo",
+    videoUrl: "https://www.youtube.com/embed/2SUY8ULXEl0?si=sSvG5KRPgp_8fq_2",
     duration: "18:18",
   },
   {
     id: 4,
     title: "Another Aviation Clip",
     thumbnail: GallaryFour,
-    videoUrl: "https://www.youtube.com/embed/jWF2y3qpudo",
+    videoUrl: "https://www.youtube.com/embed/YOYnQA1hN6s?si=Jafjza6UqlIRIAUO",
     duration: "12:40",
   },
   {
     id: 5,
     title: "Flight Training Review",
     thumbnail: GallaryFive,
-    videoUrl: "https://www.youtube.com/embed/jWF2y3qpudo",
+    videoUrl: "https://www.youtube.com/embed/pjHfNN-oKoA?si=jE3m0m-7rbRR0NIF",
     duration: "15:30",
   },
   {
     id: 6,
     title: "Test Flight Recap",
     thumbnail: GallarySix,
-    videoUrl: "https://www.youtube.com/embed/jWF2y3qpudo",
+    videoUrl: "https://www.youtube.com/embed/86xFD4jn-MU?si=W_boDwDqvDYmHEen",
     duration: "11:00",
   },
 ];
@@ -108,9 +108,9 @@ const Gallary = () => {
             loop={true}
             navigation={true}
             coverflowEffect={{
-              rotate: 40,
+              rotate: 60,
               stretch: 0,
-              depth: 100,
+              depth: 200,
               modifier: 1,
               slideShadows: true,
             }}
