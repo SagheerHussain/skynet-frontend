@@ -1,23 +1,25 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Acquisition from "../components/Acquisition";
 import ScrollToTop from "../components/ScrollToTop";
-import bgPlane from "/images/acquisition/banner.avif"; // Replace with your path
+import ServiceBanner from "../components/ServiceBanner";
+import banner from "/images/acquisition/banner.avif";
+import ServiceBannerContent from "../components/ServiceBannerContent";
+import CTABanner from "../components/CTABanner";
+import ServiceRappleResearch from "../components/ServiceRappleResearch";
+import ServiceHighlights from "../components/ServiceHighlights";
 
 const AcquisitionPage = () => {
   return (
     <>
-      <section
-        className="relative w-full bg-cover bg-center flex justify-center rounded-[20px]"
-        style={{ backgroundImage: `url(${bgPlane})` }}
-      >
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[0]"></div>
-        <div className="container px-5">
-          <Navbar />
-          <Acquisition />
+      <ServiceBanner banner={banner} />
+      <main id="acquisition">
+        <ServiceBannerContent />
+        <ServiceRappleResearch />
+        <ServiceHighlights />
+        <div className="container">
+          <CTABanner />
         </div>
-      </section>
+      </main>
       <Footer />
       <ScrollToTop />
     </>

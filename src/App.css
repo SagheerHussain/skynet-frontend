@@ -9,10 +9,12 @@ body {
   background-color: #111218;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-weight: 600 !important;
+h1,h2,h3 {
+  font-weight: 700 !important;
 }
-
+h4,h5,h6 {
+  font-weight: 500 !important;
+}
 .container {
   max-width: 1400px !important;
   width: 100% !important;

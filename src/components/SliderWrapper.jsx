@@ -46,7 +46,7 @@ const SliderWrapper = () => {
     <>
       <section className="relative w-screen h-full xl:h-[70vh] z-[-1] py-20 xl:py-0">
         <div className="absolute w-screen top-0 left-0 h-full">
-          <div className="absolute w-screen h-full bg-black opacity-90 z-[10]"></div>
+          <div className="absolute w-screen h-full bg-black opacity-70 z-[10]"></div>
           <Swiper
             spaceBetween={30}
             effect={"fade"}
@@ -77,12 +77,12 @@ const SliderWrapper = () => {
         </div>
 
         <div className="container px-5">
-          <Aurora
-            colorStops={["#fff", "#aaa", "#fff"]}
+          {/* <Aurora
+            colorStops={["#222", "#444", "#222"]}
             blend={0.5}
             amplitude={1.0}
             speed={0.5}
-          />
+          /> */}
 
           <svg style={{ display: "none" }}>
             <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">
