@@ -106,13 +106,13 @@ const SliderWrapper = () => {
 
           <div className="relative inset-0 flex flex-col items-center justify-center text-white z-[20] h-full xl:h-[70vh]">
             <div className="flex flex-col justify-center items-center">
-              <h1 className="text-4xl lg:text-4xl font-bold text-white text-center">
+              <h1 className="text-4xl lg:text-6xl  font-bold text-white text-center">
                 Precision Aviation{" "}
                 <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
                   Global Impact.
                 </span>
               </h1>
-              <p className="text-lg lg:text-lg text-white font-light max-w-xl mx-auto text-center pt-4 pb-8">
+              <p className="text-lg lg:text-lg max-w-6xl text-white font-light mx-auto text-center pt-4 pb-8">
                 At Mason Amelia, we don’t just broker aircraft — we deliver
                 confidence, clarity, and world-class service every step of the
                 way.

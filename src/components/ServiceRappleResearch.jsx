@@ -18,11 +18,11 @@ const ServiceRappleResearch = ({
         }}
         className="relative py-20 z-[10]"
       >
-        <div className="overlay bg-[#111218] opacity-[.97] absolute top-0 left-0 w-full h-full z-[-1]" />
+        <div className="overlay bg-[#111218df] opacity-[.97] absolute top-0 left-0 w-full h-full z-[-1]" />
         <div className="container px-5">
           <div className="w-full mb-20 px-4 flex flex-col justify-between items-center text-center z-[4]">
             <h2
-              className="text-4xl xl:text-5xl font-bold text-white mb-4"
+              className="text-4xl xl:text-6xl font-bold text-white mb-4 max-w-4xl mx-auto"
               style={{ lineHeight: "1.1" }}
             >
               <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
@@ -30,13 +30,13 @@ const ServiceRappleResearch = ({
               </span>{" "}
               {title}
             </h2>
-            <p className="text-[#7b889e] text-base font-normal max-w-2xl">
+            <p className="text-[#fff] text-xl font-light max-w-5xl mx-auto">
               {description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {data.map((item, index) => (
+            {/* {data.map((item, index) => (
               <div className="w-full p-8 rounded-2xl bg-[#15161c74] overflow-hidden relative">
                 <div className="flex flex-col items-center text-center space-y-4">
                   <div className="flex items-center justify-center">
@@ -48,6 +48,38 @@ const ServiceRappleResearch = ({
                     {item.title}
                   </h4>
                   <p className="text-sm text-white/80">{item.description}</p>
+                </div>
+              </div>
+            ))} */}
+
+            {data.map((item, index) => (
+              <div className="flex items-center">
+                <div className="flip-3d-container">
+                  <div className="flip-3d-inner">
+                    {/* FRONT SIDE */}
+                    <div className="flip-3d-front bg-[#1777cb31] rounded-xl shadow-xl p-6 flex flex-col justify-center items-center">
+                      <div className="text-center">
+                        <h2 className="text-lg font-semibold text-white">
+                          {item.title}
+                        </h2>
+                        <p className="text-xs mt-4 text-white">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* BACK SIDE */}
+                    <div className="flip-3d-back bg-[#1777cb31] rounded-xl shadow-xl h-full p-6 flex flex-col justify-center items-center">
+                      <div className="text-center">
+                        <h2 className="text-lg font-semibold text-white">
+                          {item.title}
+                        </h2>
+                        <p className="text-xs mt-4 text-white">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

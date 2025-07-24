@@ -87,10 +87,13 @@ const Gallary = () => {
       <section id="gallary" className="w-full py-20">
         <div className="container px-5">
           <div className="text-center text-white">
-            <h1 className="text-4xl font-bold">
-              A Bespoke Approach to Brokerage
+            <h1 className="text-6xl font-bold">
+              A Bespoke{" "}
+              <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
+                Approach to Brokerage
+              </span>
             </h1>
-            <p className="text-base max-w-2xl mx-auto mt-4">
+            <p className="text-base max-w-6xl mx-auto mt-4">
               Explore our curated video library showcasing real-world
               performance, cockpit experiences, and expert reviews of the
               aircraft we represent. Whether you're looking to buy, sell, or

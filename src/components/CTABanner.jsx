@@ -18,7 +18,7 @@ const CTABanner = () => {
         <h2 className="text-sm uppercase mb-4 text-gray-400">
           Get Started Today
         </h2>
-        <h1 className="text-4xl sm:text-5xl font-bold leading-snug">
+        <h1 className="text-4xl sm:text-6xl font-bold leading-snug max-w-5xl mx-auto">
           Ready to connect and <br />
           acquire the{" "}
           <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">

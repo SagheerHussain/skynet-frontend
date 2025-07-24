@@ -8,6 +8,7 @@ import MeetTheTeam from "../components/MeetTheTeam";
 import Gallary from "../components/Gallary";
 import ScrollToTop from "../components/ScrollToTop";
 import Intro from "../components/Intro";
+import LatestJets from "../components/LatestJets";
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
       <Intro />
       <MeetTheTeam />
       <SliderWrapper />
+      <LatestJets />
       <Gallary />
       <Contact />
       <Footer />
