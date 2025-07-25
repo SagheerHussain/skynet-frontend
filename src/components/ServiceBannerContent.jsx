@@ -16,7 +16,7 @@ const ServiceBannerContent = ({ highlightTitle, title, description }) => {
                 </span>{" "} <br />
                 {title}
               </h1>
-              <p className="text-txt_light_color font-light max-w-4xl mt-5">
+              <p className="text-white text-lg font-light max-w-4xl mt-5">
                 {description}
               </p>
             </div>

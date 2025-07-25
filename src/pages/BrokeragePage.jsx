@@ -149,14 +149,14 @@ const BrokeragePage = () => {
   return (
     <>
       <ServiceBanner banner={banner} />
-      <main id="brokerage">
-        <ServiceBannerContent
+      <main id="brokerage" className="relative">
+        {/* <ServiceBannerContent
           highlightTitle={"Elevating Aircraft Sales"}
           title=" With Precision & Confidence"
           description="At Mason Amelia, our brokerage process is more than just listing — it's a strategic approach to selling aircraft efficiently and at maximum value.
                       From market-aligned pricing to global outreach and end-to-end management, we ensure your aircraft stands out to the right buyers.
                       With decades of aviation experience and proprietary market intelligence, our team transforms every listing into a seamless success."
-        />
+        /> */}
         <BrokerageRappleResearch
           data={data}
           highlightedTitle={"Pre Brokerage"}
@@ -181,9 +181,11 @@ const BrokeragePage = () => {
           <Timeline data={timeline} isHeading={true} />
         </section>
 
-        <div className="container">
-          <CTABanner />
-        </div>
+        <section className="bg-[#111218] relative z-[10] py-10">
+          <div className="container">
+            <CTABanner />
+          </div>
+        </section>
       </main>
       <Footer />
       <ScrollToTop />
