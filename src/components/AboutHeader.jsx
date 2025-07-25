@@ -24,7 +24,7 @@ const AboutHeader = () => {
                 Empowering a New Era of Aviation Excellence, Built on Trust and
                 Family
               </h1>
-              <Button buttonLabel="Meet The Team" />
+              <Button buttonLabel="Meet The Team" onClick="/team" />
             </div>
           </div>
         </div>

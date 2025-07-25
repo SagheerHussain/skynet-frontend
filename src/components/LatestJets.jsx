@@ -59,7 +59,7 @@ const LatestJets = () => {
             </h4>
             <p className="text-gray-600 text-lg mt-2 mb-6">July 3, 2025</p>
 
-            <Button buttonLabel="Read More" />
+            <Button buttonLabel="Read More" onClick="/showroom" />
           </div>
 
           {/* RIGHT SMALL ARTICLES */}

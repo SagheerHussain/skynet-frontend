@@ -85,7 +85,7 @@ const GlowingCardSection = () => {
                   <p className="text-gray-300 text-sm mb-4">
                     {service.description}
                   </p>
-                  <Button buttonLabel="Read More" />
+                  <Button buttonLabel="Read More" onClick="/about" />
                 </div>
               </div>
             </div>

@@ -149,7 +149,7 @@ const SliderWrapper = () => {
                         {card.description}
                       </p>
                       <div className="z-[9999]">
-                        <Button buttonLabel="Let Us Help" />
+                        <Button buttonLabel="Let Us Help" onClick={"/contact"} />
                       </div>
                     </div>
                   </div>

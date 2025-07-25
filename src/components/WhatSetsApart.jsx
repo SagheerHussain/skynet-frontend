@@ -106,7 +106,7 @@ export default function WhatSetsUsApart() {
                 interests, and makes your transition to a new aircraft seamless
                 and stress-free.
               </p>
-              <Button buttonLabel="Contact Us" />
+              <Button buttonLabel="Contact Us" onClick="/contact" />
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">

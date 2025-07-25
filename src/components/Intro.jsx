@@ -34,7 +34,7 @@ const Intro = () => {
             </h2>
 
             <div className="mt-12">
-              <Button buttonLabel="Meet the Team" />
+              <Button buttonLabel="Meet the Team" onClick="/team" />
             </div>
           </div>
         </div>

@@ -49,13 +49,16 @@ const Footer = () => {
                   <Link to={"/showroom"}>Showroom</Link>
                 </li>
                 <li className="hover:text-tertiary_color text-[1.1rem] cursor-pointer transition">
-                  <Link to={"/"}>Services</Link>
+                  <Link to={"/acquisition"}>Acquisitions</Link>
                 </li>
                 <li className="hover:text-tertiary_color text-[1.1rem] cursor-pointer transition">
-                  <Link to={"/"}>About</Link>
+                  <Link to={"/brokerage"}>Brokerage</Link>
                 </li>
                 <li className="hover:text-tertiary_color text-[1.1rem] cursor-pointer transition">
-                  <Link to={"/"}>Contact</Link>
+                  <Link to={"/about"}>About</Link>
+                </li>
+                <li className="hover:text-tertiary_color text-[1.1rem] cursor-pointer transition">
+                  <Link to={"/contact"}>Contact</Link>
                 </li>
               </ul>
             </div>
@@ -82,22 +85,30 @@ const Footer = () => {
                 className=""
               />
               <div className="social-icons flex items-center gap-4 mt-10">
-                <FaLinkedinIn
-                  size={24}
-                  className="text-white hover:text-blue-400 cursor-pointer transition"
-                />
-                <FaFacebookF
-                  size={24}
-                  className="text-white hover:text-blue-400 cursor-pointer transition"
-                />
-                <FaInstagram
+                <a href="https://www.linkedin.com/company/masonamelia/" target="_blank">
+                  <FaLinkedinIn
+                    size={24}
+                    className="text-white hover:text-blue-400 cursor-pointer transition"
+                  />
+                </a>
+                <a href="https://www.facebook.com/masonamelia.aviation" target="_blank">
+                  <FaFacebookF
+                    size={24}
+                    className="text-white hover:text-blue-400 cursor-pointer transition"
+                  />
+                </a>
+                <a href="https://www.instagram.com/masonamelia.aircraftsales/" target="_blank">
+                  <FaInstagram
                   size={24}
                   className="text-white hover:text-pink-400 cursor-pointer transition"
                 />
+                </a>
+                <a href="https://www.youtube.com/c/lookingforhigher" target="_blank">
                 <FaYoutube
                   size={24}
                   className="text-white hover:text-red-500 cursor-pointer transition"
                 />
+                </a>
               </div>
             </div>
           </div>

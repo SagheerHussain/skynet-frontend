@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import Button from "./Button";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
 const team = [
@@ -16,6 +16,10 @@ const team = [
     title: "President | Sales & Acquisitions ",
     image:
       "https://static.wixstatic.com/media/04f737_2ec51bc4e12347b6adec7750f2ac3e88~mv2.jpg/v1/crop/x_157,y_249,w_990,h_1003/fill/w_315,h_319,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/JA_edited.jpg",
+    facebook: "https://www.facebook.com/masonamelia.aviation",
+    twitter: "https://twitter.com/masonamelia",
+    instagram: "https://www.instagram.com/lookingforhigher/",
+    linkedin: "https://www.linkedin.com/in/jesse-j-adams/",
   },
   {
     name: "Melissa Patterson",
@@ -24,6 +28,10 @@ const team = [
     title: "Operations Manager",
     image:
       "https://static.wixstatic.com/media/04f737_2c4aaa0cafea4b48b8e2002eb3bce55e~mv2.jpg/v1/fill/w_315,h_305,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6355_edited_edited.jpg",
+    facebook: "https://www.facebook.com/masonamelia.aviation",
+    twitter: "https://twitter.com/masonamelia",
+    instagram: "https://www.instagram.com/masonamelia.aircraftsales/",
+    linkedin: "https://www.linkedin.com/in/melissa-patterson-7aa10235/",
   },
   {
     name: "Donny Gabriel",
@@ -32,6 +40,10 @@ const team = [
     title: "Sales & Acquisitions | Flight Ops",
     image:
       "https://static.wixstatic.com/media/04f737_6f72f58bab424ea4aefd8c173fe906e6~mv2.jpg/v1/crop/x_1779,y_102,w_3570,h_3845/fill/w_315,h_339,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/0042_7992_RT.jpg",
+    facebook: "https://www.facebook.com/profile.php?id=61556325614410",
+    twitter: "https://twitter.com/masonamelia",
+    instagram: "https://www.instagram.com/masonamelia.aircraftsales/",
+    linkedin: "https://www.linkedin.com/in/donnygabriel1/",
   },
   {
     name: "Peyton Lindbloom",
@@ -40,6 +52,10 @@ const team = [
     title: "Sales & Acquisitions | Turbine Aircraft",
     image:
       "https://static.wixstatic.com/media/04f737_ac4365d295d54e5883ac79cd35289c15~mv2.jpg/v1/crop/x_0,y_70,w_2624,h_3140/fill/w_315,h_377,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-1.jpg",
+    facebook: "https://www.facebook.com/masonamelia.aviation",
+    twitter: "https://twitter.com/masonamelia",
+    instagram: "https://www.instagram.com/peytonlindbloom/",
+    linkedin: "https://www.linkedin.com/in/peyton-lindbloom-893333305/",
   },
   {
     name: "Carlos Lopez",
@@ -48,6 +64,10 @@ const team = [
     title: "Videographer | Media Strategist",
     image:
       "https://static.wixstatic.com/media/04f737_e557ad92bfa74140ae49b2f7748812cf~mv2.jpg/v1/crop/x_0,y_3,w_1837,h_2304/fill/w_315,h_395,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5396_edited.jpg",
+    facebook: "https://www.facebook.com/masonamelia.aviation",
+    twitter: "https://twitter.com/masonamelia",
+    instagram: "https://www.instagram.com/masonamelia.aircraftsales/",
+    linkedin: "https://www.linkedin.com/in/carlos-lopez/",
   },
   {
     name: "Tom Donaldson",
@@ -56,6 +76,10 @@ const team = [
     title: "Sales & Acquisitions | Flight Ops",
     image:
       "https://static.wixstatic.com/media/04f737_43879c33c26c412691ae5bb35c893616~mv2.jpg/v1/crop/x_191,y_88,w_2159,h_2076/fill/w_315,h_303,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Tom_008_JPG.jpg",
+    facebook: "https://www.facebook.com/masonamelia.aviation",
+    twitter: "https://twitter.com/masonamelia",
+    instagram: "https://www.instagram.com/cirrusexpert/",
+    linkedin: "https://www.linkedin.com/in/tom-donaldson/",
   },
   {
     name: "Melissa Adams",
@@ -64,6 +88,10 @@ const team = [
     title: "Data Analyst | Operations Assistant",
     image:
       "https://static.wixstatic.com/media/04f737_049a22dc06c746b5b1ecdea75206a585~mv2.jpg/v1/crop/x_33,y_0,w_567,h_712/fill/w_315,h_395,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Melissa.jpg",
+    facebook: "https://www.facebook.com/masonamelia.aviation",
+    twitter: "https://www.youtube.com/c/lookingforhigher",
+    instagram: "https://www.instagram.com/missyjolove/",
+    linkedin: "https://www.linkedin.com/in/melissa-martinez-adams/",
   },
   {
     name: "Nick Buccellato",
@@ -72,6 +100,10 @@ const team = [
     title: "Sales & Acquisitions | Flight Ops",
     image:
       "https://static.wixstatic.com/media/04f737_5e91991100554352809c6307f5e17ca0~mv2.jpg/v1/crop/x_532,y_680,w_1611,h_2020/fill/w_315,h_395,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_4432_JPG.jpg",
+    facebook: "https://www.facebook.com/profile.php?id=100010304431418&sk=photos_by",
+    twitter: "https://twitter.com/masonamelia",
+    instagram: "https://www.instagram.com/masonamelia.aircraftsales/",
+    linkedin: "https://www.linkedin.com/in/nicholas-buccellato/",
   },
 ];
 
@@ -114,8 +146,8 @@ const TeamSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {team.map((member, idx) => (
-            <Link to={`/team/${idx}`}>
-              <div className="relative team-card rounded-xl overflow-hidden group">
+            <div className="relative team-card rounded-xl overflow-hidden group">
+                <Link to={`/team/${idx}`}>
                 <div className="relative w-full">
                   <img
                     src={member.image}
@@ -124,6 +156,7 @@ const TeamSection = () => {
                   />
                   <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-[0]"></div>
                 </div>
+                </Link>
                 {/* <div className="absolute top-[-20%] group-hover:top-[20%] transition-all duration-500 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <Button buttonLabel="View" onClick={`/team/2`} />
               </div> */}
@@ -145,17 +178,25 @@ const TeamSection = () => {
                           {member.title}
                         </p>
                         <div className="social-icons flex items-center gap-4 justify-center">
-                          <FaFacebook className="hover:text-[#0866ff] text-xl transition cursor-pointer" />
-                          <FaTwitter className="hover:text-[#00b7ff] text-xl transition cursor-pointer" />
-                          <FaInstagram className="hover:text-[#c3407b] text-xl transition cursor-pointer" />
-                          <FaLinkedin className="hover:text-[#0a66c2] text-xl transition cursor-pointer" />
+                          <a href={member.facebook} target="_blank">
+                            <FaFacebook className="hover:text-[#0866ff] text-xl transition cursor-pointer" />
+                          </a>
+                          <a href={member.twitter} target="_blank">
+                            <FaYoutube className="hover:text-[#00b7ff] text-xl transition cursor-pointer" />
+                          </a>
+                          <a href={member.instagram} target="_blank">
+                            <FaInstagram className="hover:text-[#c3407b] text-xl transition cursor-pointer" />
+                          </a>
+                          <a href={member.linkedin} target="_blank">
+                            <FaLinkedin className="hover:text-[#0a66c2] text-xl transition cursor-pointer" />
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </Link>
+           
           ))}
         </div>
       </div>

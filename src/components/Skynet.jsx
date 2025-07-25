@@ -16,7 +16,7 @@ const Skynet = () => {
             Reimagined with SkyNet
           </span>
         </h1>
-        <Button buttonLabel="Get Started" />
+        <Button buttonLabel="Get Started" onClick="/contact" />
       </div>
     </section>
   );
