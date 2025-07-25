@@ -3,6 +3,7 @@ import Aurora from "./ui/Aurora";
 import Button from "./Button";
 import { FaPlaneDeparture, FaShieldAlt, FaHandshake } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 
 // Import Swiper styles
 import "swiper/css";
@@ -106,22 +107,32 @@ const SliderWrapper = () => {
 
           <div className="relative inset-0 flex flex-col items-center justify-center text-white z-[20] h-full xl:h-[70vh]">
             <div className="flex flex-col justify-center items-center">
-              <h1 className="text-4xl lg:text-6xl  font-bold text-white text-center">
+              <motion.h1
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-4xl lg:text-6xl  font-bold text-white text-center"
+              >
                 Precision Aviation{" "}
                 <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
                   Global Impact.
                 </span>
-              </h1>
-              <p className="text-lg lg:text-lg max-w-6xl text-white font-light mx-auto text-center pt-4 pb-8">
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-lg lg:text-lg max-w-6xl text-white font-light mx-auto text-center pt-4 pb-8"
+              >
                 At Mason Amelia, we don’t just broker aircraft — we deliver
                 confidence, clarity, and world-class service every step of the
                 way.
-              </p>
+              </motion.p>
             </div>
 
             <div className="grid grid-cols-3 gap-4">
               {cards.map((card, index) => (
-                <div
+                <motion.div
                   key={index}
                   className="glass-container glass-container--rounded px-4 py-3"
                   style={{
@@ -129,6 +140,9 @@ const SliderWrapper = () => {
                     boxShadow:
                       "0 6px 6px rgba(0, 0, 0, 0.439), 0 0 20px rgba(0, 0, 0, 0.1)",
                   }}
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ type: "spring", stiffness: 30, duration: 0.5, delay: 0.3 }}
                 >
                   <div
                     className="glass-filter"
@@ -149,11 +163,14 @@ const SliderWrapper = () => {
                         {card.description}
                       </p>
                       <div className="z-[9999]">
-                        <Button buttonLabel="Let Us Help" onClick={"/contact"} />
+                        <Button
+                          buttonLabel="Let Us Help"
+                          onClick={"/contact"}
+                        />
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

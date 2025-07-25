@@ -20,6 +20,7 @@ import GallaryThree from "/images/gallary/image 3.png";
 import GallaryFour from "/images/gallary/image 4.png";
 import GallaryFive from "/images/gallary/image 5.png";
 import GallarySix from "/images/gallary/image 6.png";
+import { motion } from "framer-motion";
 
 Modal.setAppElement("#root");
 
@@ -87,20 +88,30 @@ const Gallary = () => {
       <section id="gallary" className="w-full py-20">
         <div className="container px-5">
           <div className="text-center text-white">
-            <h1 className="text-6xl font-bold">
+            <motion.h1
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-6xl font-bold"
+            >
               A Bespoke{" "}
               <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
                 Approach to Brokerage
               </span>
-            </h1>
-            <p className="text-lg max-w-5xl mx-auto mt-4">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-lg max-w-5xl mx-auto mt-4"
+            >
               Explore our curated video library showcasing real-world
               performance, cockpit experiences, and expert reviews of the
               aircraft we represent. Whether you're looking to buy, sell, or
               simply understand the true value of each model, our videos offer
               unmatched transparency and insight into the world of
               high-performance aviation.
-            </p>
+            </motion.p>
           </div>
 
           <Swiper

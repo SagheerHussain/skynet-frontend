@@ -1,6 +1,7 @@
 import React from "react";
 import banner from "/images/intro/banner.png";
 import Button from "./Button";
+import { motion } from "framer-motion";
 
 const Intro = () => {
   return (
@@ -20,10 +21,18 @@ const Intro = () => {
         {/* Content */}
         <div className="container relative z-10 max-w-6xl w-full flex flex-col md:flex-row items-center h-full px-5">
           <div className="md:w-1/2 space-y-6">
-            <h4 className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold">
+            <motion.h4
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold"
+            >
               Who We Are
-            </h4>
-            <h2
+            </motion.h4>
+            <motion.h2
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               className="lg:text-[3rem] xl:text-[3.5rem] 2xl:text-7xl font-bold text-white lg:max-w-[25rem] xl:max-w-[30rem] 2xl:max-w-xl"
               style={{ lineHeight: "1.1" }}
             >
@@ -31,11 +40,16 @@ const Intro = () => {
               <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
                 global leader in aviation
               </span>
-            </h2>
+            </motion.h2>
 
-            <div className="mt-12">
+            <motion.div
+              className="mt-12"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
               <Button buttonLabel="Meet the Team" onClick="/team" />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

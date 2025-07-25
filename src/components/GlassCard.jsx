@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Button from "./Button";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { motion } from "framer-motion";
 
 export default function GlassCard({ icon, title, description, buttonLabel }) {
   const media = useMediaQuery("(max-width: 500px)");
@@ -31,23 +32,36 @@ export default function GlassCard({ icon, title, description, buttonLabel }) {
           >
             <div className="w-full text-white flex flex-col items-center">
               {/* Animated Heading */}
-              <h2
+              <motion.h2
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 100, duration: 0.5 }}
                 className={`${
                   media ? "text-[1.5rem]" : "text-[2rem]"
                 } md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] 2xl:text-[4.7rem] font-extrabold capitalize text-center leading-[1.2]`}
               >
                 Turbulence Free, Transactions.
-              </h2>
+              </motion.h2>
               {/* Description */}
-              <p className="text-xs text-center sm:text-sm md:text-base lg:text-lg py-3 text-white/70 opacity-100">
+              <motion.p
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-xs text-center sm:text-sm md:text-base lg:text-lg py-3 text-white/70 opacity-100"
+              >
                 Industry-leading marketing, data, and grit to help you buy or
                 sell.
-              </p>
+              </motion.p>
 
               {/* Button */}
-              <div className="text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-center"
+              >
                 <Button buttonLabel="Visit Showroom" onClick="/showroom" />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

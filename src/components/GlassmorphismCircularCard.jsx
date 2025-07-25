@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function GlassmorphismCircularCard({
   title,
@@ -9,7 +10,12 @@ export default function GlassmorphismCircularCard({
   link,
 }) {
   return (
-    <div className={`${customClasses}`}>
+    <motion.div
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 1 }}
+      className={`${customClasses}`}
+    >
       <div
         className="
       relative
@@ -36,6 +42,6 @@ export default function GlassmorphismCircularCard({
           </p>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
