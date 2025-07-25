@@ -52,7 +52,7 @@ const SkynetAdvantage = () => {
                   clarity in a market often filled with ambiguity. It’s not just
                   data—it’s guided intelligence.
                 </p>
-                <div className="absolute group-hover:translate-y-[-50%] top-[50%] left-0 transition-all duration-200 rotate-[45deg] w-[800px] h-[800px] bg-[#1777cb] opacity-[.05] z-[-1]"></div>
+                <div className="absolute xl:group-hover:translate-y-[-55%] 2xl:group-hover:translate-y-[-50%] top-[50%] left-0 transition-all duration-200 rotate-[45deg] w-[800px] xl:h-[900px] 2xl:h-[800px] bg-[#1777cb] opacity-[.05] z-[-1]"></div>
               </div>
 
               {/* Card 3 */}
