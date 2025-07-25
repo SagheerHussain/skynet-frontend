@@ -165,7 +165,13 @@ const BrokeragePage = () => {
             "Before your aircraft hits the market, our expert team designs a smart, strategic approach to attract premium buyers and maximize value."
           }
         />
-        <ServiceHighlights data={brokerageData} />
+        <ServiceHighlights
+          topTitle={"Strategic"}
+          highlightedTitle={"Aircraft Brokerage"}
+          bottomTitle={"for Confident Closures"}
+          description="Every listing tells a story. Discover how Mason Amelia’s trusted brokerage model delivers maximum value, optimal timing, and seamless execution—from initial listing to final handshake."
+          data={brokerageData}
+        />
         <section
           id="timeline"
           style={{

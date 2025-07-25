@@ -1,10 +1,16 @@
 import React from "react";
 import plane from "/images/aeroplane.png";
 
-const ServiceHighlights = ({data}) => {
+const ServiceHighlights = ({
+  topTitle = "Streamlined",
+  highlightedTitle = "Aircraft Acquisition",
+  bottomTitle = "for Confident Ownership",
+  description = "Every acquisition tells a story. Discover how Mason Amelia’s proven strategies deliver precise, profitable outcomes—from first contact to final delivery.",
+  data,
+}) => {
   return (
     <>
-      <section className=" py-20 bg-[#fff] relative z-[10] parallax-bg" >
+      <section className=" py-20 bg-[#fff] relative z-[10] parallax-bg">
         <div className="container px-5">
           {/* Section Title */}
           <div className="w-full mb-20 px-4 flex flex-col md:flex-row justify-between items-center z-[4]">
@@ -13,16 +19,14 @@ const ServiceHighlights = ({data}) => {
                 className="text-4xl xl:text-6xl font-bold text-[#222] mb-4 text-center max-w-4xl"
                 style={{ lineHeight: "1.1" }}
               >
-                Streamlined{" "}
+                {topTitle}{" "}
                 <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
-                  Aircraft Acquisition
+                  {highlightedTitle}
                 </span>{" "}
-                for Confident Ownership
+                {bottomTitle}
               </h2>
               <p className="text-[#222] text-2xl font-light ms-4 text-center max-w-5xl">
-                Every acquisition tells a story. Discover how Mason Amelia’s
-                proven strategies deliver precise, profitable outcomes—from
-                first contact to final delivery.
+                {description}
               </p>
             </div>
           </div>
@@ -62,9 +66,7 @@ const ServiceHighlights = ({data}) => {
                   <h3 className="text-[1.6rem] text-[#222] mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-[#333] text-lg">
-                    {item.description}
-                  </p>
+                  <p className="text-[#333] text-lg">{item.description}</p>
                 </div>
               ))}
             </div>
