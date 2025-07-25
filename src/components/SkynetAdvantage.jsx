@@ -54,7 +54,7 @@ const SkynetAdvantage = () => {
 
               {/* Card 2 (Center) */}
               <motion.div
-                className="bg-[#13151c] group transition-all duration-200 relative z-[0] overflow-hidden rounded-3xl w-[95%] md:w-1/3 px-6 py-10 text-center flex flex-col items-center transform scale-[1.15] mt-[2rem] z-10"
+                className="bg-[#13151c] group transition-all duration-200 relative z-[0] overflow-hidden rounded-3xl w-[95%] md:w-1/3 px-6 py-10 text-center flex flex-col items-center transform scale-[1.15] mt-[2rem]"
               >
                 <FaLightbulb className="text-6xl text-white mb-4 bg-[#1777cb] p-3 rounded-full" />
                 <h3 className="font-semibold text-2xl mb-2">
