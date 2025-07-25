@@ -66,7 +66,7 @@ const Reviews = () => {
       <section id="testimonials" className="py-20 my-20">
         <div className="container mb-14 z-[20]">
           <div className="text-center mb-8">
-            <h5 className="text-6xl text-[#fff] uppercase font-bold max-w-3xl mx-auto">
+            <h5 className="text-6xl text-[#fff] font-bold max-w-3xl mx-auto">
               Clients Across World
             </h5>
             <p className="text-[#fff] text-lg mt-3 mx-auto max-w-4xl">
