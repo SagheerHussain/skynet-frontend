@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#15161c] py-10 px-4">
+    <footer className="bg-[#15161c] py-10 relative px-4">
       <div className="container px-5">
         <div className="flex md:flex-row flex-col justify-between gap-6">
           {/* Logo Section */}

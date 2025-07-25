@@ -29,7 +29,9 @@ const SkynetPage = () => {
       </section>
       <SkynetAdvantage />
       <SkynetTimeline />
-      <CTABanner />
+      <div className="container px-5">
+        <CTABanner />
+      </div>
       <Footer />
     </>
   );

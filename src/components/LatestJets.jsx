@@ -43,8 +43,8 @@ const LatestJets = () => {
           {/* LEFT BIG ARTICLE */}
           <div className="flex flex-col">
             <div className="relative w-full flex items-center justify-center mb-8">
-              <div className="w-[28rem] h-[28rem] bg-[#d2e9fd56] rounded-full absolute -left-10 z-0"></div>
-              <div className="w-[28rem] h-[28rem] rounded-full overflow-hidden relative z-10 border-8 border-[#d0e5f895]">
+              <div className="w-[28rem] h-[28rem] bg-[#bee0fec1] rounded-full absolute -left-10 z-0"></div>
+              <div className="w-[28rem] h-[28rem] rounded-full overflow-hidden relative z-10 border-8 border-[#fff]">
                 <img
                   src="https://www.jetaviva.com/wp-content/uploads/2025/07/Jim-Lewis-Blog-Hero-2048x1040.jpg"
                   alt="Hero Jet"

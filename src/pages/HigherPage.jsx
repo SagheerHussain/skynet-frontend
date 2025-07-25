@@ -2,9 +2,11 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Higher from "../components/Higher";
-import bgPlane from "/images/acquisition/banner.avif"; // Replace with your path
+import bgPlane from "/images/higher/banner.jpg"; // Replace with your path
 import Gallary from "../components/Gallary";
 import ScrollToTop from "../components/ScrollToTop";
+import Vision from "../components/Vision";
+import CTABanner from "../components/CTABanner";
 
 const HigherPage = () => {
   return (
@@ -17,9 +19,13 @@ const HigherPage = () => {
         <div className="container px-5">
           <Navbar />
           <Higher />
-          <Gallary />
         </div>
       </section>
+      <Gallary />
+      <Vision />
+      <div className="container px-5">
+        <CTABanner />
+      </div>
       <Footer />
       <ScrollToTop />
     </>

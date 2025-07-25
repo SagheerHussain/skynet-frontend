@@ -93,7 +93,7 @@ const Gallary = () => {
                 Approach to Brokerage
               </span>
             </h1>
-            <p className="text-base max-w-6xl mx-auto mt-4">
+            <p className="text-lg max-w-5xl mx-auto mt-4">
               Explore our curated video library showcasing real-world
               performance, cockpit experiences, and expert reviews of the
               aircraft we represent. Whether you're looking to buy, sell, or

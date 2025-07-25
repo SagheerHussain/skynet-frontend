@@ -135,7 +135,7 @@ const MeetTheTeam = () => {
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="absolute left-0 w-[470px] h-[550px] bg-[#e7f4ff6d] rounded-3xl z-[-1]"
+              className="absolute left-0 w-[470px] h-[550px] bg-[#bee0fec1] rounded-3xl z-[-1]"
             ></motion.div>
           </div>
         </div>
