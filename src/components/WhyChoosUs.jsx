@@ -60,29 +60,28 @@ function WhyChoosUs() {
   return (
     <section id="why-choosen" className="py-20">
       <div className="container">
-        <div className="w-full mb-20 px-4 flex flex-col md:flex-row justify-between items-center">
+        <div className="w-full mb-20 px-4 flex flex-col justify-center text-center items-center">
           {/* Left Side: Headline */}
-          <div className="md:w-1/2">
-            <h4 className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold mb-6">
-              Why Choose Us
-            </h4>
-            <h2 className="text-4xl xl:text-5xl font-bold text-white mb-4">
-              Aviation is more than our business{" "}
-              <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
-                it’s our passion and our promise.
-              </span>
-            </h2>
-          </div>
+
+          <h4 className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold mb-6">
+            Why Choose Us
+          </h4>
+          <h2 className="text-4xl xl:text-5xl font-bold text-white mb-4 max-w-3xl">
+            Aviation Expertise Fueled by{" "}
+            <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
+              True Commitment
+            </span>
+          </h2>
+
           {/* Right Side: Paragraph + Button */}
-          <div className="md:w-1/2 flex flex-col justify-center items-start mt-8 md:mt-0 md:pl-12">
-            <p className="text-lg text-neutral-300 mb-8 max-w-xl">
-              At Mason Amelia, you’ll find a brokerage built on trust,
-              expertise, and genuine personal commitment. Our boutique approach
-              means you’re never just another transaction. We listen, understand
-              your mission, and tailor every step to your needs—delivering
-              clarity, confidence, and results.
-            </p>
-          </div>
+
+          <p className="text-lg text-neutral-300 mb-8 max-w-4xl">
+            At Mason Amelia, you’ll find a brokerage built on trust, expertise,
+            and genuine personal commitment. Our boutique approach means you’re
+            never just another transaction. We listen, understand your mission,
+            and tailor every step to your needs—delivering clarity, confidence,
+            and results.
+          </p>
         </div>
 
         <div className="h-[1100px] sm:h-[900px] md:h-[550px] [perspective:1000px] relative flex flex-col mx-auto w-full items-start justify-start">

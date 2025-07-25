@@ -6,6 +6,8 @@ import Tabs from "./Tabs";
 import Pagination from "./Pagination";
 import { GoFilter } from "react-icons/go";
 import FilterSideBar from "./FilterSideBar";
+import planeOne from "/images/planes/plane-one.png";
+import planeTwo from "/images/planes/plane-two.png";
 
 const airplanes = [
   {
@@ -13,8 +15,7 @@ const airplanes = [
     title: "Airplane 1",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image:
-      "https://static.wixstatic.com/media/04f737_f598ad67899742db9937d4c158e83fde~mv2.jpg/v1/fill/w_461,h_326,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
+    image: "https://static.wixstatic.com/media/04f737_f598ad67899742db9937d4c158e83fde~mv2.jpg/v1/fill/w_461,h_326,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
     price: 100000,
     airframe: "2500",
     engine: "2665",
@@ -26,8 +27,7 @@ const airplanes = [
     title: "Airplane 1",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image:
-      "https://static.wixstatic.com/media/04f737_05ff25e3a18b4d6c9b11e1c5acd59c4a~mv2.jpg/v1/fill/w_461,h_325,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
+    image: "https://static.wixstatic.com/media/04f737_05ff25e3a18b4d6c9b11e1c5acd59c4a~mv2.jpg/v1/fill/w_461,h_325,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
     price: 100000,
     airframe: "2500",
     engine: "2665",
@@ -223,7 +223,11 @@ const Listing = () => {
         </div>
 
         <div className="filter mb-4 lg:hidden flex justify-end">
-          <GoFilter onClick={() => setIsOpen(!isOpen)} className="text-white cursor-pointer" size={36} />
+          <GoFilter
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-white cursor-pointer"
+            size={36}
+          />
         </div>
 
         <div className="flex">
@@ -242,17 +246,17 @@ const Listing = () => {
           </div>
 
           <div className="block">
-          <FilterSideBar
-  selectedFilters={selectedFilters}
-  setSelectedFilters={setSelectedFilters}
-  priceRange={priceRange}
-  setPriceRange={setPriceRange}
-  minPrice={minPrice}
-  maxPrice={maxPrice}
-  categories={categories}
-  isOpen={isOpen}
-  setIsOpen={setIsOpen}
-/>
+            <FilterSideBar
+              selectedFilters={selectedFilters}
+              setSelectedFilters={setSelectedFilters}
+              priceRange={priceRange}
+              setPriceRange={setPriceRange}
+              minPrice={minPrice}
+              maxPrice={maxPrice}
+              categories={categories}
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
+            />
           </div>
 
           <div className="w-full lg:w-[75%] lg:ms-[5%]">

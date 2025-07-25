@@ -15,14 +15,14 @@ const AboutHeader = () => {
               className="glass-content h-full flex flex-col"
               style={{ padding: "3rem 1rem" }}
             >
-              <div className="mb-4 w-full">
-                <h3 className="text-white/80 text-xl text-center">
-                  Who We Are
-                </h3>
-              </div>
-              <h1 className="text-white text-[1.7rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.7rem] font-bold leading-tight drop-shadow-xl mb-3 text-center">
-                Empowering a New Era of Aviation Excellence, Built on Trust and
-                Family
+              <h1
+                className="text-white text-[1.7rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.7rem] xl:text-6xl font-bold leading-tight drop-shadow-xl mb-3 text-center"
+                style={{ lineHeight: "1.2" }}
+              >
+                Redefining Aviation with{" "}
+                <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
+                  Trust and Legacy
+                </span>
               </h1>
               <Button buttonLabel="Meet The Team" onClick="/team" />
             </div>

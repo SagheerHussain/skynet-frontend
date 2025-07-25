@@ -53,7 +53,7 @@ const Card = ({ detail, index }) => {
         <img
           src={detail?.image || ""}
           alt=""
-          className="w-full h-[225px] object-cover rounded-2xl"
+          className="w-full min-h-[225px] object-cover rounded-2xl"
           loading="lazy"
         />
       </div>

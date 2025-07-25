@@ -83,31 +83,32 @@ export default function WhatSetsUsApart() {
     <section className="w-full flex justify-center items-center py-20">
       <div className="container px-5">
         <div className="rounded-2xl py-8 w-full">
-          <div className="w-full mb-20 px-4 flex flex-col md:flex-row justify-between items-center">
+          <div className="w-full mb-20 px-4 flex flex-col justify-center text-center items-center">
             {/* Left Side: Headline */}
-            <div className="md:w-1/2">
-              <h4 className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold mb-6">
-                Expert Guidance
-              </h4>
-              <h2 className="text-4xl xl:text-5xl font-bold text-white mb-4">
-                Let Mason Amelia guide your next aircraft journey{" "}
-                <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
-                  with confidence and clarity.
-                </span>
-              </h2>
-            </div>
+
+            <h4 className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold mb-6">
+              Expert Guidance
+            </h4>
+            <h2
+              className="text-4xl xl:text-6xl font-bold text-white mb-4 max-w-3xl"
+              style={{ lineHeight: "1.2" }}
+            >
+              Mason Amelia Leads with{" "}
+              <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
+                Confidence and Clarity.
+              </span>
+            </h2>
+
             {/* Right Side: Paragraph + Button */}
-            <div className="md:w-1/2 flex flex-col justify-center items-start mt-8 md:mt-0 md:pl-12">
-              <p className="text-lg text-neutral-300 mb-8 max-w-xl">
-                As aviation specialists driven by trust and experience, we
-                deliver truly personalized service for every client and every
-                mission. From first inquiry to final handshake, our expert team
-                listens to your needs, tailors solutions, protects your
-                interests, and makes your transition to a new aircraft seamless
-                and stress-free.
-              </p>
-              <Button buttonLabel="Contact Us" onClick="/contact" />
-            </div>
+
+            <p className="text-lg text-neutral-300 mb-8 max-w-4xl">
+              As aviation specialists driven by trust and experience, we deliver
+              truly personalized service for every client and every mission.
+              From first inquiry to final handshake, our expert team listens to
+              your needs, tailors solutions, protects your interests, and makes
+              your transition to a new aircraft seamless and stress-free.
+            </p>
+            <Button buttonLabel="Contact Us" onClick="/contact" />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
             {features.map((card, idx) => (

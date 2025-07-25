@@ -36,7 +36,7 @@ const SearchBox = () => {
               {/* Input */}
               <input
                 type="text"
-                placeholder="search anything"
+                placeholder="Search Jets"
                 className="flex-grow bg-transparent outline-none text-white placeholder-white/70"
               />
 

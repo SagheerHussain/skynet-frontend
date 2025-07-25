@@ -65,17 +65,15 @@ const Reviews = () => {
     <>
       <section id="testimonials" className="py-20 my-20">
         <div className="container mb-14 z-[20]">
-          <div className="max-w-7xl mx-auto">
-            <div className="top-brands-info text-center">
-              <h5 className="text-3xl text-[#fff] uppercase font-bold">
-                Clients Across World
-              </h5>
-              <p className="text-[#fff] text-sm mt-3 max-w-lg mx-auto">
-                Real voices. Real experiences. Hear how our clients turned
-                aviation dreams into reality with Mason Amelia. From first-time
-                buyers to seasoned pilots — their journeys speak for themselves.
-              </p>
-            </div>
+          <div className="text-center mb-8">
+            <h5 className="text-6xl text-[#fff] uppercase font-bold max-w-3xl mx-auto">
+              Clients Across World
+            </h5>
+            <p className="text-[#fff] text-lg mt-3 mx-auto max-w-4xl">
+              Real voices. Real experiences. Hear how our clients turned
+              aviation dreams into reality with Mason Amelia. From first-time
+              buyers to seasoned pilots — their journeys speak for themselves.
+            </p>
           </div>
         </div>
 

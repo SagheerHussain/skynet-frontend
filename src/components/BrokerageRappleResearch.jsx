@@ -23,7 +23,7 @@ const BrokerageRappleResearch = ({
         <div className="container px-5 flex">
           <div className="w-[50%] mb-20 px-4 flex flex-col items-center justify-center z-[4]">
             <h2
-              className="text-4xl xl:text-[5rem] font-bold text-white mb-4"
+              className="text-4xl xl:text-7xl font-bold text-white mb-4"
               style={{ lineHeight: "1.1" }}
             >
               <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">

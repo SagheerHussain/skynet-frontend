@@ -9,7 +9,7 @@ const ServiceBanner = ({ banner }) => {
   return (
     <>
       <section
-        className="w-screen h-[70vh] sticky top-0 "
+        className="w-screen h-[80vh] sticky top-0 "
         style={{
           backgroundImage: `url(${
             location.pathname === "/brokerage"
@@ -27,7 +27,7 @@ const ServiceBanner = ({ banner }) => {
         </div>
         <div className="z-[-1]">
           <div className="overlay bg-[#111218] opacity-80 absolute top-0 left-0 w-full h-full z-[0]" />
-          <div className="container px-5 z-[999]">
+          <div className="container px-5 py-10 z-[999]">
             <ServiceBannerContent
               highlightTitle={
                 location.pathname === "/brokerage"
