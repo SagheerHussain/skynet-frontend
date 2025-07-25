@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Intro = () => {
   return (
     <>
-      <section className="relative w-screen lg:h-[65vh] xl:h-[60vh] bg-black text-white flex items-center">
+      <section className="relative w-screen lg:h-[65vh] xl:h-[60vh] bg-black text-white flex items-center z-[-1]">
         {/* Background Image Right Side */}
         <div
           className="absolute inset-0 w-full h-full"
@@ -33,7 +33,7 @@ const Intro = () => {
               initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="lg:text-[3rem] xl:text-[3.5rem] 2xl:text-7xl font-bold text-white lg:max-w-[25rem] xl:max-w-[30rem] 2xl:max-w-xl"
+              className="lg:text-[3rem] xl:text-[3.5rem] 2xl:text-7xl font-bold text-white lg:max-w-[25rem] xl:max-w-[30rem] 2xl:max-w-xl "
               style={{ lineHeight: "1.1" }}
             >
               Charting a new flight as a{" "}

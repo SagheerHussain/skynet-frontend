@@ -2,7 +2,13 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
-export const Timeline = ({ isHeading = false, data, topTitle = "Our Journey: From", highlightedTitle = "Vision to Industry", bottomTitle = "Leadership" }) => {
+export const Timeline = ({
+  isHeading = false,
+  data,
+  topTitle = "Our Journey: From",
+  highlightedTitle = "Vision to Industry",
+  bottomTitle = "Leadership",
+}) => {
   const ref = useRef(null);
   const containerRef = useRef(null);
   const [height, setHeight] = useState(0);
@@ -25,19 +31,30 @@ export const Timeline = ({ isHeading = false, data, topTitle = "Our Journey: Fro
   return (
     <div className="w-full font-sans md:px-10 z-[20]" ref={containerRef}>
       <div className="container mx-auto px-4 md:px-8 lg:px-8 text-center z-[20]">
-        <h2 className="mx-auto max-w-3xl font-semibold text-xl sm:text-2xl xl:text-6xl mb-4 text-white" style={{ lineHeight: "1.1" }}>
+        <motion.h2
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-3xl font-semibold text-xl sm:text-2xl xl:text-6xl mb-4 text-white"
+          style={{ lineHeight: "1.1" }}
+        >
           {topTitle}{" "}
           <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
             {highlightedTitle}
           </span>{" "}
           {bottomTitle}{" "}
-        </h2>
-        <p className="text-white text-sm md:text-base max-w-2xl mx-auto">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-white text-xl max-w-4xl md:text-base mx-auto"
+        >
           Discover the pivotal moments that have defined Mason Amelia’s
           evolution—from our entrepreneurial roots to becoming one of America’s
           fastest-growing aircraft brokerages. Each milestone represents a step
           forward in our commitment to excellence, innovation, and client trust.
-        </p>
+        </motion.p>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
@@ -45,24 +62,38 @@ export const Timeline = ({ isHeading = false, data, topTitle = "Our Journey: Fro
             key={index}
             className="flex justify-start pt-10 md:pt-40 md:gap-10"
           >
-            <div className={`sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs  md:w-full ${isHeading ? "lg:max-w-xl" : "lg:max-w-sm"}`}>
+            <div
+              className={`sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs  md:w-full ${
+                isHeading ? "lg:max-w-xl" : "lg:max-w-sm"
+              }`}
+            >
               <div className="h-16 absolute left-0 w-16 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-10 w-10 flex items-center rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700">
                   {item.icon}
                 </div>
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-white">
+              <motion.h3
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-white"
+              >
                 {item.title}
-              </h3>
+              </motion.h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
+            <motion.div
+              initial={{ opacity: 0, x: 70 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative pl-20 pr-4 md:pl-4 w-full"
+            >
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-txt_light_color">
                 {item.title}
               </h3>
 
               {item.content}
-            </div>
+            </motion.div>
           </div>
         ))}
         <div

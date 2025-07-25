@@ -96,7 +96,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="container py-10 px-5 space-x-4">
+    <div className="container py-10 px-5 space-x-4 z-[0]">
       <div className="w-full">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white pt-10">Featured Jets</h1>
@@ -126,7 +126,7 @@ const Slider = () => {
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <div
-                className="w-full h-[650px] flex flex-col justify-center p-8 relative overflow-hidden rounded-[25px]"
+                className="w-full h-[650px] flex flex-col justify-center p-8 relative overflow-hidden rounded-[25px] z-[-4]"
                 style={{
                   backgroundImage: `url(${slide.image})`,
                   backgroundSize: "cover",

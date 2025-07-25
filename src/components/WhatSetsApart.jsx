@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import SpotlightCard from "./ui/SpotlightEffect";
 import Button from "./Button";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -86,10 +87,18 @@ export default function WhatSetsUsApart() {
           <div className="w-full mb-20 px-4 flex flex-col justify-center text-center items-center">
             {/* Left Side: Headline */}
 
-            <h4 className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold mb-6">
+            <motion.h4
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold mb-6"
+            >
               Expert Guidance
-            </h4>
-            <h2
+            </motion.h4>
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
               className="text-4xl xl:text-6xl font-bold text-white mb-4 max-w-3xl"
               style={{ lineHeight: "1.2" }}
             >
@@ -97,22 +106,38 @@ export default function WhatSetsUsApart() {
               <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
                 Confidence and Clarity.
               </span>
-            </h2>
+            </motion.h2>
 
             {/* Right Side: Paragraph + Button */}
 
-            <p className="text-lg text-neutral-300 mb-8 max-w-4xl">
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-lg text-neutral-300 mb-8 max-w-4xl"
+            >
               As aviation specialists driven by trust and experience, we deliver
               truly personalized service for every client and every mission.
               From first inquiry to final handshake, our expert team listens to
               your needs, tailors solutions, protects your interests, and makes
               your transition to a new aircraft seamless and stress-free.
-            </p>
-            <Button buttonLabel="Contact Us" onClick="/contact" />
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+            >
+              <Button buttonLabel="Contact Us" onClick="/contact" />
+            </motion.div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
             {features.map((card, idx) => (
-              <div className={`glass-container w-full`}>
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.5, delay: idx * 0.2 }}
+                className={`glass-container w-full`}
+              >
                 <div className="glass-filter"></div>
                 <div className="glass-overlay"></div>
                 <div className="glass-specular"></div>
@@ -135,7 +160,7 @@ export default function WhatSetsUsApart() {
                     </div>
                   </div>
                 </SpotlightCard>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

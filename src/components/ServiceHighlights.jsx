@@ -1,5 +1,6 @@
 import React from "react";
 import plane from "/images/aeroplane.png";
+import { motion } from "framer-motion";
 
 const ServiceHighlights = ({
   topTitle = "Streamlined",
@@ -15,7 +16,10 @@ const ServiceHighlights = ({
           {/* Section Title */}
           <div className="w-full mb-20 px-4 flex flex-col md:flex-row justify-between items-center z-[4]">
             <div className="flex flex-col items-center jsutify-center mx-auto">
-              <h2
+              <motion.h2
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
                 className="text-4xl xl:text-6xl font-bold text-[#222] mb-4 text-center max-w-4xl"
                 style={{ lineHeight: "1.1" }}
               >
@@ -24,10 +28,15 @@ const ServiceHighlights = ({
                   {highlightedTitle}
                 </span>{" "}
                 {bottomTitle}
-              </h2>
-              <p className="text-[#222] text-2xl font-light ms-4 text-center max-w-5xl">
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 70 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-[#222] text-2xl font-light ms-4 text-center max-w-5xl"
+              >
                 {description}
-              </p>
+              </motion.p>
             </div>
           </div>
 
@@ -35,7 +44,15 @@ const ServiceHighlights = ({
           <div className="flex items-center gap-10">
             {/* 3D Plane Image */}
             <div className=" w-[50%] mx-auto sticky top-0 self-start">
-              <img
+              <motion.img
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  duration: 0.5,
+                  delay: 0.2,
+                }}
                 src={plane}
                 alt="3D Reflected Airplane"
                 className="w-full  object-contain"
@@ -63,10 +80,22 @@ const ServiceHighlights = ({
                   key={index}
                   className="after:bg-[#ffffff1b] after:content-[''] after:translate-y-[20px] after:mb-10 after:block after:w-full after:h-[1px] after:rounded"
                 >
-                  <h3 className="text-[1.6rem] text-[#222] mb-3">
+                  <motion.h3
+                    initial={{ opacity: 0, y: 70 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                    className="text-[1.6rem] text-[#222] mb-3"
+                  >
                     {item.title}
-                  </h3>
-                  <p className="text-[#333] text-lg">{item.description}</p>
+                  </motion.h3>
+                  <motion.p
+                    initial={{ opacity: 0, y: 70 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                    className="text-[#333] text-lg"
+                  >
+                    {item.description}
+                  </motion.p>
                 </div>
               ))}
             </div>

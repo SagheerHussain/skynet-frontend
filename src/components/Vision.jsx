@@ -1,6 +1,7 @@
 import React from "react";
 import { FaRegHandshake, FaRegPlayCircle, FaRocket } from "react-icons/fa";
 import Button from "./Button";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -29,7 +30,7 @@ const services = [
 const GlowingCardSection = () => {
   return (
     <section
-      className="py-20 z-[10] relative"
+      className="py-20 z-[0] relative"
       style={{
         backgroundImage: `url('https://t3.ftcdn.net/jpg/02/39/52/06/360_F_239520607_abB3AakIrZozIAPgdVAMiMArLwi0uJTL.jpg')`,
         backgroundSize: "cover",
@@ -41,7 +42,10 @@ const GlowingCardSection = () => {
       <div className="container mx-auto px-4 gap-8">
         <div className="w-full mb-20 px-4 flex flex-col md:flex-row justify-between items-center z-[4]">
           <div className="flex flex-col items-center jsutify-center mx-auto">
-            <h2
+            <motion.h2
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="text-4xl xl:text-6xl font-bold text-white mb-4 text-center max-w-4xl"
               style={{ lineHeight: "1.1" }}
             >
@@ -49,19 +53,29 @@ const GlowingCardSection = () => {
               <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
                 Heart & Precision
               </span>
-            </h2>
-            <p className="text-white text-lg font-light ms-4 text-center max-w-5xl">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="text-white text-lg font-light ms-4 text-center max-w-5xl"
+            >
               We blend the emotional power of storytelling with the accuracy of
               data-driven strategy. Every aircraft we market is positioned not
               just as a product, but as a personal journey. This human-first,
               precision-led approach delivers trust—and results.
-            </p>
+            </motion.p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div className={`glass-container w-full `}>
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ type: "spring", stiffness: 30, duration: 0.5 }}
+              className={`glass-container w-full `}
+            >
               <div className="glass-filter"></div>
               <div className="glass-overlay"></div>
               <div className="glass-specular"></div>
@@ -88,7 +102,7 @@ const GlowingCardSection = () => {
                   <Button buttonLabel="Read More" onClick="/about" />
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

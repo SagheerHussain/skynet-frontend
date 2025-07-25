@@ -53,7 +53,7 @@ const LatestJets = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* LEFT BIG ARTICLE */}
           <div className="flex flex-col">
-            <div className="relative w-full flex items-center justify-center mb-8">
+            <div className="relative w-full flex items-center justify-center mb-8 z-[0]">
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}

@@ -1,5 +1,6 @@
 import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 const ServiceRappleResearch = ({
   data,
@@ -21,7 +22,10 @@ const ServiceRappleResearch = ({
         <div className="overlay bg-[#111218df] opacity-[.97] absolute top-0 left-0 w-full h-full z-[-1]" />
         <div className="container px-5">
           <div className="w-full mb-20 px-4 flex flex-col justify-between items-center text-center z-[4]">
-            <h2
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-4xl xl:text-6xl font-bold text-white mb-4 max-w-4xl mx-auto"
               style={{ lineHeight: "1.1" }}
             >
@@ -29,15 +33,25 @@ const ServiceRappleResearch = ({
                 {highlightedTitle}
               </span>{" "}
               {title}
-            </h2>
-            <p className="text-[#fff] text-xl font-light max-w-5xl mx-auto">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-[#fff] text-xl font-light max-w-5xl mx-auto"
+            >
               {description}
-            </p>
+            </motion.p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.map((item, index) => (
-              <div className="w-full p-8 rounded-2xl bg-[#11121889] overflow-hidden relative">
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ type: "spring", stiffness: 30, duration: 0.8, delay: index * 0.2 }}
+                className="w-full p-8 rounded-2xl bg-[#11121889] overflow-hidden relative"
+              >
                 <div className="flex flex-col items-center text-center space-y-4">
                   <div className="flex items-center justify-center">
                     <span className="text-[#afafaf0c] text-[7rem] absolute top-[-50px] left-[-5px] font-extrabold">
@@ -49,40 +63,7 @@ const ServiceRappleResearch = ({
                   </h4>
                   <p className="text-sm text-white/80">{item.description}</p>
                 </div>
-              </div>
-            ))}
-
-            {data.map((item, index) => (
-              <></>
-              // <div className="flex items-center">
-              //   <div className="flip-3d-container">
-              //     <div className="flip-3d-inner">
-              //       {/* FRONT SIDE */}
-              //       <div className="flip-3d-front bg-[#1777cb31] rounded-xl shadow-xl p-6 flex flex-col justify-center items-center">
-              //         <div className="text-center">
-              //           <h2 className="text-lg font-semibold text-white">
-              //             {item.title}
-              //           </h2>
-              //           <p className="text-xs mt-4 text-white">
-              //             {item.description}
-              //           </p>
-              //         </div>
-              //       </div>
-
-              //       {/* BACK SIDE */}
-              //       <div className="flip-3d-back bg-[#1777cb31] rounded-xl shadow-xl h-full p-6 flex flex-col justify-center items-center">
-              //         <div className="text-center">
-              //           <h2 className="text-lg font-semibold text-white">
-              //             {item.title}
-              //           </h2>
-              //           <p className="text-xs mt-4 text-white">
-              //             {item.description}
-              //           </p>
-              //         </div>
-              //       </div>
-              //     </div>
-              //   </div>
-              // </div>
+              </motion.div>
             ))}
           </div>
         </div>

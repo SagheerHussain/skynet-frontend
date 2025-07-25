@@ -7,6 +7,7 @@ import "swiper/css/effect-coverflow";
 import Button from "./Button";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const team = [
   {
@@ -129,17 +130,27 @@ const TeamSection = () => {
               className="glass-content h-full flex flex-col"
               style={{ padding: "3rem 1rem" }}
             >
-              <h2 className="text-2xl sm:text-4xl lg:text-6xl mt-12 font-bold text-[#fff]">
+              <motion.h2
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-2xl sm:text-4xl lg:text-6xl mt-12 font-bold text-[#fff]"
+              >
                 A Team of Pilots and{" "}
                 <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
                   Aviation Experts
                 </span>
-              </h2>
-              <p className="text-base sm:text-xl text-center max-w-2xl mt-4 font-light">
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-base sm:text-xl text-center max-w-2xl mt-4 font-light"
+              >
                 Built by aviators with decades of insight, Mason Amelia delivers
                 unmatched clarity, strategy, and confidence in every aircraft
                 transaction.
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>

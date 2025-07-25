@@ -120,7 +120,7 @@ const MeetTheTeam = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="justify-center w-[50%] flex relative z-[10]">
+          <div className="justify-center w-[50%] flex relative z-[0]">
             <motion.img
               initial={{ opacity: 0, x: 70 }}
               whileInView={{ opacity: 1, x: 0 }}

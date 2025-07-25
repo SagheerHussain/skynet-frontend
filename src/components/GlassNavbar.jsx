@@ -19,7 +19,7 @@ const GlassPlayer = () => {
   };
 
   return (
-    <div className="fixed z-[999] xl:block hidden left-1/2 -translate-x-1/2">
+    <div className="fixed z-[999999] xl:block hidden left-1/2 -translate-x-1/2">
       <svg style={{ display: "none" }}>
         <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">
           <feTurbulence

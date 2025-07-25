@@ -1,5 +1,6 @@
 import React from "react";
 import InfiniteMovingCards from "../components/ui/infinite-moving-cards";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -66,14 +67,24 @@ const Reviews = () => {
       <section id="testimonials" className="py-20 my-20">
         <div className="container mb-14 z-[20]">
           <div className="text-center mb-8">
-            <h5 className="text-6xl text-[#fff] font-bold max-w-3xl mx-auto">
+            <motion.h5
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-6xl text-[#fff] font-bold max-w-3xl mx-auto"
+            >
               Clients Across World
-            </h5>
-            <p className="text-[#fff] text-lg mt-3 mx-auto max-w-4xl">
+            </motion.h5>
+            <motion.p
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="text-[#fff] text-lg mt-3 mx-auto max-w-4xl"
+            >
               Real voices. Real experiences. Hear how our clients turned
               aviation dreams into reality with Mason Amelia. From first-time
               buyers to seasoned pilots — their journeys speak for themselves.
-            </p>
+            </motion.p>
           </div>
         </div>
 

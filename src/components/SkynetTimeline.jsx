@@ -3,6 +3,7 @@ import "tailwindcss/tailwind.css";
 import timelineOne from "/images/skynet/timeline-one.png";
 import timelineTwo from "/images/skynet/timeline-two.png";
 import timelineThree from "/images/skynet/timeline-three.png";
+import { motion } from "framer-motion";
 
 const SkynetTimeline = () => {
   const timelineData = [
@@ -80,20 +81,36 @@ const SkynetTimeline = () => {
   return (
     <section id="skynet-timeline" className="pt-20 bg-white">
       <div className="container pb-20">
-        <h2 className="text-3xl xl:text-6xl font-bold text-center mb-2">
+        <motion.h2
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+          }}
+          className="text-3xl xl:text-6xl font-bold text-center mb-2"
+        >
           Mason Amelia{" "}
           <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
             Journey of Innovation
           </span>
-        </h2>
-        <p className="text-center text-[#222] mb-10 text-lg mt-4 max-w-6xl mx-auto">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.4,
+          }}
+          className="text-center text-[#222] mb-10 text-lg mt-4 max-w-6xl mx-auto"
+        >
           From pioneering data access to deploying proprietary AI-powered
           analytics, Mason Amelia has consistently led the aircraft pricing
           revolution. Explore how SkyNet became the trusted name in aviation intelligence.
-        </p>
+        </motion.p>
       </div>
 
-      <div ref={containerRef} className="relative w-full px-4 overflow-hidden">
+      <div ref={containerRef} className="z-[0] relative w-full px-4 overflow-hidden">
         {/* Background Light Line */}
         <div className="absolute left-1/2 top-0 w-[1px] bg-[#8c8c8c] h-full transform -translate-x-1/2 z-0"></div>
 
@@ -119,12 +136,28 @@ const SkynetTimeline = () => {
                   index % 2 === 0 ? "md:pe-20" : "md:ps-20"
                 }`}
               >
-                <h4 className="text-2xl font-semibold text-gray-800 mb-4 text-center md:text-left">
+                <motion.h4
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.2,
+                  }}
+                  className="text-2xl font-semibold text-gray-800 mb-4 text-center md:text-left"
+                >
                   {item.title}
-                </h4>
-                <p className="text-gray-600 text-lg leading-relaxed text-justify">
+                </motion.h4>
+                <motion.p
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.6,
+                  }}
+                  className="text-gray-600 text-lg leading-relaxed text-justify"
+                >
                   {item.description}
-                </p>
+                </motion.p>
               </div>
               <div
                 className={`w-full md:w-1/2 px-6 mt-8 md:mt-0 flex justify-center ${

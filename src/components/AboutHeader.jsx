@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import { motion } from "framer-motion";
 
 const AboutHeader = () => {
   return (
@@ -15,7 +16,10 @@ const AboutHeader = () => {
               className="glass-content h-full flex flex-col"
               style={{ padding: "3rem 1rem" }}
             >
-              <h1
+              <motion.h1
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 40, duration: 0.5 }}
                 className="text-white text-[1.7rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.7rem] xl:text-6xl font-bold leading-tight drop-shadow-xl mb-3 text-center"
                 style={{ lineHeight: "1.2" }}
               >
@@ -23,8 +27,14 @@ const AboutHeader = () => {
                 <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
                   Trust and Legacy
                 </span>
-              </h1>
-              <Button buttonLabel="Meet The Team" onClick="/team" />
+              </motion.h1>
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <Button buttonLabel="Meet The Team" onClick="/team" />
+              </motion.div>
             </div>
           </div>
         </div>
