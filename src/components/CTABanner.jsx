@@ -6,7 +6,7 @@ const CTABanner = () => {
   return (
     <>
       <div
-        className="relative text-white py-10 mx-5 text-center overflow-hidden rounded-[30px] z-10 my-20"
+        className="relative text-white py-10 mx-5 text-center overflow-hidden rounded-[30px] z-[9999] my-20"
         style={{
           backgroundImage:
             `url(${banner})`,

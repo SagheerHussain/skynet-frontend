@@ -1,5 +1,5 @@
 import React from "react";
-import { HiOutlineMail } from "react-icons/hi";
+import banner from "/images/skynet/backgroundBanner.png"
 
 const BrokerageRappleResearch = ({
   data,
@@ -11,7 +11,7 @@ const BrokerageRappleResearch = ({
     <>
       <section
         style={{
-          backgroundImage: `url("https://t3.ftcdn.net/jpg/15/25/78/60/360_F_1525786014_0N03KX8C61aUqvEXGQvl48dd3ci2C2do.jpg")`,
+          backgroundImage: `url(${banner})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -38,7 +38,7 @@ const BrokerageRappleResearch = ({
 
           <div className="ms-[15%] w-[40%] flex flex-col gap-4">
             {data.map((item, index) => (
-              <div className={`w-full p-8 rounded-2xl bg-[#1777cb22] overflow-hidden relative`}>
+              <div className={`w-full p-8 rounded-2xl bg-[#1777cbd0] overflow-hidden relative`}>
                 <div className="flex flex-col items-center text-center space-y-4">
                   <div className="flex items-center justify-center">
                     <span className="text-[#e8e8e819] text-[7rem] absolute top-[-50px] left-[-5px] font-extrabold">

@@ -16,7 +16,7 @@ const ServiceRappleResearch = ({
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="relative py-20 z-[10]"
+        className="relative py-20 z-[10] parallax-bg"
       >
         <div className="overlay bg-[#111218df] opacity-[.97] absolute top-0 left-0 w-full h-full z-[-1]" />
         <div className="container px-5">

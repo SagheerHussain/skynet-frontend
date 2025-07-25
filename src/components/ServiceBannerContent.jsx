@@ -3,7 +3,7 @@ import React from "react";
 const ServiceBannerContent = ({ highlightTitle, title, description }) => {
   return (
     <>
-      <section id="banner_content" className="-mt-[7rem] pb-[5rem]">
+      <section id="banner_content" className="flex items-center h-[70vh] pb-[5rem]">
         <div className="container px-5">
           <div className={`glass-container w-full p-10`}>
             <div className="glass-filter"></div>

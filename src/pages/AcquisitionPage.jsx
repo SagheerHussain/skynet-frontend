@@ -63,21 +63,11 @@ const AcquisitionPage = () => {
     },
   ];
 
- 
   return (
     <>
       <ServiceBanner banner={banner} />
-      <main id="acquisition">
-        <ServiceBannerContent
-          highlightTitle={"Simplifying Aviation"}
-          title="One Deal at a Time"
-          description="At Mason Amelia, we bring clarity to the complexities of
-                aircraft transactions. Whether you're buying or selling, our
-                experts ensure every step is smooth, transparent, and strategic.
-                With decades of aviation insight, we turn challenges into
-                confident decisions — seamlessly. Let us handle the details, so
-                you can focus on what truly matters."
-        />
+
+      <main id="acquisition" className="relative">
         <ServiceRappleResearch
           data={data}
           highlightedTitle={"Pre Acquisition"}
@@ -87,9 +77,11 @@ const AcquisitionPage = () => {
           }
         />
         <ServiceHighlights data={acquisitionData} />
-        <div className="container">
-          <CTABanner />
-        </div>
+        <section className="bg-[#111218] relative z-[10] py-10">
+          <div className="container">
+            <CTABanner />
+          </div>
+        </section>
       </main>
       <Footer />
       <ScrollToTop />

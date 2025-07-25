@@ -1,21 +1,35 @@
 import React from "react";
 import Navbar from "./Navbar";
+import ServiceBannerContent from "./ServiceBannerContent";
 
 const ServiceBanner = ({ banner }) => {
   return (
     <>
+      <div className="container">
+        <Navbar />
+      </div>
       <section
         style={{
-          backgroundImage: `url(${banner})`,
+          // backgroundImage: `url(${banner})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
         }}
-        className="w-screen h-[40vh] relative"
+        className="w-screen h-[70vh] sticky top-0 z-[-1]"
       >
-        <div className="overlay bg-black opacity-60 absolute top-0 left-0 w-full h-full z-[0]" />
+        <div className="overlay bg-[#111218] opacity-60 absolute top-0 left-0 w-full h-full z-[0]" />
         <div className="container px-5">
-          <Navbar />
+          <ServiceBannerContent
+            highlightTitle={"Simplifying Aviation"}
+            title="One Deal at a Time"
+            description="At Mason Amelia, we bring clarity to the complexities of
+                          aircraft transactions. Whether you're buying or selling, our
+                          experts ensure every step is smooth, transparent, and strategic.
+                          With decades of aviation insight, we turn challenges into
+                          confident decisions — seamlessly. Let us handle the details, so
+                          you can focus on what truly matters."
+          />
         </div>
       </section>
     </>
