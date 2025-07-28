@@ -85,7 +85,7 @@ const Gallary = () => {
 
   return (
     <>
-      <section id="gallary" className="w-full py-20">
+      <section id="gallary" className="w-full pt-20">
         <div className="container px-5">
           <div className="text-center text-white">
             <motion.h1

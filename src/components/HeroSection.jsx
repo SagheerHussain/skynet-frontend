@@ -83,7 +83,7 @@ const HeroSection = () => {
                 </div>
                 <div className="w-1/2 md:w-[33%] relative">
                   <GlassmorphismCircularCard
-                    title="Aircraft Valuation"
+                    title="Valuation"
                     tagline="Real-Time Market Insights"
                     link="/higher"
                     icon={
