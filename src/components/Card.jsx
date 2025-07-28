@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Card = ({ detail, index }) => {
   const categoryGradients = {
@@ -20,6 +21,7 @@ const Card = ({ detail, index }) => {
   ];
 
   return (
+    <Link to={`/showroom/${detail._id}`}>
     <motion.div
       className="relative card rounded-lg overflow-hidden shadow-lg"
       initial={{ scale: 0, opacity: 0 }}
@@ -112,6 +114,7 @@ const Card = ({ detail, index }) => {
         </div>
       </div>
     </motion.div>
+    </Link>
   );
 };
 
