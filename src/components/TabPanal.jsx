@@ -1,15 +1,14 @@
-import { motion } from "framer-motion";
+import React from "react";
 
-export default function Tabs({ categories, activeTab, setActiveTab, isAllTab = true }) {
+const TabPanal = () => {
   return (
     <>
-      <div style={styles.navContainer} className="2xl:w-full w-full">
-        {isAllTab && (
-          <div
-            onClick={() => setActiveTab("all")}
-            style={{
-              ...styles.tab,
-              color: activeTab === "all" ? "white" : "#aaa",
+      <div style={styles.navContainer} className="2xl:w-[85%] w-full">
+        <div
+          onClick={() => setActiveTab("all")}
+          style={{
+            ...styles.tab,
+            color: activeTab === "all" ? "white" : "#aaa",
           }}
         >
           {activeTab === "all" && (
@@ -21,7 +20,6 @@ export default function Tabs({ categories, activeTab, setActiveTab, isAllTab = t
           )}
           <span style={{ position: "relative", zIndex: 1 }}>All</span>
         </div>
-        )}
 
         {categories.map((tab) => (
           <div
@@ -41,8 +39,7 @@ export default function Tabs({ categories, activeTab, setActiveTab, isAllTab = t
                   stiffness: 500,
                   damping: 30,
                 }}
-              >
-              </motion.div>
+              ></motion.div>
             )}
             <span style={{ position: "relative", zIndex: 1 }}>{tab.name}</span>
           </div>
@@ -50,35 +47,6 @@ export default function Tabs({ categories, activeTab, setActiveTab, isAllTab = t
       </div>
     </>
   );
-}
-
-const styles = {
-  navContainer: {
-    display: "flex",
-    margin: "0 auto",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "24px",
-    padding: "2px",
-    borderRadius: "50px",
-    background: "#171921",
-  },
-  tab: {
-    position: "relative",
-    padding: "10px 15px",
-    cursor: "pointer",
-    borderRadius: "50px",
-  },
-  highlight: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    overflow: "hidden",
-    borderRadius: "50px",
-    background: "#000",
-    border: "1px solid #49a8fc",
-    zIndex: 0,
-  },
 };
+
+export default TabPanal;

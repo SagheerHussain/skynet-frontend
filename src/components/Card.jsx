@@ -73,19 +73,19 @@ const Card = ({ detail, index }) => {
               "inset 3px 3px 3px 0 rgba(255, 255, 255, .05), inset -3px -3px 3px 0 rgba(255, 255, 255, .05)",
           }}
         />
-        <h3 className="text-white text-[1.5rem]">{detail?.title}</h3>
-        <p className="text-white text-[.8rem]">
-          {detail?.description?.slice(0, 100)}...
+        <h3 className="text-white text-lg mb-2 text-start">{detail?.title}</h3>
+        <p className="text-white text-[.8rem] text-start">
+          {detail?.description?.slice(0, 50)}...
         </p>
 
-        <div className="price pt-3">
+        <div className="price pt-3 text-start">
           <span className="text-tertiary_color text-[1.2rem]">
             $ {detail?.price?.toLocaleString()}
           </span>
         </div>
 
         <div className="mt-4 flex items-center justify-between gap-4">
-          <div className="w-[33%] airframe flex flex-col items-center gap-2 bg-[#262626] py-2 rounded-lg">
+          <div className="w-[33%] airframe flex flex-col items-center gap-2 bg-[#171921] py-2 rounded-lg">
             <span className="text-white 2xl:px-4 xl:px-3 lg:px-2 xl:text-[.8rem] lg:text-[.6rem] rounded-full">
               Airframe
             </span>
@@ -93,7 +93,7 @@ const Card = ({ detail, index }) => {
               {detail?.airframe}
             </span>
           </div>
-          <div className="w-[33%] airframe flex flex-col items-center gap-2 bg-[#262626] py-2 rounded-lg">
+          <div className="w-[33%] airframe flex flex-col items-center gap-2 bg-[#171921] py-2 rounded-lg">
             <span className="text-white 2xl:px-4 xl:px-3 lg:px-2 xl:text-[.8rem] lg:text-[.6rem] rounded-full">
               Engine
             </span>
@@ -101,7 +101,7 @@ const Card = ({ detail, index }) => {
               {detail?.engine}
             </span>
           </div>
-          <div className="w-[33%] airframe flex flex-col items-center gap-2 bg-[#262626] py-2 rounded-lg">
+          <div className="w-[33%] airframe flex flex-col items-center gap-2 bg-[#171921] py-2 rounded-lg">
             <span className="text-white 2xl:px-4 xl:px-3 lg:px-2 xl:text-[.8rem] lg:text-[.6rem] rounded-full">
               Propeller
             </span>

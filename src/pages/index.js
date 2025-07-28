@@ -9,6 +9,7 @@ import TeamPage from "./TeamPage";
 import MemberDetailPage from "./MemberDetailPage";
 import HigherPage from "./HigherPage";
 import ContactPage from "./ContactPage";
+import AircraftDetailPage from "./AircraftDetailPage";
 
 export {
     HomePage,
@@ -21,5 +22,6 @@ export {
     TeamPage,
     HigherPage,
     MemberDetailPage,
+    AircraftDetailPage,
     ContactPage
 };

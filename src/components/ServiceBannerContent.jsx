@@ -13,7 +13,7 @@ const ServiceBannerContent = ({ highlightTitle, title, description }) => {
             <div className="glass-content h-full flex flex-col p-8">
               <motion.h1
                 initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ type: "spring", stiffness: 30, duration: 0.5 }}
                 className="text-7xl text-white"
                 style={{ lineHeight: "1.2" }}
@@ -25,7 +25,7 @@ const ServiceBannerContent = ({ highlightTitle, title, description }) => {
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ type: "spring", stiffness: 30, duration: 0.5, delay: 0.2 }}
                 className="text-white text-lg font-light max-w-4xl mt-5"
               >

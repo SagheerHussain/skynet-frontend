@@ -11,7 +11,8 @@ import {
   TeamPage,
   MemberDetailPage,
   HigherPage,
-  ContactPage,
+  ContactPage,  
+  AircraftDetailPage,
 } from "./pages/index";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -28,6 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/showroom" element={<ShowroomPage />} />
+        <Route path="/showroom/:id" element={<AircraftDetailPage />} />
         <Route path="/acquisition" element={<AcquisitionPage />} />
         <Route path="/brokerage" element={<BrokeragePage />} />
         <Route path="/skynet" element={<SkynetPage />} />

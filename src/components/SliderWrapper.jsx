@@ -162,12 +162,12 @@ const SliderWrapper = () => {
                       <p className="text-txt_light_color mb-4">
                         {card.description}
                       </p>
-                      <div className="z-[9999]">
+                      {/* <div className="z-[9999]">
                         <Button
                           buttonLabel="Let Us Help"
                           onClick={"/contact"}
                         />
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </motion.div>

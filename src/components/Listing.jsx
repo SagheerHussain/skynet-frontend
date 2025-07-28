@@ -6,17 +6,16 @@ import Tabs from "./Tabs";
 import Pagination from "./Pagination";
 import { GoFilter } from "react-icons/go";
 import FilterSideBar from "./FilterSideBar";
-import planeOne from "/images/planes/plane-one.png";
-import planeTwo from "/images/planes/plane-two.png";
+import planeOne from "/images/planes/plane (1).png";
+import planeTwo from "/images/planes/plane (2).png";
 
 const airplanes = [
   {
     _id: "94827342a",
-    title: "Airplane 1",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image: "https://static.wixstatic.com/media/04f737_f598ad67899742db9937d4c158e83fde~mv2.jpg/v1/fill/w_461,h_326,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
-    price: 100000,
+    title: "Gulfstream G600",
+    description: `Ultra-long-range jet offering luxurious interiors and advanced aerodynamics.`,
+    image: planeOne,
+    price: 58000000,
     airframe: "2500",
     engine: "2665",
     category: "acquired",
@@ -24,11 +23,10 @@ const airplanes = [
   },
   {
     _id: "dafda4353",
-    title: "Airplane 1",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image: "https://static.wixstatic.com/media/04f737_05ff25e3a18b4d6c9b11e1c5acd59c4a~mv2.jpg/v1/fill/w_461,h_325,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
-    price: 100000,
+    title: "Pilatus PC-24",
+    description: `The world’s first Super Versatile Jet, combining jet performance with STOL capability.`,
+    image: planeTwo,
+    price: 11200000,
     airframe: "2500",
     engine: "2665",
     category: "for-sale",
@@ -36,12 +34,10 @@ const airplanes = [
   },
   {
     _id: "948affad23127342a",
-    title: "Airplane 1",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image:
-      "https://static.wixstatic.com/media/04f737_1c39fe2f88ed45528ce4adbaf6fcb7db~mv2.jpg/v1/fill/w_475,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
-    price: 100000,
+    title: "Dassault Falcon 8X",
+    description: `Trijet design built for global missions with impressive comfort and silence.`,
+    image: "https://static.wixstatic.com/media/04f737_1c39fe2f88ed45528ce4adbaf6fcb7db~mv2.jpg/v1/fill/w_475,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
+    price: 62000000,
     airframe: "2500",
     engine: "2665",
     category: "for-sale",
@@ -49,12 +45,10 @@ const airplanes = [
   },
   {
     _id: "aasfa241",
-    title: "Airplane 1",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image:
-      "https://static.wixstatic.com/media/04f737_ac3a5ea4fa314ee2a69820004b466adc~mv2.jpg/v1/fill/w_476,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
-    price: 175000,
+    title: "Cessna Citation Latitude",
+    description: `A spacious midsize business jet with refined performance and connectivity.`,
+    image: "https://static.wixstatic.com/media/04f737_ac3a5ea4fa314ee2a69820004b466adc~mv2.jpg/v1/fill/w_476,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
+    price: 18500000,
     airframe: "2500",
     engine: "2665",
     category: "off-market",
@@ -62,12 +56,10 @@ const airplanes = [
   },
   {
     _id: "fada2341",
-    title: "Airplane 1",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image:
-      "https://static.wixstatic.com/media/04f737_cd6176e2909246568c3e1e28bc53a5e6~mv2.png/v1/fill/w_494,h_317,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.png",
-    price: 175000,
+    title: "Embraer Legacy 500",
+    description: `Elegant design, powerful range, and fly-by-wire technology define this midsize jet.`,
+    image: "https://static.wixstatic.com/media/04f737_cd6176e2909246568c3e1e28bc53a5e6~mv2.png/v1/fill/w_494,h_317,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.png",
+    price: 20500000,
     airframe: "2500",
     engine: "2665",
     category: "wanted",
@@ -75,12 +67,10 @@ const airplanes = [
   },
   {
     _id: "342561",
-    title: "Airplane 1",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image:
-      "https://static.wixstatic.com/media/04f737_fd0a17988c874abba73d71133474396d~mv2.jpg/v1/fill/w_476,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
-    price: 379000,
+    title: "Bombardier Global 7500",
+    description: `A record-breaking ultra-long-range jet built for elite intercontinental travel.`,
+    image: "https://static.wixstatic.com/media/04f737_fd0a17988c874abba73d71133474396d~mv2.jpg/v1/fill/w_476,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
+    price: 75000000,
     airframe: "5000",
     engine: "2665",
     category: "sold",
@@ -88,12 +78,10 @@ const airplanes = [
   },
   {
     _id: "252571",
-    title: "Airplane 1",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image:
-      "https://static.wixstatic.com/media/04f737_e52f694a355b4486b572f20d7b9cadef~mv2.jpg/v1/fill/w_461,h_321,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
-    price: 100000,
+    title: "HondaJet Elite",
+    description: `Light jet designed for efficiency, innovation, and a quiet ride.`,
+    image: "https://static.wixstatic.com/media/04f737_e52f694a355b4486b572f20d7b9cadef~mv2.jpg/v1/fill/w_461,h_321,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
+    price: 7000000,
     airframe: "2500",
     engine: "2665",
     category: "sale-pending",
@@ -101,12 +89,10 @@ const airplanes = [
   },
   {
     _id: "adad2413414",
-    title: "Airplane 1",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image:
-      "https://static.wixstatic.com/media/04f737_6e0dc7c677f5437d829b057ea12c2819~mv2.jpg/v1/fill/w_476,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
-    price: 100000,
+    title: "Cessna Citation CJ4 Gen2",
+    description: `Compact yet powerful jet, ideal for short runways and business hops.`,
+    image: "https://static.wixstatic.com/media/04f737_6e0dc7c677f5437d829b057ea12c2819~mv2.jpg/v1/fill/w_476,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
+    price: 10500000,
     airframe: "2500",
     engine: "2665",
     category: "coming-soon",
@@ -114,12 +100,10 @@ const airplanes = [
   },
   {
     _id: "24342342",
-    title: "Airplane 1",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image:
-      "https://static.wixstatic.com/media/04f737_52a32d56f9714148904f44208f37a15c~mv2.jpg/v1/fill/w_476,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
-    price: 100000,
+    title: "Beechcraft King Air 260",
+    description: `Proven twin-turboprop with excellent speed, range, and avionics.`,
+    image: "https://static.wixstatic.com/media/04f737_52a32d56f9714148904f44208f37a15c~mv2.jpg/v1/fill/w_476,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
+    price: 7200000,
     airframe: "5000",
     engine: "2665",
     category: "for-sale",
@@ -127,17 +111,15 @@ const airplanes = [
   },
   {
     _id: "25545426fgdafa",
-    title: "Airplane 1",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image:
-      "https://static.wixstatic.com/media/04f737_5f0dce2365ab4f4ca18a4aa8a1a89c87~mv2.jpg/v1/fill/w_475,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
-    price: 100000,
+    title: "Cirrus Vision Jet G2+",
+    description: `Personal jet with enhanced automation and safety through Cirrus CAPS.`,
+    image: "https://static.wixstatic.com/media/04f737_5f0dce2365ab4f4ca18a4aa8a1a89c87~mv2.jpg/v1/fill/w_475,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
+    price: 3450000,
     airframe: "5000",
     engine: "2665",
     category: "for-sale",
     propeller: "2352",
-  },
+  }
 ];
 
 const categories = [
