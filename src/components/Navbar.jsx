@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed md:static top-0 w-screen px-6 text-white flex items-center justify-between z-20 h-[10vh] transition-colors duration-300 ${
+      className={`xl:pt-0 pt-4 fixed md:relative top-0 w-full px-6 text-white flex items-center justify-between z-20 h-[10vh] transition-colors duration-300 ${
         scrolled ? "bg-black/70" : "bg-transparent"
       } md:bg-transparent`}
     >
@@ -39,7 +39,7 @@ const Navbar = () => {
 
       <GlassNavbar />
 
-      <div className="flex items-center call-to-action z-[999]">
+      <div className="flex items-center justify-end call-to-action z-[999]">
         <SearchBox />
         <div
           className="flex items-center ms-4 xl:hidden"

@@ -58,7 +58,7 @@ const GlassPlayer = () => {
                 <li>
                   <Link
                     to="/showroom"
-                    className="uppercase text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     Showroom
                   </Link>
@@ -67,7 +67,7 @@ const GlassPlayer = () => {
                 <li>
                   <button
                     onMouseEnter={() => toggleDropdown("services")}
-                    className={`uppercase text-[.9rem] font-semibold transition hover:text-tertiary_color`}
+                    className={`uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color`}
                   >
                     Services +
                   </button>
@@ -76,7 +76,7 @@ const GlassPlayer = () => {
                 <li>
                   <Link
                     to="/skynet"
-                    className="uppercase text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     Skynet
                   </Link>
@@ -86,7 +86,7 @@ const GlassPlayer = () => {
                   <Link
                     to="/about"
                     onMouseEnter={() => toggleDropdown("about")}
-                    className="uppercase text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     About MA +
                   </Link>
@@ -95,7 +95,7 @@ const GlassPlayer = () => {
                 <li>
                   <Link
                     to="/contact"
-                    className="uppercase text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     Contact
                   </Link>

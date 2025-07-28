@@ -126,7 +126,7 @@ const Slider = () => {
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <div
-                className="w-full h-[650px] flex flex-col justify-center p-8 relative overflow-hidden rounded-[25px] z-[-4]"
+                className="w-full h-[500px] md:h-[650px] flex flex-col justify-center p-8 relative overflow-hidden rounded-[25px] z-[-4]"
                 style={{
                   backgroundImage: `url(${slide.image})`,
                   backgroundSize: "cover",
@@ -147,16 +147,16 @@ const Slider = () => {
                   className="ms-auto w-full md:w-[60%] lg:w-[40%]"
                 >
                   {/* PURPLE BOX (Title) */}
-                  <div className="w-full h-[150px] relative z-[9999]">
+                  <div className="w-full md:h-[150px] h-[100px] relative z-[9999]">
                     <motion.div
                       className="liquid-glass flex flex-col justify-center z-[0]"
-                      initial={{ y: -200, scale: 0.8 }}
+                      initial={{ y: -100, scale: 0.8 }}
                       // animate={{ y: 0, scale: 1 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true, amount: 0.2 }}
                       whileInView={{ y: 0, scale: 1 }}
                       transition={{
                         ...springDrop,
-                        duration: 5,
+                        duration: media ? 1.2 : 5,
                         delay: 0.4,
                       }}
                     >
@@ -167,13 +167,13 @@ const Slider = () => {
                         className="
                           relative
                           rounded-xl flex flex-col items-center justify-center
-                          text-center lg:py-0 py-4
+                          text-center lg:py-0 md:py-4
                           h-full w-full
                         "
                       >
-                        <h1 className="text-base xl:text-3xl font-semibold text-white px-4 py-3 rounded-md">
+                        <p className="text-sm md:text-base xl:text-xl md:font-light font-light text-white px-4 md:py-3 rounded-md">
                           {slide?.title}
-                        </h1>
+                        </p>
                       </div>
                     </motion.div>
                   </div>
@@ -182,13 +182,13 @@ const Slider = () => {
                   <div className="flex flex-row gap-4 my-4">
                     {/* Logo Box */}
                     <motion.div
-                      className="w-1/2 h-[150px] relative z-[9999]"
+                      className="w-1/2 md:h-[150px] h-[100px] relative z-[9999]"
                       initial={{ y: -200, scale: 0.8 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true, amount: 0.2 }}
                       whileInView={{ y: 0, scale: 1 }}
                       transition={{
                         ...springDrop,
-                        duration: 5,
+                        duration: media ? 1.2 : 5,
                         delay: 0.2,
                       }}
                     >
@@ -205,7 +205,7 @@ const Slider = () => {
                           "
                         >
                           {slide?.feature.map((feature, index) => (
-                            <span className="text-white" key={index}>{feature}</span>
+                            <span className="text-white text-xs md:text-base xl:text-xl md:font-normal font-light" key={index}>{feature}</span>
                           ))}
                         </div>
                       </div>
@@ -213,13 +213,13 @@ const Slider = () => {
 
                     {/* Quotes Box */}
                     <motion.div
-                      className="w-1/2 h-[150px] relative z-[9999]"
+                      className="w-1/2 md:h-[150px] h-[100px] relative z-[9999]"
                       initial={{ y: -200, scale: 0.8 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true, amount: 0.2 }}
                       whileInView={{ y: 0, scale: 1 }}
                       transition={{
                         ...springDrop,
-                        duration: 5,
+                        duration: media ? 1.2 : 5,
                         delay: 0.2,
                       }}
                     >
@@ -236,7 +236,7 @@ const Slider = () => {
                           "
                         >
                           {slide?.avionics?.map((avionics, index) => (
-                            <span className="text-white" key={index}>{avionics}</span>
+                            <span className="text-white text-xs md:text-base xl:text-xl md:font-normal font-light" key={index}>{avionics}</span>
                           ))}
                         </div>
                       </div>
@@ -246,15 +246,14 @@ const Slider = () => {
                   {/* RED BOX (Description) */}
                   <motion.div
                     initial={{ y: -200, scale: 0.8 }}
-                    // animate={{ y: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.2 }}
                     whileInView={{ y: 0, scale: 1 }}
-                    viewport={{ once: false }}
                     transition={{
                       ...springDrop,
-                      duration: 5,
+                      duration: media ? 1.2 : 5,
                       delay: 0,
                     }}
-                    className="w-full h-[150px] relative z-[9999]"
+                    className="w-full md:h-[150px] h-[100px] relative z-[9999]"
                   >
                     <div className="liquid-glass flex flex-col justify-center z-[0]">
                       <div className="liquid-glass--bend z-[0]" />
@@ -268,7 +267,7 @@ const Slider = () => {
                           h-full w-full
                         "
                       >
-                        <p className="text-base xl:text-lg font-semibold text-white px-4 py-3 rounded-md">
+                        <p className="text-xs md:text-base xl:text-xl md:font-normal font-light text-white px-4 py-3 rounded-md">
                           {slide?.description.slice(0, 120)}...
                         </p>
                       </div>

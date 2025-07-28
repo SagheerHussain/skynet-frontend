@@ -7,9 +7,9 @@ const Showcase = () => {
   const mobileMedia = useMediaQuery("(max-width: 450px)");
 
   return (
-    <div className=" w-screen z-10">
+    <div className="w-screen">
       <div
-        className="sm:absolute top-0 left-0 w-full h-full z-0"
+        className="sm:absolute top-0 left-0 w-full h-full md:h-screen lg:h-[110vh] xl:h-screen z-0"
         style={{
           filter: "drop-shadow(20px 10px 15px rgba(255, 255, 255, 0.2))",
         }}
@@ -34,7 +34,9 @@ const Showcase = () => {
         </div>
       </div>
 
-      <Navbar />
+      <div className="container">
+        <Navbar />
+      </div>
 
       <HeroSection />
     </div>

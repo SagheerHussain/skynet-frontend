@@ -29,7 +29,7 @@ const Brands = () => {
   });
 
   return (
-    <div className="overflow-x-hidden w-full py-8">
+    <section className="w-full overflow-x-hidden">
       <div className="w-max flex" ref={containerRef}>
         {baseImages.map((img, index) => (
           <motion.img
@@ -39,12 +39,12 @@ const Brands = () => {
             className="w-40 h-24 object-contain mx-12"
             draggable={false}
             style={{
-                filter: 'brightness(0) invert(1)'
+              filter: "brightness(0) invert(1)",
             }}
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

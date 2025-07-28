@@ -45,7 +45,7 @@ const SliderWrapper = () => {
 
   return (
     <>
-      <section className="relative w-screen h-full xl:h-[70vh] py-20 xl:py-0 z-[0] overflow-x-hidden">
+      <section className="relative w-screen h-full py-20 overflow-x-hidden">
         <div className="absolute w-screen top-0 left-0 h-full">
           <div className="absolute w-screen h-full bg-black opacity-70 z-[10]"></div>
           <Swiper
@@ -65,7 +65,7 @@ const SliderWrapper = () => {
             ].map((item, index) => (
               <SwiperSlide
                 key={index}
-                className="min-w-screen h-full xl:min-h-[70vh]"
+                className="w-screen "
                 style={{
                   backgroundImage: `url(${item})`,
                   backgroundSize: "cover",
@@ -105,7 +105,7 @@ const SliderWrapper = () => {
             </filter>
           </svg>
 
-          <div className="relative inset-0 flex flex-col items-center justify-center text-white z-[20] h-full xl:h-[70vh]">
+          <div className="relative inset-0 flex flex-col items-center justify-center text-white z-[20]">
             <div className="flex flex-col justify-center items-center">
               <motion.h1
                 initial={{ opacity: 0, y: 80 }}

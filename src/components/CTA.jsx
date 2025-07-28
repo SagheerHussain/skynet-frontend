@@ -29,13 +29,13 @@ const CTA = () => {
         >
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
           <div className="text-center text-white px-4 z-[5]">
-            <h2 className="text-5xl font-bold mb-4">
+            <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold mb-4">
               Ready for{" "}
               <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
                 Takeoff ?
               </span>
             </h2>
-            <p className="text-xl mb-6 mx-auto max-w-2xl">
+            <p className="text-base md:text-xl mb-6 mx-auto max-w-2xl">
               Partner with industry leaders in aviation solutions tailored for
               precision and performance. Connect with us to elevate your mission
               to new heights.

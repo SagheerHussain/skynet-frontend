@@ -9,17 +9,17 @@ const HeroSection = () => {
   return (
     <div
       className="
-            w-full h-full md:h-screen lg:h-[110vh] xl:h-screen
+            w-full h-full md:h-[90vh] lg:h-[100vh] xl:h-[90vh]
             flex justify-center
             relative p-4
           "
     >
       <div className="container z-10 px-4">
-        <div className="flex flex-col xl:gap-8 justify-end md:h-[90vh] lg:h-screen xl:h-[90vh] relative text-center text-white my-auto">
-          <div className="md:order-1 order-2">
+        <div className="flex flex-col xl:gap-0 justify-end md:h-[90vh] lg:h-screen xl:h-[90vh] relative text-center text-white my-auto">
+          <div className="md:order-1 order-2 md:mt-0 mt-4">
           <GlassCard />
           </div>
-          <div className="sm:order-2 order-1 w-full flex justify-between my-4">
+          <div className="sm:order-2 order-1 w-full flex justify-between md:my-12">
             <div
               className={`glass-container w-full`}
               style={{ borderRadius: "20px" }}
