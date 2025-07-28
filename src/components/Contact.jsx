@@ -106,8 +106,8 @@ const Contact = () => {
 
           {/* Right Side - Contact Form */}
           <div className="bg-transparent bg-opacity-40 p-8 rounded-2xl z-[2]">
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
+            <form className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div className="md:col-span-2">
                 <label className="text-sm text-white mb-2 inline-block">
                   First name:
                 </label>
@@ -117,7 +117,7 @@ const Contact = () => {
                   placeholder="Enter name"
                 />
               </div>
-              <div>
+              <div className="md:col-span-2">
                 <label className="text-sm text-white mb-2 inline-block">
                   Phone:
                 </label>

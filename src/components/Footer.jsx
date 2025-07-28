@@ -15,9 +15,9 @@ const Footer = () => {
   return (
     <footer className="bg-[#15161c] py-10 relative px-4">
       <div className="container px-5">
-        <div className="flex md:flex-row flex-col justify-between gap-6">
+        <div className="flex lg:flex-row flex-col justify-between gap-6">
           {/* Logo Section */}
-          <div className="logo md:w-[60%] w-full">
+          <div className="logo lg:w-[60%] w-full">
             <Link to={"/"}>
               <img
                 src={
@@ -27,7 +27,7 @@ const Footer = () => {
                 alt=""
               />
             </Link>
-            <p className="mt-8 text-white md:max-w-lg">
+            <p className="mt-8 text-white lg:max-w-lg">
               Mason Amelia delivers advanced aviation services with precision,
               reliability, and innovation across the U.S. Proudly veteran-owned,
               we are committed to excellence in every flight and every client
@@ -35,7 +35,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 gap-6 text-sm">
+          <div className="lg:mx-auto grid grid-cols-2 sm:grid-cols-3 gap-6 text-sm">
             {/* Company Links */}
             <div>
               <h3 className="capitalize text-lg font-semibold mb-6 text-white">
@@ -116,7 +116,7 @@ const Footer = () => {
       </div>
 
       <div className="container px-5">
-        <div className="w-full mt-12 border-t border-white/20 pt-4 flex md:flex-row flex-col md:justify-between justify-center items-center gap-4 text-white text-xl">
+        <div className="w-full mt-12 border-t border-white/20 pt-4 flex lg:flex-row flex-col lg:justify-between justify-center items-center gap-4 text-white text-xl">
           <p className="text-base text-center">
             © 2025 Mason Amelia. All rights reserved.
           </p>

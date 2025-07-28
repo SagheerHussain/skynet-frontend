@@ -29,7 +29,7 @@ const Brands = () => {
   });
 
   return (
-    <div className="overflow-hidden w-full py-8">
+    <div className="overflow-x-hidden w-full py-8">
       <div className="w-max flex" ref={containerRef}>
         {baseImages.map((img, index) => (
           <motion.img

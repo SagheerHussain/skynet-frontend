@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={`relative w-full px-6 text-white flex items-center justify-between z-20 h-[10vh] pt-4`}>
+    <nav className={`fixed md:static top-0 w-screen px-6 text-white flex items-center justify-between z-20 h-[10vh]`}>
       <div className="logo z-[20]">
         <Link to={"/"}>
           <img

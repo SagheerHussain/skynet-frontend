@@ -30,3 +30,12 @@
               //   </div>
               // </div>
             ))}
+
+
+
+
+             ${
+            mediaHeight
+              ? "translate-y-[220px] md:translate-y-[80px]"
+              : "md:translate-y-0 translate-y-[100px]"
+          }

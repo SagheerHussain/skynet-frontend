@@ -45,7 +45,7 @@ const SliderWrapper = () => {
 
   return (
     <>
-      <section className="relative w-screen h-full xl:h-[70vh] py-20 xl:py-0 z-[-1]">
+      <section className="relative w-screen h-full xl:h-[70vh] py-20 xl:py-0 z-[0] overflow-x-hidden">
         <div className="absolute w-screen top-0 left-0 h-full">
           <div className="absolute w-screen h-full bg-black opacity-70 z-[10]"></div>
           <Swiper
@@ -111,7 +111,7 @@ const SliderWrapper = () => {
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-4xl lg:text-6xl  font-bold text-white text-center"
+                className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold text-white text-center"
               >
                 Precision Aviation{" "}
                 <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
@@ -122,7 +122,7 @@ const SliderWrapper = () => {
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-lg lg:text-lg max-w-6xl text-white font-light mx-auto text-center pt-4 pb-8"
+                className="text-sm md:text-lg max-w-6xl text-white font-light mx-auto text-center pt-4 pb-8"
               >
                 At Mason Amelia, we don’t just broker aircraft — we deliver
                 confidence, clarity, and world-class service every step of the
@@ -130,7 +130,7 @@ const SliderWrapper = () => {
               </motion.p>
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {cards.map((card, index) => (
                 <motion.div
                   key={index}

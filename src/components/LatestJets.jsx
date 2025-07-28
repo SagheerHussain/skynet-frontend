@@ -28,8 +28,8 @@ const blogData = [
 
 const LatestJets = () => {
   return (
-    <section id="latestJets" className="bg-[#fff] py-20 px-4 md:px-16">
-      <div className="container">
+    <section id="" className="bg-white py-20">
+      <div className="container ">
         <motion.h4
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,7 +42,7 @@ const LatestJets = () => {
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-4xl md:text-6xl font-semibold mb-10 text-black max-w-2xl"
+          className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[3.5rem] 2xl:text-7xl font-semibold mb-10 text-black max-w-2xl"
         >
           Next-Gen Jets:{" "}
           <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
@@ -55,16 +55,16 @@ const LatestJets = () => {
           <div className="flex flex-col">
             <div className="relative w-full flex items-center justify-center mb-8 z-[0]">
               <motion.div
-                initial={{ opacity: 0, x: -100 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="w-[28rem] h-[28rem] bg-[#bee0fec1] rounded-full absolute -left-10 z-0"
+                className="md:block hidden w-[22rem] h-[22rem] xl:w-[28rem] xl:h-[28rem] bg-[#bee0fec1] rounded-full absolute lg:-left-2 xl:-left-10 z-0"
               ></motion.div>
               <motion.div
-                initial={{ opacity: 0, x: 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="w-[28rem] h-[28rem] rounded-full overflow-hidden relative z-10 border-8 border-[#fff]"
+                className="h-[320px] md:w-[22rem] md:h-[22rem] xl:w-[28rem] xl:h-[28rem] rounded-full overflow-hidden relative z-10 border-8 border-[#fff]"
               >
                 <img
                   src="https://www.jetaviva.com/wp-content/uploads/2025/07/Jim-Lewis-Blog-Hero-2048x1040.jpg"
@@ -78,7 +78,7 @@ const LatestJets = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-4xl text-black max-w-xl"
+              className="text-2xl md:text-4xl text-black max-w-xl"
             >
               Premier Precision: Why the Premier 1A Remains a Top Acquisition
               Target
@@ -102,15 +102,15 @@ const LatestJets = () => {
           </div>
 
           {/* RIGHT SMALL ARTICLES */}
-          <div className="flex flex-col divide-y divide-gray-300">
+          <div className="flex flex-col divide-y divide-gray-300 ">
             {blogData.map((item) => (
               <div
                 key={item.id}
                 className="flex items-center gap-4 py-6 first:pt-0 last:pb-0"
               >
                 <motion.img
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: -50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: .8 }}
                   src={item.image}
                   alt={item.title}
@@ -118,10 +118,10 @@ const LatestJets = () => {
                 />
                 <div>
                   <motion.h4
-                    initial={{ opacity: 0, x: 100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1 }}
-                    className="text-xl font-medium text-black"
+                    className="text-lg md:text-xl font-medium text-black"
                   >
                     {item.title}
                   </motion.h4>

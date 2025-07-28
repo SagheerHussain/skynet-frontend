@@ -5,18 +5,14 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { motion } from "framer-motion";
 
 export default function GlassCard({ icon, title, description, buttonLabel }) {
-  const media = useMediaQuery("(max-width: 500px)");
-  const mediaHeight = useMediaQuery("(max-height: 680px)");
+  // const media = useMediaQuery("(max-width: 500px)");
+  // const mediaHeight = useMediaQuery("(max-height: 680px)");
 
   return (
     <>
       <div className="glass_card">
         <div
-          className={`glass-container w-full ${
-            mediaHeight
-              ? "translate-y-[220px] md:translate-y-[80px]"
-              : "md:translate-y-0 translate-y-[100px]"
-          }`}
+          className={`glass-container w-full md:translate-y-0`}
           style={{
             borderRadius: "20px",
             boxShadow:
@@ -36,9 +32,7 @@ export default function GlassCard({ icon, title, description, buttonLabel }) {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ type: "spring", stiffness: 100, duration: 0.5 }}
-                className={`${
-                  media ? "text-[1.5rem]" : "text-[2rem]"
-                } md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] 2xl:text-[4.7rem] font-extrabold capitalize text-center leading-[1.2]`}
+                className={`text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[3.5rem] 2xl:text-7xl font-extrabold capitalize text-center leading-[1.2]`}
               >
                 Turbulence Free, Transactions.
               </motion.h2>
@@ -47,7 +41,7 @@ export default function GlassCard({ icon, title, description, buttonLabel }) {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-xs text-center sm:text-sm md:text-base lg:text-lg py-3 text-white/70 opacity-100"
+                className="text-center text-sm md:text-base lg:text-lg py-3 text-white/70 opacity-100"
               >
                 Industry-leading marketing, data, and grit to help you buy or
                 sell.

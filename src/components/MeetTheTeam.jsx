@@ -7,7 +7,7 @@ import { FiPhoneCall } from "react-icons/fi";
 const MeetTheTeam = () => {
   return (
     <section
-      className="w-full bg-[#fff] py-32 px-4"
+      className="w-full bg-[#fff] py-32 px-4 overflow-x-hidden"
       id="meetTheTeam"
       style={{
         backgroundImage: `url("https://bracketweb.com/jetlywp/wp-content/uploads/2023/01/about-1-bg-1.png")`,
@@ -17,9 +17,9 @@ const MeetTheTeam = () => {
       }}
     >
       <div className="container px-5">
-        <div className="flex flex-col md:flex-row items-center justify-between lg:gap-4 xl:gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4 lg:gap-4 xl:gap-8">
           {/* LEFT CONTENT */}
-          <div className="w-[50%] rounded-3xl p-8 text-white">
+          <div className="w-full md:w-1/2 rounded-3xl text-white">
             <motion.h6
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -33,7 +33,7 @@ const MeetTheTeam = () => {
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.4 }}
-              className="text-2xl md:text-3xl lg:text-4xl xl:text-[4rem] font-bold text-primary_theme"
+              className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[3.5rem] 2xl:text-7xl font-bold text-primary_theme"
               style={{ lineHeight: "1.1" }}
             >
               Meet the Experts From{" "}
@@ -88,13 +88,13 @@ const MeetTheTeam = () => {
             </ul>
 
             {/* CTA + Phone */}
-            <div className="flex flex-col sm:flex-row items-center mt-8 gap-4">
+            <div className="flex flex-col lg:flex-row lg:items-center mt-8 gap-4">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 1.4 }}
               >
-                <Button buttonLabel="Get to Know Us" onClick="/team" />
+                <Button buttonLabel="View More" onClick="/team" />
               </motion.div>
 
               <motion.div
@@ -120,14 +120,14 @@ const MeetTheTeam = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="justify-center w-[50%] flex relative z-[0]">
+          <div className="justify-center md:w-1/2 flex relative z-[0]">
             <motion.img
               initial={{ opacity: 0, x: 70 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               src="https://bracketweb.com/jetlywp/wp-content/uploads/2023/01/about-one-img-1.jpg"
               alt="Team Banner"
-              className="rounded-3xl shadow-2xl z-[20] lg:mt-[25px] xl:mt-[100px] ml-[50px]"
+              className="rounded-3xl shadow-2xl z-[20] lg:mt-[25px] xl:mt-[100px] lg:ml-[50px]"
             />
 
             {/* Transparent Overlay */}
@@ -135,7 +135,7 @@ const MeetTheTeam = () => {
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="absolute left-0 w-[470px] h-[550px] bg-[#bee0fec1] rounded-3xl z-[-1]"
+              className="lg:block hidden absolute left-0 w-[470px] h-[550px] bg-[#bee0fe7c] rounded-3xl z-[-1]"
             ></motion.div>
           </div>
         </div>
