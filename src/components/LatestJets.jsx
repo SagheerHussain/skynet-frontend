@@ -28,8 +28,8 @@ const blogData = [
 
 const LatestJets = () => {
   return (
-    <section id="" className="bg-white py-20">
-      <div className="container ">
+    <section id="latestJets" className="bg-white py-20">
+      <div className="container px-5">
         <motion.h4
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

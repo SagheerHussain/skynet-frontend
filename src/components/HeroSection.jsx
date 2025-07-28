@@ -31,10 +31,9 @@ const HeroSection = () => {
               <div className="glass-overlay"></div>
               <div className="glass-specular"></div>
               <div
-                className={`h-full glass-content w-full flex-wrap md:flex-nowrap`}
-                style={{ padding: "2rem 0rem" }}
+                className={`h-full glass-content w-full flex-wrap md:flex-nowrap md:py-4 py-0`}
               >
-                <div className="w-full md:w-[33%] relative">
+                <div className="w-1/2 md:w-[33%] relative">
                   <GlassmorphismCircularCard
                     title="Sell My Plane"
                     tagline="Aircraft Brokerage Services"
@@ -50,7 +49,7 @@ const HeroSection = () => {
                   />
                   <div className="md:block hidden z-[0] glassmorphism_effect_line w-[1px] h-[60%] bg-white/20 absolute right-[0px] top-1/2 -translate-y-1/2"></div>
                 </div>
-                <div className="w-full md:w-[33%] relative">
+                <div className="w-1/2 md:w-[33%] relative">
                   <GlassmorphismCircularCard
                     title="Buy My Plane"
                     tagline="Acquisition Services"
@@ -66,7 +65,7 @@ const HeroSection = () => {
                   />
                   <div className="md:block hidden z-[-1] glassmorphism_effect_line w-0 md:w-[1px] h-[60%] bg-white/20 absolute right-[0px] top-1/2 -translate-y-1/2"></div>
                 </div>
-                <div className="w-full md:w-[33%] relative">
+                <div className="w-1/2 md:w-[33%] relative">
                   <GlassmorphismCircularCard
                     title="Advisory"
                     tagline="Legal • Sales Tax • Insurance"
@@ -82,7 +81,7 @@ const HeroSection = () => {
                   />
                   <div className="md:block hidden z-[-1] glassmorphism_effect_line w-[1px] h-[60%] bg-white/20 absolute right-[0px] top-1/2 -translate-y-1/2"></div>
                 </div>
-                <div className="w-full md:w-[33%] relative">
+                <div className="w-1/2 md:w-[33%] relative">
                   <GlassmorphismCircularCard
                     title="Aircraft Valuation"
                     tagline="Real-Time Market Insights"

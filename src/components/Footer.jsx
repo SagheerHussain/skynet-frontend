@@ -23,7 +23,7 @@ const Footer = () => {
                 src={
                   "https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_180,h_65,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png%201x,%20https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_360,h_130,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png%202x"
                 }
-                className="w-60"
+                className="w-44 md:w-60"
                 alt=""
               />
             </Link>
@@ -117,10 +117,10 @@ const Footer = () => {
 
       <div className="container px-5">
         <div className="w-full mt-12 border-t border-white/20 pt-4 flex lg:flex-row flex-col lg:justify-between justify-center items-center gap-4 text-white text-xl">
-          <p className="text-base text-center">
+          <p className="md:order-1 order-2 text-sm md:text-base text-start">
             © 2025 Mason Amelia. All rights reserved.
           </p>
-          <div className="flex sm:flex-row flex-col items-center gap-6">
+          <div className="md:order-2 order-1 flex sm:flex-row flex-col md:items-center gap-6">
             {/* Location */}
             <div className="flex items-center gap-3">
               <div className="bg-tertiary_color p-2 rounded">
