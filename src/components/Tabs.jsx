@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function Tabs({ categories, activeTab, setActiveTab, isAllTab = true }) {
   return (
     <>
-      <div style={styles.navContainer} className="2xl:w-full w-full">
+      <div style={styles.navContainer} className="w-full lg:flex-nowrap flex-wrap flex sm:flex-row flex-col">
         {isAllTab && (
           <div
             onClick={() => setActiveTab("all")}
@@ -31,6 +31,7 @@ export default function Tabs({ categories, activeTab, setActiveTab, isAllTab = t
               ...styles.tab,
               color: activeTab === tab.slug ? "white" : "#aaa",
             }}
+            className="md:w-auto w-full text-center"
           >
             {activeTab === tab.slug && (
               <motion.div
@@ -41,6 +42,7 @@ export default function Tabs({ categories, activeTab, setActiveTab, isAllTab = t
                   stiffness: 500,
                   damping: 30,
                 }}
+                className="w-full"
               >
               </motion.div>
             )}

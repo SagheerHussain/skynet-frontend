@@ -7,7 +7,7 @@ import ScrollToTop from '../components/ScrollToTop'
 const AircraftDetailPage = () => {
   return (
     <>
-      <div className="container px-5">
+      <div className="container">
         <Navbar />
       </div>
       <AircraftDetail />

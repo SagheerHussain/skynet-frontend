@@ -276,8 +276,8 @@ const AircraftDetail = () => {
   const renderTabContent = () => {
     const data = aircraft[activeTab.toLowerCase()];
     return (
-      <div className="flex justify-between mt-6 space-y-2 border-t-[1px] border-b-[1px] border-dashed border-gray-700 pt-2">
-        <div className="w-[20%] tab-heading">
+      <div className="md:flex justify-between mt-6 space-y-2 border-t-[1px] border-b-[1px] border-dashed border-gray-700 pt-2">
+        <div className="md:w-[20%] tab-heading">
           <h2 className="pt-4 text-3xl font-semibold bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
             {activeTab
               ?.split("_")
@@ -285,7 +285,7 @@ const AircraftDetail = () => {
               .join(" ")}
           </h2>
         </div>
-        <div className="w-[80%]">
+        <div className="md:w-[80%]">
           {data.map((item, index) => (
             <div key={index} className=" text-sm  py-4">
               <span className="text-white border-b border-t border-dashed border-[#46485D] font-medium block text-white/80 bg-[#171921] text-lg p-4">
@@ -303,46 +303,60 @@ const AircraftDetail = () => {
     <>
       <section id="showroom" className="py-20">
         <div className="container px-5">
-          <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold mb-8 text-white">
+          <div className="lg:flex items-center justify-between">
+            <h1 className="text-3xl font-bold mb-4 lg:mb-8 text-white">
               {aircraft?.title}
             </h1>
-            <span className="rounded-[20px] inline-block bg-gradient-to-r py-2 mb-2 from-[#1777cb] to-tertiary_color px-8 font-semibold text-white">
-              For Sale
-            </span>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="tag-container mb-4"
+            >
+              <div
+                className="tag-left-arrow"
+                style={{ borderRight: "20px solid #1777cb" }}
+              ></div>
+              <div className="flex items-center gap-2 px-4 py-[9px] bg-[#1777cb] text-white text-sm font-semibold">
+                <span className="w-2 h-2 bg-[#fff] rounded-full"></span>
+                {aircraft?.status}
+              </div>
+            </motion.div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="w-[60%]">
+          <div className="lg:flex flex-col md:flex-row gap-4">
+            <div className="lg:w-[60%]">
               <img
                 src={aircraft?.images[activeImgIndex]}
                 alt="Main Aircraft"
                 className="w-full h-[400px] object-cover rounded-2xl"
               />
               <div className="mt-4">
-                <div className="flex gallary_images gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gallary_images gap-4">
                   {aircraft?.images?.slice(0, 4).map((src, i) => (
                     <img
                       key={i}
                       src={src}
                       alt={`Thumb ${i}`}
                       className={`${
-                        activeImgIndex === i ? "border-2 border-[#1777cb] opacity-70" : ""
-                      } cursor-pointer w-[23%] h-[120px] object-cover rounded-2xl`}
+                        activeImgIndex === i
+                          ? "border-2 border-[#1777cb] opacity-70"
+                          : ""
+                      } cursor-pointer h-[120px] object-cover rounded-2xl`}
                       onClick={() => setActiveImgIndex(i)}
                     />
                   ))}
                 </div>
-                <div className="flex mt-4 gap-4">
+                <div className="md:flex mt-4 gap-4">
                   <button
                     onClick={() => setModalOpen(true)}
-                    className="bg-[#22242e] hover:bg-[#22242e]/80 transition-all duration-300 flex items-center justify-center gap-2 text-white w-1/2 py-3 px-4 rounded-[30px] text-lg font-semibold"
+                    className="bg-[#22242e] w-full md:w-1/2 md:mb-0 mb-4 hover:bg-[#22242e]/80 transition-all duration-300 flex items-center justify-center gap-2 text-white py-3 px-4 rounded-[30px] text-lg font-semibold"
                   >
                     <IoImageOutline size={22} /> <span>View More</span>
                   </button>
                   <button
                     onClick={() => openVideoModal()}
-                    className="bg-[#22242e] hover:bg-[#22242e]/80 transition-all duration-300 flex items-center justify-center gap-2 text-white w-1/2 py-3 px-4 rounded-[30px] text-lg font-semibold"
+                    className="bg-[#22242e] w-full md:w-1/2 hover:bg-[#22242e]/80 transition-all duration-300 flex items-center justify-center gap-2 text-white py-3 px-4 rounded-[30px] text-lg font-semibold"
                   >
                     <FaRegCirclePlay size={22} /> <span>Video</span>
                   </button>
@@ -350,7 +364,7 @@ const AircraftDetail = () => {
               </div>
             </div>
 
-            <div className="w-[40%]">
+            <div className="lg:w-[40%]">
               <div className="jet_featured flex justify-between mt-4 gap-4">
                 <div className="flex flex-col items-center bg-[#171921] w-1/2 p-4 rounded-3xl">
                   <div className="featured_value">
@@ -394,7 +408,7 @@ const AircraftDetail = () => {
                 </div>
               </div>
 
-              <div className="mt-8 flex items-start justify-between">
+              <div className="mt-8 md:flex items-start justify-between">
                 <div className="contact-info">
                   <h2 className="mb-4 text-2xl bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
                     Agent Details
@@ -478,18 +492,28 @@ const AircraftDetail = () => {
           {/* Relatedd Aircraft */}
           <h4 className="mt-16 text-4xl text-white">Related Aircraft</h4>
           <Swiper
-            slidesPerView={4}
             spaceBetween={30}
             navigation={{
               clickable: true,
             }}
             keyboard={{
               enabled: true,
-              onlyInViewport: true, // optional: limits arrow control to when Swiper is in view
+              onlyInViewport: true,
             }}
             loop={true}
             modules={[Navigation, Keyboard]}
             className="mySwiper"
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 4,
+              },
+            }}
           >
             {airplanes?.map((airplane) => (
               <SwiperSlide key={airplane._id}>
@@ -570,7 +594,9 @@ const AircraftDetail = () => {
               {/* Main Video */}
               <div className="aspect-video">
                 <iframe
-                  src={"https://www.youtube.com/embed/taLem3cUJb4?si=p7OX_eyJ_4abvwRO"}
+                  src={
+                    "https://www.youtube.com/embed/taLem3cUJb4?si=p7OX_eyJ_4abvwRO"
+                  }
                   title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
@@ -579,8 +605,6 @@ const AircraftDetail = () => {
               </div>
             </div>
           </Modal>
-
-
         </div>
       </section>
     </>
