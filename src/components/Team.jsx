@@ -5,11 +5,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import Button from "./Button";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const team = [
+const partners = [
   {
     name: "Jesse Adams",
     phone: "(210) 882-9658",
@@ -46,6 +52,9 @@ const team = [
     instagram: "https://www.instagram.com/masonamelia.aircraftsales/",
     linkedin: "https://www.linkedin.com/in/donnygabriel1/",
   },
+];
+
+const team = [
   {
     name: "Peyton Lindbloom",
     phone: "(720) 300-2145",
@@ -101,7 +110,8 @@ const team = [
     title: "Sales & Acquisitions | Flight Ops",
     image:
       "https://static.wixstatic.com/media/04f737_5e91991100554352809c6307f5e17ca0~mv2.jpg/v1/crop/x_532,y_680,w_1611,h_2020/fill/w_315,h_395,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_4432_JPG.jpg",
-    facebook: "https://www.facebook.com/profile.php?id=100010304431418&sk=photos_by",
+    facebook:
+      "https://www.facebook.com/profile.php?id=100010304431418&sk=photos_by",
     twitter: "https://twitter.com/masonamelia",
     instagram: "https://www.instagram.com/masonamelia.aircraftsales/",
     linkedin: "https://www.linkedin.com/in/nicholas-buccellato/",
@@ -114,9 +124,9 @@ const TeamSection = () => {
   return (
     <section id="team" className="text-white py-20 px-4 md:px-10">
       <div className="container px-5">
-        <div className="flex flex-col justify-center items-center mb-20">
+        <div className="flex flex-row justify-center mb-20 gap-4">
           <div
-            className={`glass-container w-full`}
+            className={`w-[40%] glass-container h-full`}
             style={{
               borderRadius: "20px",
               boxShadow:
@@ -153,20 +163,18 @@ const TeamSection = () => {
               </motion.p>
             </div>
           </div>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {team.map((member, idx) => (
-            <div className="relative team-card rounded-xl overflow-hidden group">
+          <div className="w-[60%] partners grid grid-cols-3 gap-4">
+            {partners.map((member, idx) => (
+              <div className="relative team-card rounded-xl overflow-hidden group mb-4">
                 <Link to={`/team/${idx}`}>
-                <div className="relative w-full">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-[400px] object-cover"
-                  />
-                  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-[0]"></div>
-                </div>
+                  <div className="relative w-full">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-[375px] object-cover"
+                    />
+                    <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-[0]"></div>
+                  </div>
                 </Link>
                 {/* <div className="absolute top-[-20%] group-hover:top-[20%] transition-all duration-500 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <Button buttonLabel="View" onClick={`/team/2`} />
@@ -182,10 +190,10 @@ const TeamSection = () => {
                         <h2 className="text-2xl font-semibold text-white">
                           {member.name}
                         </h2>
-                        <h2 className="text-sm py-2 font-semibold text-white">
+                        <p className="text-sm py-2 font-light text-gray-400">
                           {member.email}
-                        </h2>
-                        <p className="text-sm text-gray-400 mb-4">
+                        </p>
+                        <p className="text-sm font-light text-gray-400 mb-4">
                           {member.title}
                         </p>
                         <div className="social-icons flex items-center gap-4 justify-center">
@@ -207,7 +215,62 @@ const TeamSection = () => {
                   </div>
                 </div>
               </div>
-           
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {team.map((member, idx) => (
+            <div className="relative team-card rounded-xl overflow-hidden group">
+              <Link to={`/team/${idx}`}>
+                <div className="relative w-full">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-[400px] object-cover"
+                  />
+                  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-[0]"></div>
+                </div>
+              </Link>
+              {/* <div className="absolute top-[-20%] group-hover:top-[20%] transition-all duration-500 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <Button buttonLabel="View" onClick={`/team/2`} />
+              </div> */}
+              <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[130px] group-hover:h-[190px] transition-all duration-500">
+                <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3">
+                  <div className="glass-filter"></div>
+                  <div className="glass-overlay"></div>
+                  <div className="glass-specular"></div>
+
+                  <div className="glass-content glass-content--inline justify-center">
+                    <div className="relative w-full py-5 px-2">
+                      <h2 className="text-2xl font-semibold text-white">
+                        {member.name}
+                      </h2>
+                      <h2 className="text-sm py-2 font-semibold text-white">
+                        {member.email}
+                      </h2>
+                      <p className="text-sm text-gray-400 mb-4">
+                        {member.title}
+                      </p>
+                      <div className="social-icons flex items-center gap-4 justify-center">
+                        <a href={member.facebook} target="_blank">
+                          <FaFacebook className="hover:text-[#0866ff] text-xl transition cursor-pointer" />
+                        </a>
+                        <a href={member.twitter} target="_blank">
+                          <FaYoutube className="hover:text-[#00b7ff] text-xl transition cursor-pointer" />
+                        </a>
+                        <a href={member.instagram} target="_blank">
+                          <FaInstagram className="hover:text-[#c3407b] text-xl transition cursor-pointer" />
+                        </a>
+                        <a href={member.linkedin} target="_blank">
+                          <FaLinkedin className="hover:text-[#0a66c2] text-xl transition cursor-pointer" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
