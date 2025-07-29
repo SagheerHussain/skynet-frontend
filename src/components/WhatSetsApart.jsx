@@ -87,19 +87,23 @@ export default function WhatSetsUsApart() {
           <div className="w-full mb-20 px-4 flex flex-col justify-center text-center items-center">
             {/* Left Side: Headline */}
 
-            <motion.h4
-              initial={{ opacity: 0, y: 100 }}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold mb-6"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="tag-container mb-4"
             >
-              Expert Guidance
-            </motion.h4>
+              <div className="tag-left-arrow"></div>
+              <div className="flex items-center gap-2 px-4 py-[9px] bg-[#222] text-white text-sm font-semibold">
+                <span className="w-2 h-2 bg-[#fff] rounded-full"></span>
+                Expert Guidance
+              </div>
+            </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-4xl xl:text-6xl font-bold text-white mb-4 max-w-3xl"
+              className="text-[1.6rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold text-white mb-4 md:max-w-3xl"
               style={{ lineHeight: "1.2" }}
             >
               Mason Amelia Leads with{" "}
@@ -114,7 +118,7 @@ export default function WhatSetsUsApart() {
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-lg text-neutral-300 mb-8 max-w-4xl"
+              className="text-sm md:text-lg text-neutral-300 mb-8 max-w-4xl"
             >
               As aviation specialists driven by trust and experience, we deliver
               truly personalized service for every client and every mission.

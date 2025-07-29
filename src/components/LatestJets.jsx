@@ -46,7 +46,7 @@ const LatestJets = () => {
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[3.5rem] 2xl:text-7xl font-semibold mb-10 text-black max-w-2xl"
+          className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-semibold mb-10 text-black max-w-2xl"
         >
           Next-Gen Jets:{" "}
           <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">

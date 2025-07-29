@@ -37,16 +37,14 @@ export const Timeline = ({
         <motion.h2
           initial={{
             opacity: 0,
-            x: isSmallScreen ? 0 : -100,
-            y: isSmallScreen ? 70 : 0,
+            y: 70,
           }}
           whileInView={{
             opacity: 1,
-            x: 0,
             y: 0,
           }}
           transition={{ duration: 0.5 }}
-          className="mx-auto max-w-3xl font-semibold text-xl sm:text-2xl xl:text-6xl mb-4 text-white"
+          className="mx-auto max-w-3xl font-semibold text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl mb-4 text-white"
           style={{ lineHeight: "1.1" }}
         >
           {topTitle}{" "}
@@ -58,16 +56,14 @@ export const Timeline = ({
         <motion.p
           initial={{
             opacity: 0,
-            x: isSmallScreen ? 0 : -100,
-            y: isSmallScreen ? 70 : 0,
+            y: 70,
           }}
           whileInView={{
             opacity: 1,
-            x: 0,
             y: 0,
           }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-white text-xl max-w-4xl md:text-base mx-auto"
+          className="text-white text-base md:text-xl max-w-4xl mx-auto"
         >
           Discover the pivotal moments that have defined Mason Amelia’s
           evolution—from our entrepreneurial roots to becoming one of America’s
@@ -104,12 +100,10 @@ export const Timeline = ({
             <motion.div
               initial={{
                 opacity: 0,
-                x: isSmallScreen ? 0 : 70,
-                y: isSmallScreen ? 70 : 0,
+                y: 70,
               }}
               whileInView={{
                 opacity: 1,
-                x: 0,
                 y: 0,
               }}
               transition={{ duration: 0.5, delay: 0.2 }}

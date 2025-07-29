@@ -15,12 +15,14 @@ const TeamPage = () => {
         style={{ backgroundImage: `url(${bgPlane})` }}
       >
         <div className="absolute top-0 left-0 w-full h-full bg-[#111218] opacity-90 z-[-1]"></div>
-        <div className="container px-5">
+        <div className="container">
           <Navbar />
           <Team />
-          <CTABanner />
         </div>
       </section>
+      <div className="container px-5">
+        <CTABanner />
+      </div>
       <Contact />
       <Footer />
       <ScrollToTop />

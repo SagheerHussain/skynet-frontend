@@ -7,7 +7,7 @@ import { FiPhoneCall } from "react-icons/fi";
 const MeetTheTeam = () => {
   return (
     <section
-      className="md:h-screen w-full bg-[#fff] py-20 px-4 overflow-x-hidden"
+      className="md:h-screen lg:h-full xl:h-screen w-full bg-[#fff] py-20 px-4 overflow-x-hidden"
       id="meetTheTeam"
       style={{
         backgroundImage: `url("https://bracketweb.com/jetlywp/wp-content/uploads/2023/01/about-1-bg-1.png")`,

@@ -29,12 +29,10 @@ const BrokerageRappleResearch = ({
             <motion.h2
               initial={{
                 opacity: 0,
-                x: isSmallScreen ? 0 : -100,
-                y: isSmallScreen ? -100 : 0,
+                y: 100,
               }}
               whileInView={{
                 opacity: 1,
-                x: 0,
                 y: 0,
               }}
               transition={{ duration: 0.8 }}
@@ -49,12 +47,10 @@ const BrokerageRappleResearch = ({
             <motion.p
               initial={{
                 opacity: 0,
-                x: isSmallScreen ? 0 : -100,
-                y: isSmallScreen ? -100 : 0,
+                y: 100,
               }}
               whileInView={{
                 opacity: 1,
-                x: 0,
                 y: 0,
               }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -69,12 +65,10 @@ const BrokerageRappleResearch = ({
               <motion.div
               initial={{
                 opacity: 0,
-                x: isSmallScreen ? 0 : 100,
-                y: isSmallScreen ? 100 : 0,
+                y: 100,
               }}
               whileInView={{
                 opacity: 1,
-                x: 0,
                 y: 0,
               }}
               transition={{ duration: 0.8, delay: index * 0.2 }}

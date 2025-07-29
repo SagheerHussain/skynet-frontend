@@ -1,15 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import { IoCheckmarkDone } from "react-icons/io5";
 import { motion } from "framer-motion";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const TabContent = ({ src, title, description, features }) => {
+
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   return (
     <div className="w-full relative h-full rounded-2xl p-4 sm:p-10 text-xl md:text-4xl font-bold text-dark bg-[#15161C]">
       <div className="flex md:flex-row flex-col py-14">
         {/* Image */}
         <motion.div
-          initial={{ opacity: 0, x: 200 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: isMobile ? 0 : 200, y: isMobile ? 0 : 70 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="image sm:p-6 mt-[-4rem] md:w-[55%] lg:w-[40%] relative z-[2] flex flex-col items-center"
         >

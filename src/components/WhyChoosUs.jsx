@@ -5,8 +5,11 @@ import featureOne from "/images/feature-one.png";
 import featureTwo from "/images/feature-two.png";
 import featureThree from "/images/feature-three.png";
 import { motion } from "framer-motion";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 function WhyChoosUs() {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   const services = [
     {
       title: "Personal Commitment",
@@ -64,17 +67,25 @@ function WhyChoosUs() {
         <div className="w-full mb-20 px-4 flex flex-col justify-center text-center items-center">
           {/* Left Side: Headline */}
 
-          <motion.h4
-            initial={{ opacity: 0, y: 100 }}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold mb-6"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="tag-container mb-4"
           >
-            Why Choose Us
-          </motion.h4>
+            <div className="tag-left-arrow"></div>
+            <div className="flex items-center gap-2 px-4 py-[9px] bg-[#222] text-white text-sm font-semibold">
+              <span className="w-2 h-2 bg-[#fff] rounded-full"></span>
+              Why Choose Us
+            </div>
+          </motion.div>
           <motion.h2
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{
+              opacity: 0,
+              y: isMobile ? 100 : 0,
+              x: isMobile ? 0 : -100,
+            }}
+            whileInView={{ opacity: 1, y: 0, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-4xl xl:text-5xl font-bold text-white mb-4 max-w-3xl"
             style={{ lineHeight: "1.2" }}
@@ -88,8 +99,12 @@ function WhyChoosUs() {
           {/* Right Side: Paragraph + Button */}
 
           <motion.p
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{
+              opacity: 0,
+              y: isMobile ? 100 : 0,
+              x: isMobile ? 0 : -100,
+            }}
+            whileInView={{ opacity: 1, y: 0, x: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
             className="text-lg text-neutral-300 mb-8 max-w-4xl"
           >

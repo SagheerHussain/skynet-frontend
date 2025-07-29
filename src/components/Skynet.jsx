@@ -4,14 +4,14 @@ import Button from "./Button";
 
 const Skynet = () => {
   return (
-    <section className="lg:h-[70vh] xl:h-[60vh]">
+    <section className="h-screen md:-mt-[5vh]">
       {/* Background Image Right Side */}
-      <div className="px-5 container flex flex-col justify-center h-full">
+      <div className="px-5 container flex flex-col justify-center h-full ">
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 50, duration: 0.5 }}
-          className="text-white lg:text-6xl xl:text-7xl lg:max-w-lg xl:max-w-2xl mb-7"
+          className="text-white md:text-start text-center text-[2rem] md:text-[3rem] lg:text-[3rem] xl:text-6xl md:max-w-md lg:max-w-2xl"
           style={{ lineHeight: "1.1" }}
         >
           Pricing Intelligence{" "}
@@ -23,6 +23,7 @@ const Skynet = () => {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 50, duration: 0.5, delay: 0.3 }}
+          className="mt-8 text-center md:text-start z-[0]"
         >
           <Button buttonLabel="Get Started" onClick="/contact" />
         </motion.div>

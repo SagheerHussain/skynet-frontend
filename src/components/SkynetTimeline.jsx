@@ -112,10 +112,10 @@ const SkynetTimeline = () => {
 
       <div ref={containerRef} className="z-[0] relative w-full px-4 overflow-hidden">
         {/* Background Light Line */}
-        <div className="absolute left-1/2 top-0 w-[1px] bg-[#8c8c8c] h-full transform -translate-x-1/2 z-0"></div>
+        <div className="md:block hidden absolute left-1/2 top-0 w-[1px] bg-[#8c8c8c] h-full transform -translate-x-1/2 z-0"></div>
 
         {/* Animated Blue Line */}
-        <div className="absolute left-1/2 top-0 w-[1px] transform -translate-x-1/2 z-10">
+        <div className="md:block hidden absolute left-1/2 top-0 w-[1px] transform -translate-x-1/2 z-10">
           <div
             ref={lineRef}
             className="w-full bg-[#1777cb] transition-all duration-300 ease-in-out origin-top"
@@ -171,7 +171,7 @@ const SkynetTimeline = () => {
                 />
               </div>
               <div
-                className={`absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full flex items-center justify-center border-[1px] text-xl font-bold bg-white z-30 transition-colors duration-300 ${
+                className={`md:flex hidden absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full items-center justify-center border-[1px] text-xl font-bold bg-white z-30 transition-colors duration-300 ${
                   activeIndex >= index
                     ? "border-[#1777cb] text-[#1777cb]"
                     : "border-[#c7c7c7] text-[#c7c7c7]"

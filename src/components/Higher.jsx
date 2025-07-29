@@ -3,15 +3,14 @@ import { motion } from "framer-motion";
 
 const Higher = () => {
   return (
-    <div className="py-20">
+    <div className="flex items-center h-screen md:h-[60vh]">
       {/* Overlay card */}
-
-      <div className="md:p-8 py-8 px-2 w-[90%] md:w-[100%] text-white">
+      <div className="md:p-8 py-8 px-2 text-whitetext-start">
         <motion.h2
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mx-auto max-w-4xl text-center text-2xl md:text-7xl font-bold mb-2"
+          className="md:text-start text-center md:max-w-2xl lg:max-w-2xl xl:max-w-3xl text-[2rem] text-white md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold mb-2"
           style={{ lineHeight: "1.1" }}
         >
           Elevating Aircraft Deals Through{" "}
@@ -23,7 +22,7 @@ const Higher = () => {
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-center text-lg max-w-5xl mt-4 mx-auto"
+          className="md:text-start text-center text-white md:max-w-2xl lg:max-w-2xl xl:max-w-3xl text-base md:text-lg mt-4"
         >
           Dive into real-world aviation stories that go beyond aircraft specs
           and listings. At Mason Amelia, we capture the passion, process, and
