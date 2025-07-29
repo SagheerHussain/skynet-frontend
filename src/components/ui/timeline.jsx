@@ -1,6 +1,7 @@
 "use client";
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const Timeline = ({
   isHeading = false,
@@ -28,12 +29,22 @@ export const Timeline = ({
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
+
   return (
     <div className="w-full font-sans md:px-10 z-[20]" ref={containerRef}>
       <div className="container mx-auto px-4 md:px-8 lg:px-8 text-center z-[20]">
         <motion.h2
-          initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{
+            opacity: 0,
+            x: isSmallScreen ? 0 : -100,
+            y: isSmallScreen ? 70 : 0,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            y: 0,
+          }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl font-semibold text-xl sm:text-2xl xl:text-6xl mb-4 text-white"
           style={{ lineHeight: "1.1" }}
@@ -45,8 +56,16 @@ export const Timeline = ({
           {bottomTitle}{" "}
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{
+            opacity: 0,
+            x: isSmallScreen ? 0 : -100,
+            y: isSmallScreen ? 70 : 0,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            y: 0,
+          }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-white text-xl max-w-4xl md:text-base mx-auto"
         >
@@ -83,8 +102,16 @@ export const Timeline = ({
             </div>
 
             <motion.div
-              initial={{ opacity: 0, x: 70 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{
+                opacity: 0,
+                x: isSmallScreen ? 0 : 70,
+                y: isSmallScreen ? 70 : 0,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                y: 0,
+              }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative pl-20 pr-4 md:pl-4 w-full"
             >

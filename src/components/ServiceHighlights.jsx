@@ -20,7 +20,7 @@ const ServiceHighlights = ({
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-4xl xl:text-6xl font-bold text-[#222] mb-4 text-center max-w-4xl"
+                className="text-[1.6rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold text-[#222] mb-4 text-center max-w-4xl"
                 style={{ lineHeight: "1.1" }}
               >
                 {topTitle}{" "}
@@ -33,7 +33,7 @@ const ServiceHighlights = ({
                 initial={{ opacity: 0, y: 70 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-[#222] text-2xl font-light ms-4 text-center max-w-5xl"
+                className="text-[#222] text-sm md:text-lg xl:text-xl font-light ms-4 text-center max-w-5xl"
               >
                 {description}
               </motion.p>
@@ -41,9 +41,9 @@ const ServiceHighlights = ({
           </div>
 
           {/* Main Content Grid */}
-          <div className="flex items-center gap-10">
+          <div className="md:flex items-center gap-10">
             {/* 3D Plane Image */}
-            <div className=" w-[50%] mx-auto sticky top-0 self-start">
+            <div className="md:w-[50%] mx-auto md:sticky top-0 self-start">
               <motion.img
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ const ServiceHighlights = ({
                 }}
                 src={plane}
                 alt="3D Reflected Airplane"
-                className="w-full  object-contain"
+                className="w-full object-contain"
               />
               <img
                 src={plane}
@@ -74,7 +74,7 @@ const ServiceHighlights = ({
             </div>
 
             {/* Challenge, Solution, Result */}
-            <div className="w-[50%] space-y-6 text-left text-sm sm:text-base text-gray-800">
+            <div className="md:w-[50%] space-y-6 text-left text-sm sm:text-base text-gray-800">
               {data.map((item, index) => (
                 <div
                   key={index}
@@ -84,7 +84,7 @@ const ServiceHighlights = ({
                     initial={{ opacity: 0, y: 70 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
-                    className="text-[1.6rem] text-[#222] mb-3"
+                    className="text-[1.2rem] md:text-[1.6rem] text-[#222] mb-3"
                   >
                     {item.title}
                   </motion.h3>
@@ -92,7 +92,7 @@ const ServiceHighlights = ({
                     initial={{ opacity: 0, y: 70 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
-                    className="text-[#333] text-lg"
+                    className="text-[#333] text-sm md:text-lg"
                   >
                     {item.description}
                   </motion.p>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Intro = () => {
   return (
     <>
-      <section className="relative w-screen py-20 bg-black text-white flex items-center z-[0] overflow-x-hidden">
+      <section className="relative w-screen md:h-screen py-20 bg-black text-white flex items-center z-[0] overflow-x-hidden">
         {/* Background Image Right Side */}
         <div
           className="absolute inset-0 w-full h-full"

@@ -78,7 +78,7 @@ const AcquisitionPage = () => {
         />
         <ServiceHighlights data={acquisitionData} />
         <section className="bg-[#111218] relative z-[10] py-10">
-          <div className="container">
+          <div className="container px-5">
             <CTABanner />
           </div>
         </section>

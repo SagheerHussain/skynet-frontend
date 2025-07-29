@@ -12,7 +12,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      setScrolled(offset > 100);
+      setScrolled(offset > 30);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`xl:pt-0 pt-4 fixed md:relative top-0 w-full px-6 text-white flex items-center justify-between z-20 h-[10vh] transition-colors duration-300 ${
+      className={`xl:pt-0 lg:pt-4 fixed md:relative top-0 w-full px-6 text-white flex items-center justify-between z-20 h-[10vh] transition-colors duration-300 ${
         scrolled ? "bg-black/70" : "bg-transparent"
       } md:bg-transparent`}
     >

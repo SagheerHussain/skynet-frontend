@@ -7,7 +7,7 @@ import { FiPhoneCall } from "react-icons/fi";
 const MeetTheTeam = () => {
   return (
     <section
-      className="w-full bg-[#fff] py-20 px-4 overflow-x-hidden"
+      className="md:h-screen w-full bg-[#fff] py-20 px-4 overflow-x-hidden"
       id="meetTheTeam"
       style={{
         backgroundImage: `url("https://bracketweb.com/jetlywp/wp-content/uploads/2023/01/about-1-bg-1.png")`,
@@ -16,8 +16,8 @@ const MeetTheTeam = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="container px-5">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4 lg:gap-4 xl:gap-8">
+      <div className="container h-full px-5 flex items-center">
+        <div className="flex flex-col md:flex-row items-center  justify-between gap-8 md:gap-4 lg:gap-4 xl:gap-8">
           {/* LEFT CONTENT */}
           <div className="w-full md:w-1/2 rounded-3xl text-white">
             <motion.h6

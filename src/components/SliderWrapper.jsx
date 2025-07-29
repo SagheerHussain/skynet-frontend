@@ -1,9 +1,11 @@
 import React from "react";
-import Aurora from "./ui/Aurora";
-import Button from "./Button";
-import { FaPlaneDeparture, FaShieldAlt, FaHandshake } from "react-icons/fa";
+import { FaHandshake } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
+import { IoIosGlobe } from "react-icons/io";
+import { GiCommercialAirplane } from "react-icons/gi";
+import { GrSecure } from "react-icons/gr";
+import { SiTrustpilot } from "react-icons/si";
 
 // Import Swiper styles
 import "swiper/css";
@@ -18,26 +20,34 @@ import { EffectFade, Autoplay } from "swiper/modules";
 const SliderWrapper = () => {
   const cards = [
     {
-      icon: <FaPlaneDeparture className="text-tertiary_color text-4xl" />,
+      icon: <GiCommercialAirplane size={32} className="text-tertiary_color" />,
       title: "Aviation Expertise",
       description:
-        "From takeoff to close, we simplify aircraft deals with unmatched industry insight and support.",
+        "From takeoff to close, we simplify aircraft sales with sharp insights and end-to-end guidance.",
       buttonLabel: "Let Us Help",
       onClick: "/contact",
     },
     {
-      icon: <FaShieldAlt className="text-tertiary_color text-4xl" />,
+      icon: <GrSecure size={32} className="text-tertiary_color" />,
       title: "Secure Transactions",
       description:
-        "Avoid costly pitfalls. We ensure full legal, financial, and regulatory compliance throughout your journey.",
+        "We reduce costly risks through full legal, financial, and compliance support every step of the way.",
       buttonLabel: "Let Us Help",
       onClick: "/contact",
     },
     {
-      icon: <FaHandshake className="text-tertiary_color text-4xl" />,
+      icon: <SiTrustpilot size={32} className="text-tertiary_color" />,
       title: "Trusted Partners",
       description:
-        "Work with a team that values transparency, trust, and long-term relationships in every deal.",
+        "Rely on a team committed to trust, transparency, and long-term partnerships built to last.",
+      buttonLabel: "Let Us Help",
+      onClick: "/contact",
+    },
+    {
+      icon: <IoIosGlobe size={32} className="text-tertiary_color" />,
+      title: "Global Reach",
+      description:
+        "We operate worldwide—offering seamless aircraft deals, logistics, and expert global support.",
       buttonLabel: "Let Us Help",
       onClick: "/contact",
     },
@@ -45,9 +55,9 @@ const SliderWrapper = () => {
 
   return (
     <>
-      <section className="relative w-screen h-full py-20 overflow-x-hidden">
+      <section className="md:h-screen relative z-[0] w-screen py-20 overflow-x-hidden">
         <div className="absolute w-screen top-0 left-0 h-full">
-          <div className="absolute w-screen h-full bg-black opacity-70 z-[10]"></div>
+          <div className="absolute w-screen h-full bg-black opacity-50 z-[10]"></div>
           <Swiper
             spaceBetween={30}
             effect={"fade"}
@@ -77,7 +87,7 @@ const SliderWrapper = () => {
           </Swiper>
         </div>
 
-        <div className="container px-5">
+        <div className="container px-5 h-full flex items-center z-[10]">
           {/* <Aurora
             colorStops={["#222", "#444", "#222"]}
             blend={0.5}
@@ -105,7 +115,7 @@ const SliderWrapper = () => {
             </filter>
           </svg>
 
-          <div className="relative inset-0 flex flex-col items-center justify-center text-white z-[20]">
+          <div className="relative inset-0 flex flex-col items-center gap-8 justify-center text-white z-[20]">
             <div className="flex flex-col justify-center items-center">
               <motion.h1
                 initial={{ opacity: 0, y: 80 }}
@@ -122,53 +132,48 @@ const SliderWrapper = () => {
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-sm md:text-lg max-w-6xl text-white font-light mx-auto text-center pt-4 pb-8"
+                className="text-sm md:text-lg max-w-5xl text-white font-light mx-auto text-center pt-4 pb-8"
               >
-                At Mason Amelia, we don’t just broker aircraft — we deliver
-                confidence, clarity, and world-class service every step of the
-                way.
+                At Mason Amelia, we don’t just broker aircraft — we curate
+                tailored aviation experiences that prioritize precision, trust,
+                and performance. From initial consultation to final delivery,
+                every step is guided by expert insight and a relentless focus on
+                your goals. Our global reach, regulatory expertise, and
+                client-first approach ensure seamless transactions and enduring
+                partnerships across borders.
               </motion.p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {cards.map((card, index) => (
                 <motion.div
                   key={index}
-                  className="glass-container glass-container--rounded px-4 py-3"
-                  style={{
-                    border: "none",
-                    boxShadow:
-                      "0 6px 6px rgba(0, 0, 0, 0.439), 0 0 20px rgba(0, 0, 0, 0.1)",
-                  }}
+                  className="px-4 py-3"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
-                  transition={{ type: "spring", stiffness: 30, duration: 0.5, delay: 0.3 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 30,
+                    duration: 0.5,
+                    delay: 0.3,
+                  }}
                 >
-                  <div
-                    className="glass-filter"
-                    style={{
-                      filter: "url(#lg-dist) !important",
-                      backdropFilter: "blur(0px) !important",
-                    }}
-                  ></div>
-                  <div className="glass-overlay"></div>
-                  <div className="glass-specular"></div>
-                  <div className="glass-content glass-content--inline justify-center">
-                    <div className="relative rounded-xl flex flex-col items-center justify-center text-center p-4 h-full w-full">
-                      <div className="mb-4">{card.icon}</div>
-                      <h2 className="text-lg lg:text-xl xl:text-2xl font-semibold text-white mb-4">
-                        {card.title}
-                      </h2>
-                      <p className="text-txt_light_color mb-4">
-                        {card.description}
-                      </p>
-                      {/* <div className="z-[9999]">
+                  <div className="bg-[#15161cac] relative border-[1px] border-[#f1f1f192] rounded-[10px] flex flex-col items-center justify-center text-center p-4 h-full w-full">
+                    <div className="mb-4 absolute top-[-30px] bg-[#15161cac] border-[1px] border-[#f1f1f192] rounded-[50%] p-3">
+                      {card.icon}
+                    </div>
+                    <h4 className="text-lg lg:text-lg xl:text-xl text-white mb-4 mt-8">
+                      {card.title}
+                    </h4>
+                    <p className="text-[#eee] text-sm font-light mb-4 max-w-4xl">
+                      {card.description}
+                    </p>
+                    {/* <div className="z-[9999]">
                         <Button
                           buttonLabel="Let Us Help"
                           onClick={"/contact"}
                         />
                       </div> */}
-                    </div>
                   </div>
                 </motion.div>
               ))}

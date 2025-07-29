@@ -27,7 +27,7 @@ const Footer = () => {
                 alt=""
               />
             </Link>
-            <p className="mt-8 text-white lg:max-w-lg text-justify">
+            <p className="mt-8 text-white lg:max-w-lg text-start md:text-justify">
               Mason Amelia delivers advanced aviation services with precision,
               reliability, and innovation across the U.S. Proudly veteran-owned,
               we are committed to excellence in every flight and every client

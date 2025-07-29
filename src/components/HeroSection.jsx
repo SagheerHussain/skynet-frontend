@@ -11,18 +11,18 @@ const HeroSection = () => {
       className="
             w-full h-full md:h-[90vh] lg:h-[100vh] xl:h-[90vh]
             flex justify-center
-            relative p-4
+            relative p-0
           "
     >
-      <div className="container z-10 px-4">
-        <div className="flex flex-col xl:gap-0 justify-end md:h-[90vh] lg:h-screen xl:h-[90vh] relative text-center text-white my-auto">
+      <div className="container z-10 px-4 py-4">
+        <div className="flex flex-col xl:gap-0 justify-end md:h-[90vh] lg:h-screen xl:h-[90vh] relative text-white my-auto">
           <div className="md:order-1 order-2 md:mt-0 mt-4">
-          <GlassCard />
+            <GlassCard />
           </div>
-          <div className="sm:order-2 order-1 w-full flex justify-between md:my-12">
+          <div className="sm:order-2 order-1 w-full flex justify-between md:mb-12 md:mt-8">
             <div
               className={`glass-container w-full`}
-              style={{ borderRadius: "20px" }}
+              style={{ borderRadius: "5px" }}
             >
               <div
                 className="glass-filter"
@@ -40,9 +40,9 @@ const HeroSection = () => {
                     link="/brokerage"
                     icon={
                       <FaPlane
-                        size={40}
+                        size={36}
                         color="#111218"
-                        className="-mt-8 bg-tertiary_color p-2 rounded-[50%]"
+                        className="bg-tertiary_color p-2 rounded-[50%]"
                       />
                     }
                     customClasses="w-full"
@@ -56,9 +56,9 @@ const HeroSection = () => {
                     link="/acquisition"
                     icon={
                       <FaUsers
-                        size={40}
+                        size={36}
                         color="#111218"
-                        className="-mt-8 bg-tertiary_color p-2 rounded-[50%]"
+                        className="bg-tertiary_color p-2 rounded-[50%]"
                       />
                     }
                     customClasses="w-full"
@@ -72,9 +72,9 @@ const HeroSection = () => {
                     link="/skynet"
                     icon={
                       <FaHandsHelping
-                        size={40}
+                        size={36}
                         color="#111218"
-                        className="-mt-8 bg-tertiary_color p-2 rounded-[50%]"
+                        className="bg-tertiary_color p-2 rounded-[50%]"
                       />
                     }
                     customClasses="w-full"
@@ -88,9 +88,9 @@ const HeroSection = () => {
                     link="/higher"
                     icon={
                       <FiTrendingUp
-                        size={40}
+                        size={36}
                         color="#111218"
-                        className="-mt-8 bg-tertiary_color p-2 rounded-[50%]"
+                        className="bg-tertiary_color p-2 rounded-[50%]"
                       />
                     }
                     customClasses="w-full"

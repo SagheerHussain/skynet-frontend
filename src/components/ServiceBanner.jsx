@@ -8,11 +8,11 @@ const ServiceBanner = ({ banner }) => {
 
   return (
     <>
-        <div className="container">
-          <Navbar />
-        </div>
+      <div className="container">
+        <Navbar />
+      </div>
       <section
-        className="w-screen h-[90vh] sticky top-0 mt-[-10vh]"
+        className="w-screen h-full lg:h-screen xl:h-[90vh] md:sticky top-0 mt-[-10vh]"
         style={{
           backgroundImage: `url(${
             location.pathname === "/brokerage"
@@ -25,12 +25,11 @@ const ServiceBanner = ({ banner }) => {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="z-[0]">
-          <div className="overlay bg-[#111218] opacity-80 absolute top-0 left-0 w-full h-full z-[0]" />
-          <div className="container px-5 py-10 z-[999] h-[90vh] pt-[15vh]">
-            <ServiceBannerContent
-              highlightTitle={
-                location.pathname === "/brokerage"
+        <div className="overlay bg-[#111218] opacity-80 absolute top-0 left-0 w-full h-full " />
+        <div className="container px-5 pt-[25vh] md:pt-[15vh] lg:pt-[10vh] xl:pt-[15vh]">
+          <ServiceBannerContent
+            highlightTitle={
+              location.pathname === "/brokerage"
                   ? "Navigating Brokerage"
                   : "Simplifying Aviation"
               }
@@ -46,7 +45,6 @@ const ServiceBanner = ({ banner }) => {
               }
             />
           </div>
-        </div>
       </section>
     </>
   );
