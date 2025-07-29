@@ -47,7 +47,7 @@ const MeetTheTeam = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.6 }}
-              className="text-[#222] mt-5 text-lg leading-relaxed"
+              className="text-[#222] mt-5 text-lg leading-relaxed text-justify"
             >
               Our team is the heart of Mason Amelia — passionate professionals
               dedicated to delivering seamless experiences from takeoff to

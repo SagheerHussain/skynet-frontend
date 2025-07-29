@@ -103,7 +103,7 @@ const Gallary = () => {
               initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-lg max-w-5xl mx-auto mt-4"
+              className="text-lg max-w-5xl mx-auto mt-4 font-light"
             >
               Explore our curated video library showcasing real-world
               performance, cockpit experiences, and expert reviews of the
