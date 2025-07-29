@@ -7,6 +7,7 @@ body {
   font-style: normal;
   overflow-x: hidden !important;
   background-color: #111218;
+  width: 100vw !important;
 }
 
 h1,h2,h3 {
@@ -29,13 +30,27 @@ h4,h5,h6 {
   clip-path: ellipse(52% 70% at 9% 46%);
 }
 
+.tag-container {
+  display: flex;
+  align-items: center;
+}
+
+.tag-left-arrow {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #222; /* same as bg */
+  border-radius: 0 4px 4px 0;
+}
+
 #meetTheTeam .btn-main,
 #latestJets .btn-main {
   position: relative;
-  color: #222 !important; 
+  color: #fff !important; 
   letter-spacing: 3px;
   overflow: hidden;
-  background: rgba(205, 204, 204, 0.408);
+  background: rgba(66, 65, 65, 0.693);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.253);
   border-radius: 30px;
   font-weight: 600;
@@ -51,16 +66,6 @@ h4,h5,h6 {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.179);
   border-radius: 30px;
 }
-/* .btn-main::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  z-index: -1;
-} */
 .btn-main::after {
   content: "";
   position: absolute;

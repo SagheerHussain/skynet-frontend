@@ -30,14 +30,18 @@ const LatestJets = () => {
   return (
     <section id="latestJets" className="bg-white py-20">
       <div className="container px-5">
-        <motion.h4
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-white text-base bg-gradient-to-r inline-block px-4 py-2 rounded-[30px] from-[#373738] to-[#6c6d6f] font-semibold mb-6"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="tag-container mb-4"
         >
-          Latest Jets
-        </motion.h4>
+          <div className="tag-left-arrow"></div>
+          <div className="flex items-center gap-2 px-4 py-[9px] bg-[#222] text-white text-sm font-semibold">
+            <span className="w-2 h-2 bg-[#fff] rounded-full"></span>
+            Latest Jets
+          </div>
+        </motion.div>
         <motion.h2
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -111,7 +115,7 @@ const LatestJets = () => {
                 <motion.img
                   initial={{ opacity: 0, y: -50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: .8 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
                   src={item.image}
                   alt={item.title}
                   className="w-28 h-28 rounded-full object-cover"

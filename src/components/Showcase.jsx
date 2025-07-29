@@ -14,7 +14,7 @@ const Showcase = () => {
           filter: "drop-shadow(20px 10px 15px rgba(255, 255, 255, 0.2))",
         }}
       >
-        <div className="w-full h-[30vh] sm:h-[50vh] md:h-[75%] lg:h-full overflow-hidden">
+        <div className="w-screen h-[30vh] sm:h-[50vh] md:h-[75%] lg:h-full overflow-hidden">
           <div
             className={`overlay absolute top-0 left-0 w-full h-full z-10 md:block hidden`}
             style={{

@@ -20,14 +20,18 @@ const MeetTheTeam = () => {
         <div className="flex flex-col md:flex-row items-center  justify-between gap-8 md:gap-4 lg:gap-4 xl:gap-8">
           {/* LEFT CONTENT */}
           <div className="w-full md:w-1/2 rounded-3xl text-white">
-            <motion.h6
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className="text-sm bg-gradient-to-r from-[#373738] to-[#6c6d6f] inline-block px-4 py-2 rounded-[30px] mb-4"
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="tag-container mb-4"
             >
-              Get To Know Us
-            </motion.h6>
+              <div className="tag-left-arrow"></div>
+              <div className="flex items-center gap-2 px-4 py-[9px] bg-[#222] text-white text-sm font-semibold">
+                <span className="w-2 h-2 bg-[#fff] rounded-full"></span>
+                Get To Know Us
+              </div>
+            </motion.div>
             {/* Heading */}
             <motion.h2
               initial={{ y: 50, opacity: 0 }}
