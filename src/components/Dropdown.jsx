@@ -19,7 +19,7 @@ const Dropdown = ({ items = [], className, onMouseLeave }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div
-        className="glass-container flex flex-col justify-center glass-container--rounded py-3"
+        className="glass-container flex flex-col justify-center glass-container--rounded p-2"
         style={{ borderRadius: "10px" }}
       >
         <div className="glass-filter"></div>
