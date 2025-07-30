@@ -1,4 +1,5 @@
 import React from "react";
+import useGsapScroll from "../hooks/useGsapScroll";
 import Showcase from "../components/Showcase";
 import Brands from "../components/Brands";
 import Contact from "../components/Contact";
@@ -9,19 +10,32 @@ import Gallary from "../components/Gallary";
 import ScrollToTop from "../components/ScrollToTop";
 import Intro from "../components/Intro";
 import LatestJets from "../components/LatestJets";
+import Navbar from "../components/Navbar";
 
 const HomePage = () => {
+  useGsapScroll();
+
   return (
     <>
-      <Showcase />
-      <Brands />
-      <Intro />
-      <MeetTheTeam />
-      <SliderWrapper />
-      <LatestJets />
-      <Gallary />
-      <Contact />
-      <Footer />
+      <div className="container">
+        <Navbar />
+      </div>
+
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <Showcase />
+          <main id="main">
+            <Brands />
+            <Intro />
+            <MeetTheTeam />
+            <SliderWrapper />
+            <LatestJets />
+            <Gallary />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </div>
       <ScrollToTop />
     </>
   );

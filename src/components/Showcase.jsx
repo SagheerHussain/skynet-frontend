@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 import HeroSection from "./HeroSection";
 import Navbar from "./Navbar";
 import useMediaQuery from "@mui/material/useMediaQuery";
+// import LocomotiveScroll from "locomotive-scroll";
 
 const Showcase = () => {
-  const mobileMedia = useMediaQuery("(max-width: 768px)");
-
   return (
-    <div className="w-screen">
+    <header className="w-screen z-[10]">
       <div
-        className="sm:absolute top-0 left-0 w-full h-full md:h-screen lg:h-[110vh] xl:h-screen z-0"
+        className="sm:absolute top-0 left-0 w-full h-full md:h-screen lg:h-[110vh] xl:h-screen z-[-1]"
         style={{
           filter: "drop-shadow(20px 10px 15px rgba(255, 255, 255, 0.2))",
         }}
@@ -34,12 +33,9 @@ const Showcase = () => {
         </div>
       </div>
 
-      <div className="container">
-        <Navbar />
-      </div>
-
+     
       <HeroSection />
-    </div>
+    </header>
   );
 };
 

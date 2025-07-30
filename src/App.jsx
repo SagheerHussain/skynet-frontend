@@ -16,6 +16,7 @@ import {
 } from "./pages/index";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+// import "./locomotive-scroll.css";
 
 function App() {
   const { pathname } = useLocation();

@@ -639,3 +639,12 @@ h4,h5,h6 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#smooth-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+#smooth-content {
+  will-change: transform;
+}

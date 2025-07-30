@@ -19,7 +19,7 @@ const GlassPlayer = () => {
   };
 
   return (
-    <div className="fixed z-[999999] xl:block hidden left-1/2 -translate-x-1/2">
+    <div className="fixed w-full z-[9999] xl:block hidden left-1/2 -translate-x-1/2">
       <svg style={{ display: "none" }}>
         <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">
           <feTurbulence
@@ -100,6 +100,14 @@ const GlassPlayer = () => {
                     Contact
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/contact"
+                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                  >
+                    Blogs
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -121,7 +129,7 @@ const GlassPlayer = () => {
                   ]
             }
             className={
-              activeDropdown === "services" ? "left-[25%]" : "left-[60%]"
+              activeDropdown === "services" ? "left-[35%]" : "left-[50%]"
             }
             onMouseLeave={() => setActiveDropdown(null)}
           />

@@ -21,11 +21,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`xl:pt-0 lg:pt-4 fixed md:relative top-0 w-full px-6 text-white flex items-center justify-between z-20 h-[10vh] transition-colors duration-300 ${
+      className={`xl:pt-0 lg:pt-4 fixed md:static top-0 w-full px-6 text-white flex items-center justify-between z-20 h-[10vh] transition-colors duration-300 ${
         scrolled ? "bg-black/70" : "bg-transparent"
       } md:bg-transparent`}
     >
-      <div className="logo z-[20]">
+      <div className="logo z-[999999]">
         <Link to={"/"}>
           <img
             src={
@@ -39,7 +39,7 @@ const Navbar = () => {
 
       <GlassNavbar />
 
-      <div className="flex items-center justify-end call-to-action z-[999]">
+      <div className="flex items-center justify-end call-to-action z-[9999] ">
         <SearchBox />
         <div
           className="flex items-center ms-4 xl:hidden"
