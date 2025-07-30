@@ -106,7 +106,7 @@ const LatestJets = () => {
                 onClick="/showroom"
                 bgColor="111218"
                 arrowColor="#111218"
-                txtColor="fff"
+                txtColor="text-[#fff]"
                 borderColor="border-gray-200"
                 fillColor="fill-gray-200"
               />

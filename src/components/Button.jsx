@@ -7,7 +7,7 @@ export default function Button({
   isContact = false,
   bgColor = "fff",
   arrowColor = "#fff",
-  txtColor = "111218",
+  txtColor = "text-[#111218]",
   borderColor = "border-gray-800",
   fillColor = "fill-gray-800"
 }) {
@@ -15,7 +15,7 @@ export default function Button({
     <Link to={onClick} className="z-[9999]">
       <button
         type="submit"
-        class={`text-[#${txtColor}] flex gap-2 items-center shadow-xl text-base md:text-lg bg-[#${bgColor}] backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-tertiary_color hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 border-[${borderColor}] transition-all duration-700 hover:border-tertiary_color rounded-full group`}
+        class={`${txtColor} flex gap-2 items-center shadow-xl text-base md:text-lg bg-[#${bgColor}] backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-tertiary_color hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 border-[${borderColor}] transition-all duration-700 hover:border-tertiary_color rounded-full group`}
       >
         {buttonLabel}
         <svg
