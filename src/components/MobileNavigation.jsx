@@ -118,6 +118,12 @@ const MobileNavigation = ({ isOpen, setIsOpen }) => {
         >
           Contact
         </Link>
+        <Link
+          to="/blogs"
+          className="uppercase text-xl hover:text-tertiary_color transition duration-50"
+        >
+          Blogs
+        </Link>
       </div>
     </div>
   );
