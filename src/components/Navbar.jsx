@@ -23,8 +23,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${location.pathname === "/blog-detail/1" || location.pathname === "/blogs" ? "bg-[#000]" : ""} xl:pt-0 lg:pt-4 z-[9999] fixed md:static top-0 w-full px-6 text-white flex items-center justify-between h-[10vh] transition-colors duration-300 ${
-        scrolled ? "bg-black/70" : "bg-transparent"
+      className={`xl:pt-0 lg:pt-4 z-[9999] fixed md:static top-0 w-full px-6 text-white flex items-center justify-between h-[10vh] transition-colors duration-300 ${
+        scrolled
+          ? "bg-black/70"
+          : location.pathname === "/blogs"
+          ? "bg-black/70"
+          : location.pathname === "/blog-detail/1"
+          ? "bg-black/70"
+          : "bg-transparent"
       } md:bg-transparent`}
     >
       <div className="logo z-[999999]">

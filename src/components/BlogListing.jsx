@@ -96,11 +96,11 @@ const gradient = categoryGradients[categoryName] || [
 
 const BlogListing = () => {
   return (
-    <section className="bg-white px-6 md:px-16 pb-20 pt-20">
+    <section className="bg-white px-6 md:px-16 pb-20 pt-32">
       <div className="container px-5">
         <div className="text-center mb-12">
           <p className="text-tertiary_color font-semibold">Read Our Blog</p>
-          <h1 className="text-4xl font-bold mt-2 mb-2">Browse Our Resources</h1>
+          <h1 className="text-2xl md:text-4xl font-bold mt-2 mb-2">Browse Our Resources</h1>
           <p className="text-gray-600 max-w-xl mx-auto">
             We provide tips and resources from jet industry leaders. For real.
           </p>
