@@ -7,7 +7,7 @@ const InfiniteMovingCards = ({
   items,
   direction = "left",
   speed = "fast",
-  pauseOnHover = false,
+  pauseOnHover = true,
   className,
 }) => {
   const containerRef = useRef(null);
@@ -56,7 +56,7 @@ const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 overflow-hidden md:[mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
@@ -69,22 +69,24 @@ const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <div className="glass-container flex items-center justify-center glass-container--rounded px-4 py-3">
+          <div className="glass-container flex items-center justify-center glass-container--rounded md:px-4 md:py-3">
             <div className="glass-filter"></div>
             <div className="glass-overlay"></div>
             <div className="glass-specular"></div>
 
-            <div className="glass-content glass-content--inline justify-center">
+            <div className="glass-content glass-content--inline justify-center" style={{
+              padding: "1rem 0"
+            }} >
               <li
                 key={idx}
-                className="relative w-[350px] max-w-full shrink-0 rounded-2xl px-8 py-6 md:w-[450px] "
+                className="relative w-[350px] max-w-full shrink-0 rounded-2xl px-4 md:px-8 py-0 md:py-6 md:w-[450px]"
               >
                 <blockquote>
                   <div
                     aria-hidden="true"
                     className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
                   ></div>
-                  <span className="relative z-20 text-sm leading-[1.6] font-normal text-white dark:text-gray-100">
+                  <span className="relative z-20 text-[13px] md:text-sm leading-[1.6] font-normal text-white dark:text-gray-100">
                     {item.quote?.slice(0, 250) + "..."}
                   </span>
                   <div className="relative z-20 mt-6 flex flex-row items-center justify-center">

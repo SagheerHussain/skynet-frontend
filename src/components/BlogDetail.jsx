@@ -1,0 +1,104 @@
+import React from "react";
+import { FaUserCircle } from "react-icons/fa";
+import { BsCalendarDate } from "react-icons/bs";
+
+const BlogDetail = () => {
+  return (
+    <div className="min-h-screen bg-white text-black px-4 md:px-12 pt-20 md:pt-10 pb-20">
+      <div className="container">
+        {/* Header */}
+        <div className="flex md:flex-row flex-col md:items-center justify-between mb-6">
+          <h3 className="max-w-4xl text-[1.3rem] md:text-3xl mb-4">
+            Having experience with creative studio and it’s the ultimate
+            creative factory version of this planet.
+          </h3>
+          <div className="tag-container mb-4">
+            <div className="tag-left-arrow"></div>
+            <div className="flex items-center gap-2 px-4 py-[9px] bg-[#222] text-white text-sm font-semibold">
+              <span className="w-2 h-2 bg-[#fff] rounded-full"></span>
+              Get To Know Us
+            </div>
+          </div>
+        </div>
+
+        {/* Image */}
+        <div className="w-full h-[300px] md:h-[500px] overflow-hidden rounded-xl mb-10">
+          <img
+            src="https://img.freepik.com/premium-photo/black-business-jet-taxiing-from-runway_527900-451.jpg?semt=ais_hybrid&w=740&q=80"
+            alt="blog visual"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Blog Info */}
+        <div className="">
+          <div className="flex items-center space-x-6 text-sm text-gray-500 mb-6">
+            <span className="flex items-center gap-2">
+              <FaUserCircle className="text-lg text-pink-500" /> by Donny
+              Gabriel
+            </span>
+            <span className="flex items-center gap-2">
+              <BsCalendarDate className="text-lg text-blue-600" /> 01 August,
+              2025
+            </span>
+          </div>
+
+          {/* Title */}
+          {/* <h2 className="text-2xl md:text-3xl font-bold text-black leading-snug mb-4">
+            Having experience with creative studio and it’s the ultimate
+            creative factory version of this planet.
+          </h2> */}
+
+          {/* Paragraph */}
+          <p className="text-gray-700 leading-relaxed text-base mb-4">
+            Computer users and programmers have become so accustomed to windows,
+            even for the changing capabilities and the appearances of the
+            interface of the versions, therefore it has remained Microsoft’s
+            product. Although, Lycoris, Red Hat, Mandrake, Suse, Knoppix,
+            Slackware and Lindows make up some of the different versions of
+            LINUX. These companies release their own versions of the systems
+            with
+          </p>
+          <p className="text-gray-700 leading-relaxed text-base mb-4">
+            Computer users and programmers have become so accustomed to windows,
+            even for the changing capabilities and the appearances of the
+            interface of the versions, therefore it has remained Microsoft’s
+            product. Although, Lycoris, Red Hat, Mandrake, Suse, Knoppix,
+            Slackware and Lindows make up some of the different versions of
+            LINUX. These companies release their own versions of the systems
+            with
+          </p>
+          <p className="text-gray-700 leading-relaxed text-base mb-4">
+            Computer users and programmers have become so accustomed to windows,
+            even for the changing capabilities and the appearances of the
+            interface of the versions, therefore it has remained Microsoft’s
+            product. Although, Lycoris, Red Hat, Mandrake, Suse, Knoppix,
+            Slackware and Lindows make up some of the different versions of
+            LINUX. These companies release their own versions of the systems
+            with
+          </p>
+          <p className="text-gray-700 leading-relaxed text-base mb-4">
+            Computer users and programmers have become so accustomed to windows,
+            even for the changing capabilities and the appearances of the
+            interface of the versions, therefore it has remained Microsoft’s
+            product. Although, Lycoris, Red Hat, Mandrake, Suse, Knoppix,
+            Slackware and Lindows make up some of the different versions of
+            LINUX. These companies release their own versions of the systems
+            with
+          </p>
+          <p className="text-gray-700 leading-relaxed text-base mb-4">
+            Computer users and programmers have become so accustomed to windows,
+            even for the changing capabilities and the appearances of the
+            interface of the versions, therefore it has remained Microsoft’s
+            product. Although, Lycoris, Red Hat, Mandrake, Suse, Knoppix,
+            Slackware and Lindows make up some of the different versions of
+            LINUX. These companies release their own versions of the systems
+            with
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BlogDetail;

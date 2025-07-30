@@ -5,9 +5,12 @@ import Contact from "../components/Contact";
 import bgPlane from "/images/contact.png";
 import ScrollToTop from "../components/ScrollToTop";
 import useGsapScroll from "../hooks/useGsapScroll";
+import { useLocation } from "react-router-dom";
 
 const ContactPage = () => {
   useGsapScroll();
+
+  const location = useLocation();
 
   return (
     <>
@@ -17,7 +20,7 @@ const ContactPage = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <section
-            className="relative w-full bg-cover h-screen pt-[10vh] bg-center pb-20 flex justify-center rounded-[20px]"
+            className={`relative w-full bg-cover md:pt-[10vh] bg-center md:pb-10 flex justify-center rounded-[20px] ${location.pathname !== "/contact" ? "lg:h-full xl:h-screen" : "h-full md:h-screen"}`}
             style={{
               backgroundImage: `url(${bgPlane})`,
               backgroundSize: "cover",

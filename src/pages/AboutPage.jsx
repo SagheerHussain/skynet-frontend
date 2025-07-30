@@ -121,7 +121,7 @@ const AboutPage = () => {
             }}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-[0]"></div>
-            <div className="container">
+            <div className="container px-5">
               <About />
             </div>
           </div>

@@ -124,9 +124,9 @@ const TeamSection = () => {
   return (
     <section id="team" className="text-white pb-20 pt-40 px-4 md:px-10">
       <div className="container px-5">
-        <div className="flex flex-row justify-center mb-20 gap-4">
+        <div className="md:flex flex-row justify-center md:mb-20 gap-4">
           <div
-            className={`w-[40%] glass-container h-full`}
+            className={`md:w-[40%] glass-container h-full md:mb-0 mb-4`}
             style={{
               borderRadius: "20px",
               boxShadow:
@@ -163,7 +163,7 @@ const TeamSection = () => {
               </motion.p>
             </div>
           </div>
-          <div className="w-[60%] partners grid grid-cols-3 gap-4">
+          <div className="md:w-[60%] w-full partners grid md:grid-cols-3 gap-4">
             {partners.map((member, idx) => (
               <div className="relative team-card rounded-xl overflow-hidden group mb-4">
                 <Link to={`/team/${idx}`}>
@@ -173,13 +173,13 @@ const TeamSection = () => {
                       alt={member.name}
                       className="w-full h-[375px] object-cover"
                     />
-                    <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-[0]"></div>
+                    <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 md:opacity-50 z-[0]"></div>
                   </div>
                 </Link>
                 {/* <div className="absolute top-[-20%] group-hover:top-[20%] transition-all duration-500 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <Button buttonLabel="View" onClick={`/team/2`} />
               </div> */}
-                <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[130px] group-hover:h-[190px] transition-all duration-500">
+                <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[190px] md:h-[130px] group-hover:h-[190px] transition-all duration-500">
                   <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3">
                     <div className="glass-filter"></div>
                     <div className="glass-overlay"></div>
@@ -229,13 +229,13 @@ const TeamSection = () => {
                     alt={member.name}
                     className="w-full h-[400px] object-cover"
                   />
-                  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-[0]"></div>
+                  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 md:opacity-50 z-[0]"></div>
                 </div>
               </Link>
               {/* <div className="absolute top-[-20%] group-hover:top-[20%] transition-all duration-500 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <Button buttonLabel="View" onClick={`/team/2`} />
               </div> */}
-              <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[130px] group-hover:h-[190px] transition-all duration-500">
+              <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[190px] md:h-[130px] md:group-hover:h-[190px] transition-all duration-500">
                 <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3">
                   <div className="glass-filter"></div>
                   <div className="glass-overlay"></div>

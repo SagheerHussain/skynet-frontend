@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchBox from "./SearchBox";
 import { MdMenu } from "react-icons/md";
 import GlassNavbar from "./GlassNavbar";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MobileNavigation from "./MobileNavigation";
 
 const Navbar = () => {
@@ -19,9 +19,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const location = useLocation();
+
   return (
     <nav
-      className={`xl:pt-0 lg:pt-4 fixed md:static top-0 w-full px-6 text-white flex items-center justify-between z-20 h-[10vh] transition-colors duration-300 ${
+      className={`${location.pathname === "/blog-detail/1" || location.pathname === "/blogs" ? "bg-[#000]" : ""} xl:pt-0 lg:pt-4 z-[9999] fixed md:static top-0 w-full px-6 text-white flex items-center justify-between h-[10vh] transition-colors duration-300 ${
         scrolled ? "bg-black/70" : "bg-transparent"
       } md:bg-transparent`}
     >

@@ -20,7 +20,7 @@ const TestimonialPage = () => {
             style={{ backgroundImage: `url(${bgPlane})` }}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
-            <div className="container px-5">
+            <div className="container">
               <Reviews />
             </div>
           </section>

@@ -71,7 +71,7 @@ const Reviews = () => {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-6xl text-[#fff] font-bold max-w-3xl mx-auto"
+              className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl text-[#fff] font-bold max-w-3xl mx-auto"
             >
               Clients Across World
             </motion.h5>
@@ -79,7 +79,7 @@ const Reviews = () => {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="text-[#fff] text-lg mt-3 mx-auto max-w-4xl"
+              className="text-[#fff] md:text-lg mt-3 mx-auto max-w-4xl"
             >
               Real voices. Real experiences. Hear how our clients turned
               aviation dreams into reality with Mason Amelia. From first-time
@@ -88,10 +88,10 @@ const Reviews = () => {
           </div>
         </div>
 
-        <div className="testimonial_moving_card mt-8 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="testimonial_moving_card mt-8 md:[mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <InfiniteMovingCards
             bgColor=""
-            pauseOnHover={false}
+            pauseOnHover={true}
             speed={"slow"}
             items={testimonials}
             itemClass={"min-w-[600px]"}

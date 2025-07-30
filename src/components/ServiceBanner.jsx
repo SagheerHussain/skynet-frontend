@@ -3,9 +3,12 @@ import Navbar from "./Navbar";
 import { useLocation } from "react-router-dom";
 import ShinyText from "./ui/ShinyText";
 import { motion } from "framer-motion";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const ServiceBanner = ({ banner }) => {
   const location = useLocation();
+
+  const media = useMediaQuery("(max-width: 768px)");
 
   return (
     <>
@@ -28,7 +31,7 @@ const ServiceBanner = ({ banner }) => {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 50, duration: 0.5 }}
-            className="text-white text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl lg:max-w-lg xl:max-w-2xl mb-7"
+            className="md:text-start text-center text-white text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl lg:max-w-lg xl:max-w-2xl mb-7"
             style={{ lineHeight: "1.1" }}
           >
             <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
@@ -50,10 +53,10 @@ const ServiceBanner = ({ banner }) => {
               duration: 0.5,
               delay: 0.3,
             }}
-            className="max-w-xl flex justify-start text-start"
+            className="max-w-xl flex justify-start"
           >
             <ShinyText
-              isTextCenter={false}
+              isTextCenter={media ? true : false}
               text={
                 location.pathname === "/brokerage"
                   ? "At Mason Amelia, we simplify the complexities of aircraft brokerage. Whether you're listing or buying, our experts ensure every step is precise, strategic, and transparent. With deep industry insight and relentless execution, we guide high-stakes deals to successful closures—so you can focus on the results, not the process."

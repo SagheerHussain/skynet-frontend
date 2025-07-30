@@ -27,6 +27,7 @@ import "swiper/css/thumbs";
 // import required modules
 import { Navigation, Keyboard, FreeMode, Thumbs } from "swiper/modules";
 import { motion } from "framer-motion";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const airplanes = [
   {
@@ -149,7 +150,7 @@ const airplanes = [
   },
 ];
 
-const AircraftDetail = () => {
+const AircraftDetail = ({ onOpenModal, currentIndex, setCurrentIndex }) => {
   const aircraft = {
     _id: "193726afas91731",
     title: "N252DA 2020 Diamond DA40 NG",
@@ -240,7 +241,7 @@ const AircraftDetail = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [videoModalOpen, setVideoModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("airframe");
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const categories = [
@@ -273,6 +274,8 @@ const AircraftDetail = () => {
 
   const gallary = aircraft?.images?.filter((item) => item);
 
+  const media = useMediaQuery("(max-width: 768px)");
+
   const renderTabContent = () => {
     const data = aircraft[activeTab.toLowerCase()];
     return (
@@ -301,7 +304,7 @@ const AircraftDetail = () => {
 
   return (
     <>
-      <section id="showroom" className="py-20">
+      <section id="showroom" className="pb-10 md:pb-20 pt-32 md:pt-40">
         <div className="container px-5">
           <div className="lg:flex items-center justify-between">
             <h1 className="text-3xl font-bold mb-4 lg:mb-8 text-white">
@@ -329,7 +332,8 @@ const AircraftDetail = () => {
               <img
                 src={aircraft?.images[activeImgIndex]}
                 alt="Main Aircraft"
-                className="w-full h-[400px] object-cover rounded-2xl"
+                className="w-full h-[400px] object-cover rounded-2xl cursor-pointer"
+                onClick={() => onOpenModal(activeImgIndex, gallary)} // updated
               />
               <div className="mt-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 gallary_images gap-4">
@@ -347,18 +351,20 @@ const AircraftDetail = () => {
                     />
                   ))}
                 </div>
-                <div className="md:flex mt-4 gap-4">
+                <div className="flex mt-4 gap-4">
                   <button
-                    onClick={() => setModalOpen(true)}
-                    className="bg-[#22242e] w-full md:w-1/2 md:mb-0 mb-4 hover:bg-[#22242e]/80 transition-all duration-300 flex items-center justify-center gap-2 text-white py-3 px-4 rounded-[30px] text-lg font-semibold"
+                    onClick={() => onOpenModal(currentIndex, gallary)}
+                    className="bg-[#22242e] w-full md:w-1/2 md:mb-0 mb-4 hover:bg-[#22242e]/80 transition-all duration-300 flex items-center justify-center gap-2 text-white py-3 px-4 rounded-[30px] text-sm md:text-lg font-semibold"
                   >
-                    <IoImageOutline size={22} /> <span>View More</span>
+                    <IoImageOutline size={media ? 18 : 22} />{" "}
+                    <span>View More</span>
                   </button>
                   <button
                     onClick={() => openVideoModal()}
-                    className="bg-[#22242e] w-full md:w-1/2 hover:bg-[#22242e]/80 transition-all duration-300 flex items-center justify-center gap-2 text-white py-3 px-4 rounded-[30px] text-lg font-semibold"
+                    className="bg-[#22242e] w-full md:w-1/2 md:mb-0 mb-4 hover:bg-[#22242e]/80 transition-all duration-300 flex items-center justify-center gap-2 text-white py-3 px-4 rounded-[30px] text-sm md:text-lg font-semibold"
                   >
-                    <FaRegCirclePlay size={22} /> <span>Video</span>
+                    <FaRegCirclePlay size={media ? 18 : 22} />{" "}
+                    <span>Video</span>
                   </button>
                 </div>
               </div>
@@ -368,42 +374,50 @@ const AircraftDetail = () => {
               <div className="jet_featured flex justify-between mt-4 gap-4">
                 <div className="flex flex-col items-center bg-[#171921] w-1/2 p-4 rounded-3xl">
                   <div className="featured_value">
-                    <h4 className="text-3xl font-bold text-white">4</h4>
+                    <h4 className="text-xl md:text-3xl text-white">4</h4>
                   </div>
                   <div className="featured_text">
-                    <h4 className="text-[#7C7C88]">Passangers</h4>
+                    <h4 className="text-[#7C7C88] text-sm md:text-base text-center">
+                      Passangers
+                    </h4>
                   </div>
                 </div>
                 <div className="flex flex-col items-center bg-[#171921] w-1/2 p-4 rounded-3xl">
                   <div className="featured_value">
-                    <h4 className="text-3xl text-white">
+                    <h4 className="text-xl md:text-3xl text-white">
                       900 <span className="text-white text-lg">nm</span>
                     </h4>
                   </div>
                   <div className="featured_text">
-                    <h4 className="text-[#7C7C88]">Range</h4>
+                    <h4 className="text-[#7C7C88] text-sm md:text-base text-center">
+                      Range
+                    </h4>
                   </div>
                 </div>
               </div>
               <div className="jet_featured flex justify-between mt-4 gap-4">
                 <div className="flex flex-col items-center bg-[#171921] w-1/2 p-4 rounded-3xl">
                   <div className="featured_value">
-                    <h4 className="text-3xl text-white">
+                    <h4 className="text-xl md:text-3xl text-white">
                       150 <span className="text-white text-lg">ktas</span>
                     </h4>
                   </div>
                   <div className="featured_text">
-                    <h4 className="text-[#7C7C88]">Max Cruise Speed</h4>
+                    <h4 className="text-[#7C7C88] text-sm md:text-base text-center">
+                      Max Cruise Speed
+                    </h4>
                   </div>
                 </div>
                 <div className="flex flex-col items-center bg-[#171921] w-1/2 p-4 rounded-3xl">
                   <div className="featured_value">
-                    <h4 className="text-3xl text-white">
+                    <h4 className="text-xl md:text-3xl text-white">
                       16,000 <span className="text-white text-lg">ft</span>
                     </h4>
                   </div>
                   <div className="featured_text">
-                    <h4 className="text-[#7C7C88]">Max Ceiling Height</h4>
+                    <h4 className="text-[#7C7C88] text-sm md:text-base text-center">
+                      Max Ceiling Height
+                    </h4>
                   </div>
                 </div>
               </div>
@@ -580,7 +594,7 @@ const AircraftDetail = () => {
             isOpen={videoModalOpen}
             onRequestClose={closeVideoModal}
             contentLabel="Video Gallery Modal"
-            className="fixed inset-0 flex items-center justify-center bg-black/90 z-[999]"
+            className="relative inset-0 flex items-center justify-center bg-black/90 z-[999999]"
             overlayClassName="z-[9999]"
           >
             <div className="bg-black p-4 rounded-lg w-[95%] md:w-[80%] max-w-5xl">

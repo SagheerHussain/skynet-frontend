@@ -1,8 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ShinyText from "./ui/ShinyText";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Higher = () => {
+
+  const media = useMediaQuery("(max-width: 768px)");
+
   return (
     <div className="flex items-center h-screen md:h-[70vh]">
       {/* Overlay card */}
@@ -40,10 +44,10 @@ const Higher = () => {
             duration: 0.5,
             delay: 0.3,
           }}
-          className="max-w-2xl flex justify-start text-start"
+          className="max-w-2xl flex justify-start text-center md:text-start"
         >
           <ShinyText
-            isTextCenter={false}
+            isTextCenter={media ? true :false}
             text={
               "Dive into real-world aviation stories that go beyond aircraft specs and listings. At Mason Amelia, we capture the passion, process, and people behind every deal. Through immersive video storytelling, we bring aviation to life—connecting aircraft with purpose and buyers with clarity."
             }

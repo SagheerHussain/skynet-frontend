@@ -15,11 +15,11 @@ export default function Button({
     <Link to={onClick} className="z-[9999]">
       <button
         type="submit"
-        class={`${txtColor} flex gap-2 items-center shadow-xl text-base md:text-lg bg-[#${bgColor}] backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-tertiary_color hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 border-[${borderColor}] transition-all duration-700 hover:border-tertiary_color rounded-full group`}
+        class={`${txtColor} flex gap-2 items-center shadow-xl text-sm md:text-lg bg-[#${bgColor}] backdrop-blur-md lg:font-medium isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-tertiary_color hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-3 md:px-4 py-1 md:py-2 overflow-hidden border-2 border-[${borderColor}] transition-all duration-700 hover:border-tertiary_color rounded-full group`}
       >
         {buttonLabel}
         <svg
-          class={`w-7 h-7 md:w-8 md:h-8 justify-end group-hover:rotate-90 border-[1px] ${borderColor} group-hover:bg-gray-50 text-${arrowColor} ease-linear duration-300 rounded-full border border-[${borderColor}] group-hover:border-none p-2 rotate-45`}
+          class={`w-5 h-5 md:w-8 md:h-8 justify-end group-hover:rotate-90 border-[1px] ${borderColor} group-hover:bg-gray-50 text-${arrowColor} ease-linear duration-300 rounded-full border border-[${borderColor}] group-hover:border-none md:p-2 p-1 rotate-45`}
           viewBox="0 0 16 19"
           xmlns="http://www.w3.org/2000/svg"
         >

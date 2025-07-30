@@ -21,7 +21,7 @@ const Contact = () => {
     <>
       <section
         id="contact"
-        className={`relative z-[1] ${location.pathname !== "/contact" ? "lg:h-full xl:h-screen" : ""}  flex items-center `}
+        className={`relative z-[1] ${location.pathname !== "/contact" ? "lg:h-full xl:h-screen" : "h-full"}  flex items-center `}
         style={{
           backgroundImage: `${
             location.pathname !== "/contact" ? `url(${contactBanner})` : "none"
@@ -42,7 +42,7 @@ const Contact = () => {
         <div className="container mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Side - Contact Info */}
           <div
-            className={`relative rounded-2xl shadow-md lg:h-auto h-[500px] ${
+            className={`relative rounded-2xl shadow-md lg:h-auto h-[350px] ${
               location.pathname === "/contact" && isMobile ? "mt-[15vh]" : ""
             } `}
           >
@@ -56,7 +56,7 @@ const Contact = () => {
               <div
                 className="
                 relative
-                rounded-xl flex flex-col justify-around
+                rounded-xl flex flex-col md:justify-around
                 lg:py-0 py-4
                 h-full w-full
              "

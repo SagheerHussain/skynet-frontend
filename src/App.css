@@ -451,14 +451,19 @@ h4,h5,h6 {
   background-color: #262626;
 }
 
-.MuiPaginationItem-circular {
+#showroom .MuiPaginationItem-circular {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+#showroom .MuiPaginationItem-circular.Mui-selected {
+  background-color: rgba(255, 255, 255, 0.1) !important;
   border-color: rgba(255, 255, 255, 0.3) !important;
   color: #ffffff !important;
 }
 .MuiPaginationItem-circular.Mui-selected {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+  background-color: #1777cb !important;
   border-color: rgba(255, 255, 255, 0.3) !important;
-  color: #ffffff !important;
+  color: #fff !important;
 }
 
 #gallary .swiper,

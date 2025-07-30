@@ -102,7 +102,7 @@ const GlassPlayer = () => {
                 </li>
                 <li>
                   <Link
-                    to="/contact"
+                    to="/blogs"
                     className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     Blogs

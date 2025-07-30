@@ -88,26 +88,26 @@ const Card = ({ detail, index }) => {
 
         <div className="mt-4 flex items-center justify-between gap-4">
           <div className="w-[33%] airframe flex flex-col items-center gap-2 bg-[#171921] py-2 rounded-lg">
-            <span className="text-white 2xl:px-4 xl:px-3 lg:px-2 xl:text-[.8rem] lg:text-[.6rem] rounded-full">
+            <span className="text-white 2xl:px-4 xl:px-3 lg:px-2 xl:text-[.8rem] lg:text-[.6rem] text-[.8rem] rounded-full">
               Airframe
             </span>
-            <span className="text-white xl:text-[.8rem] lg:text-[.6rem]">
+            <span className="text-white xl:text-[.8rem] lg:text-[.6rem] text-[.8rem]">
               {detail?.airframe}
             </span>
           </div>
           <div className="w-[33%] airframe flex flex-col items-center gap-2 bg-[#171921] py-2 rounded-lg">
-            <span className="text-white 2xl:px-4 xl:px-3 lg:px-2 xl:text-[.8rem] lg:text-[.6rem] rounded-full">
+            <span className="text-white 2xl:px-4 xl:px-3 lg:px-2 xl:text-[.8rem] lg:text-[.6rem] text-[.8rem] rounded-full">
               Engine
             </span>
-            <span className="text-white xl:text-[.8rem] lg:text-[.6rem]">
+            <span className="text-white xl:text-[.8rem] lg:text-[.6rem] text-[.8rem]">
               {detail?.engine}
             </span>
           </div>
           <div className="w-[33%] airframe flex flex-col items-center gap-2 bg-[#171921] py-2 rounded-lg">
-            <span className="text-white 2xl:px-4 xl:px-3 lg:px-2 xl:text-[.8rem] lg:text-[.6rem] rounded-full">
+            <span className="text-white 2xl:px-4 xl:px-3 lg:px-2 xl:text-[.8rem] lg:text-[.6rem] text-[.8rem] rounded-full">
               Propeller
             </span>
-            <span className="text-white xl:text-[.8rem] lg:text-[.6rem]">
+            <span className="text-white xl:text-[.8rem] lg:text-[.6rem] text-[.8rem]">
               {detail?.propeller}
             </span>
           </div>

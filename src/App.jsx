@@ -13,6 +13,8 @@ import {
   HigherPage,
   ContactPage,  
   AircraftDetailPage,
+  BlogPage,
+  BlogDetailPage
 } from "./pages/index";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -40,6 +42,8 @@ function App() {
         <Route path="/team/:id" element={<MemberDetailPage />} />
         <Route path="/higher" element={<HigherPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/blogs" element={<BlogPage />} />
+        <Route path="/blog-detail/:id" element={<BlogDetailPage />} />
       </Routes>
     </>
   );

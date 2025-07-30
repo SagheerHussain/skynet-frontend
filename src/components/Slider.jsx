@@ -152,11 +152,11 @@ const Slider = () => {
                       className="liquid-glass flex flex-col justify-center z-[0]"
                       initial={{ y: -100, scale: 0.8 }}
                       // animate={{ y: 0, scale: 1 }}
-                      viewport={{ once: true, amount: 0.2 }}
+                      viewport={{ once: false, amount: 0.2 }}
                       whileInView={{ y: 0, scale: 1 }}
                       transition={{
                         ...springDrop,
-                        duration: media ? 1.2 : 5,
+                        duration: media ? .7 : 5,
                         delay: 0.4,
                       }}
                     >
@@ -184,11 +184,11 @@ const Slider = () => {
                     <motion.div
                       className="w-1/2 md:h-[150px] h-[100px] relative z-[9999]"
                       initial={{ y: -200, scale: 0.8 }}
-                      viewport={{ once: true, amount: 0.2 }}
+                      viewport={{ once: false, amount: 0.2 }}
                       whileInView={{ y: 0, scale: 1 }}
                       transition={{
                         ...springDrop,
-                        duration: media ? 1.2 : 5,
+                        duration: media ? .7 : 5,
                         delay: 0.2,
                       }}
                     >
@@ -215,11 +215,11 @@ const Slider = () => {
                     <motion.div
                       className="w-1/2 md:h-[150px] h-[100px] relative z-[9999]"
                       initial={{ y: -200, scale: 0.8 }}
-                      viewport={{ once: true, amount: 0.2 }}
+                      viewport={{ once: false, amount: 0.2 }}
                       whileInView={{ y: 0, scale: 1 }}
                       transition={{
                         ...springDrop,
-                        duration: media ? 1.2 : 5,
+                        duration: media ? .7 : 5,
                         delay: 0.2,
                       }}
                     >
@@ -246,11 +246,11 @@ const Slider = () => {
                   {/* RED BOX (Description) */}
                   <motion.div
                     initial={{ y: -200, scale: 0.8 }}
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: false, amount: 0.2 }}
                     whileInView={{ y: 0, scale: 1 }}
                     transition={{
                       ...springDrop,
-                      duration: media ? 1.2 : 5,
+                      duration: media ? .7 : 5,
                       delay: 0,
                     }}
                     className="w-full md:h-[150px] h-[100px] relative z-[9999]"

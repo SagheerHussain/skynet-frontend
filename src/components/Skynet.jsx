@@ -23,7 +23,7 @@ const Skynet = () => {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 50, duration: 0.5, delay: 0.3 }}
-          className="mt-8 text-center md:text-start z-[0]"
+          className="mt-8 mx-auto md:mx-0 z-[0]"
         >
           <Button buttonLabel="Get Started" onClick="/contact" />
         </motion.div>
