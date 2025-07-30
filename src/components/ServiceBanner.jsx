@@ -9,9 +9,6 @@ const ServiceBanner = ({ banner }) => {
 
   return (
     <>
-      <div className="container">
-        <Navbar />
-      </div>
       <section
         className="w-screen h-screen md:sticky top-0 md:mt-[-10vh]"
         style={{

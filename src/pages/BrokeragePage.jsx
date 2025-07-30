@@ -12,6 +12,8 @@ import { FaHandshake, FaUsers, FaChartLine } from "react-icons/fa";
 import { FaJetFighterUp } from "react-icons/fa6";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import brokerageBanner from "/images/brokerage/timeline-banner.avif";
+import Navbar from "../components/Navbar";
+import useGsapScroll from "../hooks/useGsapScroll";
 
 const BrokeragePage = () => {
   const data = [
@@ -146,47 +148,56 @@ const BrokeragePage = () => {
     },
   ];
 
+  useGsapScroll();
+
   return (
     <>
-      <ServiceBanner banner={banner} />
-      <main id="brokerage" className="relative">
-        <BrokerageRappleResearch
-          data={data}
-          highlightedTitle={"Pre Brokerage"}
-          title={"Strategy Tailored for Success"}
-          description={
-            "Before your aircraft hits the market, our expert team designs a smart, strategic approach to attract premium buyers and maximize value."
-          }
-        />
-        <ServiceHighlights
-          topTitle={"Strategic"}
-          highlightedTitle={"Aircraft Brokerage"}
-          bottomTitle={"for Confident Closures"}
-          description="Every listing tells a story. Discover how Mason Amelia’s trusted brokerage model delivers maximum value, optimal timing, and seamless execution—from initial listing to final handshake."
-          data={brokerageData}
-        />
-        <section
-          id="timeline"
-          style={{
-            backgroundImage: `url(${brokerageBanner})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            backgroundAttachment: "fixed",
-          }}
-          className="py-20 relative z-[10]"
-        >
-          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
-          <Timeline data={timeline} isHeading={true} />
-        </section>
+      <div className="container">
+        <Navbar />
+      </div>
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <ServiceBanner banner={banner} />
+          <main id="brokerage" className="relative">
+            <BrokerageRappleResearch
+              data={data}
+              highlightedTitle={"Pre Brokerage"}
+              title={"Strategy Tailored for Success"}
+              description={
+                "Before your aircraft hits the market, our expert team designs a smart, strategic approach to attract premium buyers and maximize value."
+              }
+            />
+            <ServiceHighlights
+              topTitle={"Strategic"}
+              highlightedTitle={"Aircraft Brokerage"}
+              bottomTitle={"for Confident Closures"}
+              description="Every listing tells a story. Discover how Mason Amelia’s trusted brokerage model delivers maximum value, optimal timing, and seamless execution—from initial listing to final handshake."
+              data={brokerageData}
+            />
+            <section
+              id="timeline"
+              style={{
+                backgroundImage: `url(${brokerageBanner})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundAttachment: "fixed",
+              }}
+              className="py-20 relative z-[10]"
+            >
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
+              <Timeline data={timeline} isHeading={true} />
+            </section>
 
-        <section className="bg-[#111218] relative z-[10] py-10">
-          <div className="container px-5">
-            <CTABanner />
-          </div>
-        </section>
-      </main>
-      <Footer />
+            <section className="bg-[#111218] relative z-[10] py-10">
+              <div className="container px-5">
+                <CTABanner />
+              </div>
+            </section>
+          </main>
+          <Footer />
+        </div>
+      </div>
       <ScrollToTop />
     </>
   );

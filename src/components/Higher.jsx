@@ -4,7 +4,7 @@ import ShinyText from "./ui/ShinyText";
 
 const Higher = () => {
   return (
-    <div className="flex items-center h-screen md:h-[60vh]">
+    <div className="flex items-center h-screen md:h-[70vh]">
       {/* Overlay card */}
       <div className="md:p-8 py-8 px-2 text-whitetext-start">
         <motion.h2

@@ -6,26 +6,35 @@ import bgPlane from "/images/team/banner.avif"; // Replace with your path
 import Contact from "../components/Contact";
 import ScrollToTop from "../components/ScrollToTop";
 import CTABanner from "../components/CTABanner";
+import useGsapScroll from "../hooks/useGsapScroll";
 
 const TeamPage = () => {
+  useGsapScroll();
+
   return (
     <>
-      <section
-        className="relative w-full bg-cover bg-center flex justify-center z-[10]"
-        style={{ backgroundImage: `url(${bgPlane})` }}
-      >
-        <div className="absolute top-0 left-0 w-full h-full bg-[#111218] opacity-90 z-[-1]"></div>
-        <div className="container">
-          <Navbar />
-          <Team />
-        </div>
-      </section>
-      <div className="container px-5">
-        <CTABanner />
+      <div className="container">
+        <Navbar />
       </div>
-      <Contact />
-      <Footer />
-      <ScrollToTop />
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <section
+            className="relative w-full bg-cover bg-center flex justify-center z-[10]"
+            style={{ backgroundImage: `url(${bgPlane})` }}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-[#111218] opacity-90 z-[-1]"></div>
+            <div className="container">
+              <Team />
+            </div>
+          </section>
+          <div className="container px-5">
+            <CTABanner />
+          </div>
+          <Contact />
+          <Footer />
+          <ScrollToTop />
+        </div>
+      </div>
     </>
   );
 };

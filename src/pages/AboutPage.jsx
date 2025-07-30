@@ -11,8 +11,12 @@ import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import WhatSetsUsApart from "../components/WhatSetsApart";
 import aboutBanner from "/images/about/banner.avif";
 import WhyChoosUs from "../components/WhyChoosUs";
+import useGsapScroll from "../hooks/useGsapScroll";
 
 const AboutPage = () => {
+
+  useGsapScroll();
+
   const data = [
     {
       title: "2015",
@@ -100,47 +104,53 @@ const AboutPage = () => {
 
   return (
     <>
-      <div
-        className="relative w-full flex justify-center h-screen bg-[#10121A]"
-        style={{
-          backgroundImage: `url(${bgPlane})`,
-          backgroundSize: "cover", // <--- THIS
-          backgroundPosition: "30% 85%",
-          backgroundRepeat: "no-repeat",
-          // Optionally, add a backgroundColor as fallback
-          backgroundColor: "#10121A",
-        }}
-      >
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-[0]"></div>
-        <div className="container">
-          <Navbar />
-          <About />
+      <div className="container">
+        <Navbar />
+      </div>
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <div
+            className="relative w-full flex justify-center h-screen bg-[#10121A]"
+            style={{
+              backgroundImage: `url(${bgPlane})`,
+              backgroundSize: "cover", // <--- THIS
+              backgroundPosition: "30% 85%",
+              backgroundRepeat: "no-repeat",
+              // Optionally, add a backgroundColor as fallback
+              backgroundColor: "#10121A",
+            }}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-[0]"></div>
+            <div className="container">
+              <About />
+            </div>
+          </div>
+          <main>
+            <WhatSetsUsApart />
+
+            <section
+              id="timeline"
+              style={{
+                backgroundImage: `url(${aboutBanner})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundAttachment: "fixed",
+              }}
+              className="py-20 relative z-[10]"
+            >
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
+              <Timeline data={data} />
+            </section>
+            <section className="py-20">
+              <div className="container px-5">
+                <WhyChoosUs />
+              </div>
+            </section>
+          </main>
+          <Footer />
         </div>
       </div>
-      <main>
-        <WhatSetsUsApart />
-
-        <section
-          id="timeline"
-          style={{
-            backgroundImage: `url(${aboutBanner})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            backgroundAttachment: "fixed",
-          }}
-          className="py-20 relative z-[10]"
-        >
-          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
-          <Timeline data={data} />
-        </section>
-        <section className="py-20">
-          <div className="container px-5">
-            <WhyChoosUs />
-          </div>
-        </section>
-      </main>
-      <Footer />
       <ScrollToTop />
     </>
   );

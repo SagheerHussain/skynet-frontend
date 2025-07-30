@@ -122,7 +122,7 @@ const TeamSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="team" className="text-white py-20 px-4 md:px-10">
+    <section id="team" className="text-white pb-20 pt-40 px-4 md:px-10">
       <div className="container px-5">
         <div className="flex flex-row justify-center mb-20 gap-4">
           <div

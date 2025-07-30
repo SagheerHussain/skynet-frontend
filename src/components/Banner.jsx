@@ -17,9 +17,6 @@ const Banner = () => {
         }}
       >
         <div className="overlay bg-black opacity-60 absolute top-0 left-0 w-full h-full z-[-1]"></div>
-        <div className="container">
-          <Navbar />
-        </div>
         <div className="container px-5">
           <div className="banner-content flex flex-col items-center justify-center h-[70vh] z-[2]">
             {/* <h1 className="text-white text-6xl font-bold">Discover the Future of Flight</h1> */}

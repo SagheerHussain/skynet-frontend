@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const Skynet = () => {
   return (
-    <section className="h-screen md:-mt-[5vh]">
+    <section className="h-screen">
       {/* Background Image Right Side */}
       <div className="px-5 container flex flex-col justify-center h-full ">
         <motion.h1
