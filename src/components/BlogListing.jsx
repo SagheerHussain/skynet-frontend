@@ -111,9 +111,9 @@ const BlogListing = () => {
           <aside className="lg:mb-0 mb-4 w-full lg:w-[20%] h-full p-4 border-[1px] border-[#00000040]">
             <div>
               <h3 className="text-sm font-semibold mb-3">Categories</h3>
-              <ul className="flex lg:flex-col flex-row flex-wrap lg:gap-0 gap-4 lg:space-y-2 text-sm text-[#111218] font-medium">
+              <ul className="flex flex-wrap lg:gap-0 gap-4 lg:space-y-2 text-sm text-[#111218] font-medium">
                 {categories.map((cat, idx) => (
-                  <div className="flex items-center">
+                  <div className="flex items-center w-full md:w-auto lg:w-full">
                     <input type="checkbox" />
                     <li key={idx} className="ms-2">
                       {cat}
@@ -125,7 +125,7 @@ const BlogListing = () => {
           </aside>
 
           {/* Blog Grid */}
-          <div className="w-full lg:w-[75%] ms-[5%] grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="w-full lg:w-[75%] lg:ms-[5%] grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, idx) => (
               <Link to="/blog-detail/1">
                 <div key={idx} className={`relative overflow-hidden`}>
