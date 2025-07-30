@@ -1,9 +1,9 @@
-const ShinyText = ({ text, disabled = false, speed = 5, className = "" }) => {
+const ShinyText = ({ isTextCenter = true, text, disabled = false, speed = 5, className = "" }) => {
   const animationDuration = `${speed}s`;
 
   return (
     <div
-      className={`text-[#b5b5b5a4] text-center bg-clip-text inline-block ${
+      className={`text-[#b5b5b5a4] ${isTextCenter ? "text-center" : "text-start"} bg-clip-text inline-block ${
         disabled ? "" : "animate-shine"
       } ${className}`}
       style={{

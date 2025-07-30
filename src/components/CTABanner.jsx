@@ -31,7 +31,7 @@ const CTABanner = () => {
         </h1>
 
         {/* CTA Button */}
-        <div className="mt-8 pb-10">
+        <div className="mt-8 pb-10 flex justify-center">
           <Button buttonLabel="Contact Us" onClick="/contact" />
         </div>
       </div>

@@ -101,7 +101,15 @@ const LatestJets = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
             >
-              <Button buttonLabel="Read More" onClick="/showroom" />
+              <Button
+                buttonLabel="Read More"
+                onClick="/showroom"
+                bgColor="111218"
+                arrowColor="#111218"
+                txtColor="fff"
+                borderColor="border-gray-200"
+                fillColor="fill-gray-200"
+              />
             </motion.div>
           </div>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ShinyText from "./ui/ShinyText";
 
 const Higher = () => {
   return (
@@ -18,7 +19,7 @@ const Higher = () => {
             Visual Stories
           </span>
         </motion.h2>
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
@@ -29,7 +30,28 @@ const Higher = () => {
           people behind every deal. Through immersive video storytelling, we
           bring aviation to life—connecting aircraft with purpose and buyers
           with clarity.
-        </motion.p>
+        </motion.p> */}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 50,
+            duration: 0.5,
+            delay: 0.3,
+          }}
+          className="max-w-2xl flex justify-start text-start"
+        >
+          <ShinyText
+            isTextCenter={false}
+            text={
+              "Dive into real-world aviation stories that go beyond aircraft specs and listings. At Mason Amelia, we capture the passion, process, and people behind every deal. Through immersive video storytelling, we bring aviation to life—connecting aircraft with purpose and buyers with clarity."
+            }
+            disabled={false}
+            speed={5}
+            className="text-base md:text-lg mt-4"
+          />
+        </motion.div>
       </div>
     </div>
   );

@@ -40,7 +40,9 @@ const CTA = () => {
               precision and performance. Connect with us to elevate your mission
               to new heights.
             </p>
-            <Button buttonLabel="Contact Us" onClick="/contact" />
+            <div className="flex justify-center">
+              <Button buttonLabel="Contact Us" onClick="/contact" />
+            </div>
           </div>
         </div>
       </motion.div>

@@ -98,7 +98,15 @@ const MeetTheTeam = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 1.4 }}
               >
-                <Button buttonLabel="View More" onClick="/team" />
+                <Button
+                  buttonLabel="View More"
+                  onClick="/team"
+                  bgColor="111218"
+                  arrowColor="#111218"
+                  txtColor="fff"
+                  borderColor="border-gray-200"
+                  fillColor="fill-gray-200"
+                />
               </motion.div>
 
               <motion.div

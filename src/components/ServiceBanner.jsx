@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
-import ServiceBannerContent from "./ServiceBannerContent";
 import { useLocation } from "react-router-dom";
+import ShinyText from "./ui/ShinyText";
 import { motion } from "framer-motion";
 
 const ServiceBanner = ({ banner }) => {
@@ -44,7 +44,7 @@ const ServiceBanner = ({ banner }) => {
               ? "One Deal at a Time"
               : "One Deal at a Time"}
           </motion.h1>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -53,12 +53,20 @@ const ServiceBanner = ({ banner }) => {
               duration: 0.5,
               delay: 0.3,
             }}
-            className="max-w-xl text-white font-light md:text-start text-center"
+            className="max-w-xl flex justify-start text-start"
           >
-            {location.pathname === "/brokerage"
-              ? "At Mason Amelia, we simplify the complexities of aircraft brokerage. Whether you're listing or buying, our experts ensure every step is precise, strategic, and transparent. With deep industry insight and relentless execution, we guide high-stakes deals to successful closures—so you can focus on the results, not the process."
-              : "At Mason Amelia, we bring clarity to the complexities of aircraft transactions. Whether you're buying or selling, our experts ensure every step is smooth, transparent, and strategic. With decades of aviation insight, we turn challenges into confident decisions — seamlessly. Let us handle the details, so you can focus on what truly matters."}
-          </motion.p>
+            <ShinyText
+              isTextCenter={false}
+              text={
+                location.pathname === "/brokerage"
+                  ? "At Mason Amelia, we simplify the complexities of aircraft brokerage. Whether you're listing or buying, our experts ensure every step is precise, strategic, and transparent. With deep industry insight and relentless execution, we guide high-stakes deals to successful closures—so you can focus on the results, not the process."
+                  : "At Mason Amelia, we bring clarity to the complexities of aircraft transactions. Whether you're buying or selling, our experts ensure every step is smooth, transparent, and strategic. With decades of aviation insight, we turn challenges into confident decisions — seamlessly. Let us handle the details, so you can focus on what truly matters."
+              }
+              disabled={false}
+              speed={5}
+              className="text-lg md:text-xl"
+            />
+          </motion.div>
         </div>
       </section>
     </>
