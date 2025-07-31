@@ -23,7 +23,7 @@ const SkynetAdvantage = () => {
               initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, dealy: 0.3 }}
-              className="text-center text-gray-400 mb-10 text-lg mt-4"
+              className="text-center text-gray-400 mb-10 md:text-lg mt-4"
             >
               Discover how SkyNet delivers accurate aircraft valuations through
               private market data, intelligent analysis, and proven methodology.
