@@ -33,7 +33,7 @@ const Navbar = () => {
           : "bg-transparent"
       } md:bg-transparent`}
     >
-      <div className="logo z-[999999]">
+      <div className="logo z-[99999]">
         <Link to={"/"}>
           <img
             src={

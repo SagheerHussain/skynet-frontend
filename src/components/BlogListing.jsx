@@ -19,6 +19,7 @@ import blogImageTwo from "/images/blogs/plane-3.avif";
 import blogImageThree from "/images/blogs/plane-4.avif";
 import blogImageFour from "/images/blogs/plane-5.avif";
 import Pagination from "./Pagination";
+import { BsCalendarDate } from "react-icons/bs";
 
 const blogPosts = [
   {
@@ -100,7 +101,9 @@ const BlogListing = () => {
       <div className="container px-5">
         <div className="text-center mb-12">
           <p className="text-tertiary_color font-semibold">Read Our Blog</p>
-          <h1 className="text-2xl md:text-4xl font-bold mt-2 mb-2">Browse Our Resources</h1>
+          <h1 className="text-2xl md:text-4xl font-bold mt-2 mb-2">
+            Browse Our Resources
+          </h1>
           <p className="text-gray-600 max-w-xl mx-auto">
             We provide tips and resources from jet industry leaders. For real.
           </p>
@@ -148,14 +151,18 @@ const BlogListing = () => {
                   />
                   <div className="p-4">
                     <h3 className="text-base mt-4 text-[#111218] leading-tight">
-                      {post.title}
+                      {post.title?.slice(0, 30)}...
                     </h3>
                     <p className="text-[#444] text-sm py-3 leading-relaxed">
-                      {post.description}
+                      {post.description?.slice(0, 50)}...
                     </p>
-                    <p className="text-xs bg-[#eec7ff] text-[#222] inline-block px-3 py-1">
+                    {/* <p className="text-xs bg-[#eec7ff] text-[#222] inline-block px-3 py-1">
                       {post.author} · {post.time}
-                    </p>
+                    </p> */}
+                    <span className="text-xs flex items-center gap-2 text-[#666]">
+                      <BsCalendarDate className="text-sm text-blue-600" /> 01
+                      August, 2025
+                    </span>
                   </div>
                 </div>
               </Link>

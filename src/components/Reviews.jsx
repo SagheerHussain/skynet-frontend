@@ -64,8 +64,8 @@ const testimonials = [
 const Reviews = () => {
   return (
     <>
-      <section id="testimonials" className="py-20 my-20">
-        <div className="container mb-14 z-[20]">
+      <section id="testimonials" className="pt-40 pb-20 md:py-20">
+        <div className="container px-5 mb-14 z-[20]">
           <div className="text-center mb-8">
             <motion.h5
               initial={{ opacity: 0, y: 80 }}

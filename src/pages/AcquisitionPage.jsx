@@ -65,7 +65,7 @@ const AcquisitionPage = () => {
     },
   ];
 
-  useGsapScroll();
+  // useGsapScroll();
 
   return (
     <>
@@ -73,29 +73,26 @@ const AcquisitionPage = () => {
         <Navbar />
       </div>
 
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <ServiceBanner banner={banner} />
+      <ServiceBanner banner={banner} />
 
-          <main id="acquisition" className="relative">
-            <ServiceRappleResearch
-              data={data}
-              highlightedTitle={"Pre Acquisition"}
-              title={"Insight Curated For Precision"}
-              description={
-                "Before any deal takes flight, our team conducts thorough groundwork to ensure your acquisition strategy is sharp, informed, and advantageously positioned — from outreach to opportunity identification."
-              }
-            />
-            <ServiceHighlights data={acquisitionData} />
-            <section className="bg-[#111218] relative z-[10] py-10">
-              <div className="container px-5">
-                <CTABanner />
-              </div>
-            </section>
-          </main>
-          <Footer />
-        </div>
-      </div>
+      <main id="acquisition" className="relative">
+        <ServiceRappleResearch
+          data={data}
+          highlightedTitle={"Pre Acquisition"}
+          title={"Insight Curated For Precision"}
+          description={
+            "Before any deal takes flight, our team conducts thorough groundwork to ensure your acquisition strategy is sharp, informed, and advantageously positioned — from outreach to opportunity identification."
+          }
+        />
+        <ServiceHighlights data={acquisitionData} />
+        <section className="bg-[#111218] relative z-[10] py-10">
+          <div className="container px-5">
+            <CTABanner />
+          </div>
+        </section>
+      </main>
+      <Footer />
+
       <ScrollToTop />
     </>
   );

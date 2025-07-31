@@ -10,31 +10,29 @@ import CTABanner from "../components/CTABanner";
 import useGsapScroll from "../hooks/useGsapScroll";
 
 const HigherPage = () => {
-  useGsapScroll();
+  // useGsapScroll();
   return (
     <>
       <div className="container">
         <Navbar />
       </div>
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <section
-            className="relative w-full bg-cover h-screen md:h-[70vh] bg-center flex justify-center rounded-[20px] z-[10]"
-            style={{ backgroundImage: `url(${bgPlane})` }}
-          >
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
-            <div className="container">
-              <Higher />
-            </div>
-          </section>
-          <Gallary />
-          <Vision />
-          <div className="container px-5">
-            <CTABanner />
-          </div>
-          <Footer />
+
+      <section
+        className="relative w-full bg-cover h-screen md:h-[70vh] lg:h-[80vh] xl:h-[70vh] md:-mt-[10vh] bg-center flex justify-center z-[10]"
+        style={{ backgroundImage: `url(${bgPlane})` }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
+        <div className="container">
+          <Higher />
         </div>
+      </section>
+      <Gallary />
+      <Vision />
+      <div className="container px-5">
+        <CTABanner />
       </div>
+      <Footer />
+
       <ScrollToTop />
     </>
   );

@@ -7,8 +7,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
+import "swiper/css/keyboard";
+import "swiper/css/thumbs";
 
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, Keyboard, Thumbs } from "swiper/modules";
 
 import featuredOne from "/images/featured/one.png";
 import featuredTwo from "/images/featured/two.png";
@@ -116,17 +118,18 @@ const Slider = () => {
             disableOnInteraction: false,
           }}
           pagination={pagination}
-          modules={[Pagination, Autoplay]}
+          keyboard={true}
+          modules={[Pagination, Autoplay, Keyboard]}
           onAutoplayTimeLeft={onAutoplayTimeLeft}
           onSlideChange={(swiper) => {
             setActiveIndex(swiper.activeIndex);
           }}
-          className="mySwiper z-[1]"
+          className="mySwiper z-[-1]"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <div
-                className="w-full h-[500px] md:h-[650px] flex flex-col justify-center p-8 relative overflow-hidden rounded-[25px] z-[-4]"
+                className="w-full h-[500px] md:h-[650px] flex flex-col justify-center p-8 relative overflow-hidden rounded-[25px] z-[0]"
                 style={{
                   backgroundImage: `url(${slide.image})`,
                   backgroundSize: "cover",
@@ -147,9 +150,9 @@ const Slider = () => {
                   className="ms-auto w-full md:w-[60%] lg:w-[40%]"
                 >
                   {/* PURPLE BOX (Title) */}
-                  <div className="w-full md:h-[150px] h-[100px] relative z-[9999]">
+                  <div className="w-full md:h-[150px] h-[100px] relative z-[0]">
                     <motion.div
-                      className="liquid-glass flex flex-col justify-center z-[0]"
+                      className="liquid-glass flex flex-col justify-center"
                       initial={{ y: -100, scale: 0.8 }}
                       // animate={{ y: 0, scale: 1 }}
                       viewport={{ once: false, amount: 0.2 }}

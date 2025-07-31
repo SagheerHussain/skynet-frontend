@@ -5,10 +5,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Higher = () => {
 
-  const media = useMediaQuery("(max-width: 768px)");
+  const media = useMediaQuery("(max-width: 767px)");
 
   return (
-    <div className="flex items-center h-screen md:h-[70vh]">
+    <div className="flex items-center h-screen md:h-[80vh] lg:h-[90vh] xl:h-[80vh]">
       {/* Overlay card */}
       <div className="md:p-8 py-8 px-2 text-whitetext-start">
         <motion.h2

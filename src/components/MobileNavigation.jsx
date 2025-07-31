@@ -28,7 +28,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }) => {
 
         <Link
           to="/"
-          className="uppercase text-xl hover:text-tertiary_color transition duration-50"
+          className="uppercase text-xl hover:text-tertiary_color transition duration-50 mt-8"
         >
           Home
         </Link>

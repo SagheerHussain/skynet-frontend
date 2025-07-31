@@ -238,11 +238,8 @@ const AircraftDetail = ({ onOpenModal, currentIndex, setCurrentIndex }) => {
   };
 
   const [activeImgIndex, setActiveImgIndex] = useState(0);
-  const [modalOpen, setModalOpen] = useState(false);
   const [videoModalOpen, setVideoModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("airframe");
-  // const [currentIndex, setCurrentIndex] = useState(0);
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const categories = [
     { name: "Airframe", slug: "airframe" },
@@ -254,15 +251,6 @@ const AircraftDetail = ({ onOpenModal, currentIndex, setCurrentIndex }) => {
     { name: "Exterior", slug: "exterior" },
     { name: "Inspection", slug: "inspection" },
   ];
-
-  const openModal = (index) => {
-    setCurrentIndex(index);
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
 
   const openVideoModal = () => {
     setVideoModalOpen(true);
@@ -304,16 +292,13 @@ const AircraftDetail = ({ onOpenModal, currentIndex, setCurrentIndex }) => {
 
   return (
     <>
-      <section id="showroom" className="pb-10 md:pb-20 pt-32 md:pt-40">
+      <section id="showroom" className="py-20">
         <div className="container px-5">
           <div className="lg:flex items-center justify-between">
             <h1 className="text-3xl font-bold mb-4 lg:mb-8 text-white">
               {aircraft?.title}
             </h1>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+            <div
               className="tag-container mb-4"
             >
               <div
@@ -324,7 +309,7 @@ const AircraftDetail = ({ onOpenModal, currentIndex, setCurrentIndex }) => {
                 <span className="w-2 h-2 bg-[#fff] rounded-full"></span>
                 {aircraft?.status}
               </div>
-            </motion.div>
+            </div>
           </div>
 
           <div className="lg:flex flex-col md:flex-row gap-4">
@@ -360,7 +345,7 @@ const AircraftDetail = ({ onOpenModal, currentIndex, setCurrentIndex }) => {
                     <span>View More</span>
                   </button>
                   <button
-                    onClick={() => openVideoModal()}
+                    onClick={() => setVideoModalOpen(true)}
                     className="bg-[#22242e] w-full md:w-1/2 md:mb-0 mb-4 hover:bg-[#22242e]/80 transition-all duration-300 flex items-center justify-center gap-2 text-white py-3 px-4 rounded-[30px] text-sm md:text-lg font-semibold"
                   >
                     <FaRegCirclePlay size={media ? 18 : 22} />{" "}
@@ -537,64 +522,13 @@ const AircraftDetail = ({ onOpenModal, currentIndex, setCurrentIndex }) => {
           </Swiper>
 
           {/* Modal For Gallary Images */}
-          <Modal
-            isOpen={modalOpen}
-            onRequestClose={closeModal}
-            contentLabel="Video Gallery Modal"
-            className="fixed inset-0 flex items-center justify-center bg-black/90 z-[999]"
-            overlayClassName="z-[9999]"
-          >
-            <div className="bg-black p-4 rounded-lg w-[95%] md:w-[80%] max-w-5xl">
-              <button
-                onClick={closeModal}
-                className="text-white text-3xl font-bold absolute top-5 right-8"
-              >
-                &times;
-              </button>
-
-              {/* Main Video */}
-              <div className="aspect-video">
-                <img
-                  src={gallary[currentIndex]}
-                  className=" rounded"
-                  alt={gallary[currentIndex]}
-                />
-              </div>
-
-              {/* Thumbnails */}
-              <Swiper
-                onSwiper={setThumbsSwiper}
-                spaceBetween={10}
-                slidesPerView={4}
-                freeMode={true}
-                watchSlidesProgress={true}
-                modules={[FreeMode, Thumbs]}
-                className="mySwiper"
-              >
-                {gallary.map((image, i) => (
-                  <SwiperSlide key={i} className="cursor-pointer">
-                    <img
-                      src={image}
-                      alt={image}
-                      className={`rounded object-contain border-2 ${
-                        currentIndex === i
-                          ? "border-blue-500"
-                          : "border-transparent"
-                      }`}
-                      onClick={() => setCurrentIndex(i)}
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </Modal>
 
           {/* Modal For Video */}
           <Modal
             isOpen={videoModalOpen}
             onRequestClose={closeVideoModal}
-            contentLabel="Video Gallery Modal"
-            className="relative inset-0 flex items-center justify-center bg-black/90 z-[999999]"
+            contentLabel="Gallery Modal"
+            className="fixed inset-0 flex items-center justify-center bg-black/90 z-[99999]"
             overlayClassName="z-[9999]"
           >
             <div className="bg-black p-4 rounded-lg w-[95%] md:w-[80%] max-w-5xl">

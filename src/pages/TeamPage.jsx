@@ -16,25 +16,22 @@ const TeamPage = () => {
       <div className="container">
         <Navbar />
       </div>
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <section
-            className="relative w-full bg-cover bg-center flex justify-center z-[10]"
-            style={{ backgroundImage: `url(${bgPlane})` }}
-          >
-            <div className="absolute top-0 left-0 w-full h-full bg-[#111218] opacity-90 z-[-1]"></div>
-            <div className="container">
-              <Team />
-            </div>
-          </section>
-          <div className="container px-5">
-            <CTABanner />
-          </div>
-          <Contact />
-          <Footer />
-          <ScrollToTop />
+
+      <section
+        className="relative w-full bg-cover bg-center flex justify-center z-[10] -mt-[10vh]"
+        style={{ backgroundImage: `url(${bgPlane})` }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full bg-[#111218] opacity-90 z-[-1]"></div>
+        <div className="container">
+          <Team />
         </div>
+      </section>
+      <div className="container px-5">
+        <CTABanner />
       </div>
+      <Contact />
+      <Footer />
+      <ScrollToTop />
     </>
   );
 };

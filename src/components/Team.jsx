@@ -124,98 +124,102 @@ const TeamSection = () => {
   return (
     <section id="team" className="text-white pb-20 pt-40 px-4 md:px-10">
       <div className="container px-5">
-        <div className="md:flex flex-row justify-center md:mb-20 gap-4">
-          <div
-            className={`md:w-[40%] glass-container h-full md:mb-0 mb-4`}
-            style={{
-              borderRadius: "20px",
-              boxShadow:
-                "0 6px 6px rgba(0, 0, 0, 0.02), 0 0 20px rgba(0, 0, 0, 0.1);",
-            }}
-          >
-            <div className="glass-filter"></div>
-            <div className="glass-overlay"></div>
-            <div className="glass-specular"></div>
+        <div className="lg:h-[90vh] flex items-center">
+          <div className="lg:flex flex-row justify-center md:mb-20 gap-4">
             <div
-              className="glass-content h-full flex flex-col"
-              style={{ padding: "3rem 1rem" }}
+              className={`lg:w-[30%] xl:w-[40%] glass-container md:mb-0 mb-4`}
+              style={{
+                borderRadius: "20px",
+                boxShadow:
+                  "0 6px 6px rgba(0, 0, 0, 0.02), 0 0 20px rgba(0, 0, 0, 0.1);",
+                height: "100%",
+              }}
             >
-              <motion.h2
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold text-[#fff]"
+              <div className="glass-filter"></div>
+              <div className="glass-overlay"></div>
+              <div className="glass-specular"></div>
+              <div
+                className="glass-content flex flex-col"
+                style={{ padding: "3rem 1rem" }}
               >
-                A Team of Pilots and{" "}
-                <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
-                  Aviation Experts
-                </span>
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="text-base sm:text-xl text-center max-w-2xl mt-4 font-light"
-              >
-                Built by aviators with decades of insight, Mason Amelia delivers
-                unmatched clarity, strategy, and confidence in every aircraft
-                transaction.
-              </motion.p>
+                <motion.h2
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="text-[2rem] md:text-[1.4rem] xl:text-[2rem] 2xl:text-5xl font-bold text-[#fff]"
+                  style={{ lineHeight: "1.2" }}
+                >
+                  A Team of Pilots and{" "}
+                  <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
+                    Aviation Experts
+                  </span>
+                </motion.h2>
+                <motion.p
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="text-base xl:text-xl text-center max-w-2xl mt-4 font-light"
+                >
+                  Built by aviators with decades of insight, Mason Amelia
+                  delivers unmatched clarity, strategy, and confidence in every
+                  aircraft transaction.
+                </motion.p>
+              </div>
             </div>
-          </div>
-          <div className="md:w-[60%] w-full partners grid md:grid-cols-3 gap-4">
-            {partners.map((member, idx) => (
-              <div className="relative team-card rounded-xl overflow-hidden group mb-4">
-                <Link to={`/team/${idx}`}>
-                  <div className="relative w-full">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-[375px] object-cover"
-                    />
-                    <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 md:opacity-50 z-[0]"></div>
-                  </div>
-                </Link>
-                {/* <div className="absolute top-[-20%] group-hover:top-[20%] transition-all duration-500 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="lg:w-[70%] xl:w-[60%] w-full partners grid md:grid-cols-3 gap-4 mt-4 lg:mt-0">
+              {partners.map((member, idx) => (
+                <div className="relative team-card rounded-xl overflow-hidden group mb-4">
+                  <Link to={`/team/${idx}`}>
+                    <div className="relative w-full">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-[375px] object-cover"
+                      />
+                      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 md:opacity-50 z-[0]"></div>
+                    </div>
+                  </Link>
+                  {/* <div className="absolute top-[-20%] group-hover:top-[20%] transition-all duration-500 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <Button buttonLabel="View" onClick={`/team/2`} />
               </div> */}
-                <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[190px] md:h-[130px] group-hover:h-[190px] transition-all duration-500">
-                  <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3">
-                    <div className="glass-filter"></div>
-                    <div className="glass-overlay"></div>
-                    <div className="glass-specular"></div>
+                  <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[180px] md:h-[120px] group-hover:h-[185px] transition-all duration-500">
+                    <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3">
+                      <div className="glass-filter"></div>
+                      <div className="glass-overlay"></div>
+                      <div className="glass-specular"></div>
 
-                    <div className="glass-content glass-content--inline justify-center">
-                      <div className="relative w-full py-5 px-2">
-                        <h2 className="text-2xl font-semibold text-white">
-                          {member.name}
-                        </h2>
-                        <p className="text-sm py-2 font-light text-gray-400">
-                          {member.email}
-                        </p>
-                        <p className="text-sm font-light text-gray-400 mb-4">
-                          {member.title}
-                        </p>
-                        <div className="social-icons flex items-center gap-4 justify-center">
-                          <a href={member.facebook} target="_blank">
-                            <FaFacebook className="hover:text-[#0866ff] text-xl transition cursor-pointer" />
-                          </a>
-                          <a href={member.twitter} target="_blank">
-                            <FaYoutube className="hover:text-[#00b7ff] text-xl transition cursor-pointer" />
-                          </a>
-                          <a href={member.instagram} target="_blank">
-                            <FaInstagram className="hover:text-[#c3407b] text-xl transition cursor-pointer" />
-                          </a>
-                          <a href={member.linkedin} target="_blank">
-                            <FaLinkedin className="hover:text-[#0a66c2] text-xl transition cursor-pointer" />
-                          </a>
+                      <div className="glass-content glass-content--inline justify-center px-4">
+                        <div className="relative w-full py-5 px-2">
+                          <h2 className="text-lg xl:text-xl font-semibold text-white px-3">
+                            {member.name}
+                          </h2>
+                          <p className="text-xs xl:text-sm p-2 font-light text-gray-400">
+                            {member.email}
+                          </p>
+                          <p className="text-xs xl:text-sm font-light text-gray-400 mb-4 px-3">
+                            {member.title}
+                          </p>
+                          <div className="social-icons flex items-center gap-4 justify-center px-3">
+                            <a href={member.facebook} target="_blank">
+                              <FaFacebook className="hover:text-[#0866ff] text-xl transition cursor-pointer" />
+                            </a>
+                            <a href={member.twitter} target="_blank">
+                              <FaYoutube className="hover:text-[#00b7ff] text-xl transition cursor-pointer" />
+                            </a>
+                            <a href={member.instagram} target="_blank">
+                              <FaInstagram className="hover:text-[#c3407b] text-xl transition cursor-pointer" />
+                            </a>
+                            <a href={member.linkedin} target="_blank">
+                              <FaLinkedin className="hover:text-[#0a66c2] text-xl transition cursor-pointer" />
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 

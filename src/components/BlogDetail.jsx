@@ -16,7 +16,7 @@ const BlogDetail = () => {
             <div className="tag-left-arrow"></div>
             <div className="flex items-center gap-2 px-4 py-[9px] bg-[#222] text-white text-sm font-semibold">
               <span className="w-2 h-2 bg-[#fff] rounded-full"></span>
-              Get To Know Us
+              Charter Jets
             </div>
           </div>
         </div>

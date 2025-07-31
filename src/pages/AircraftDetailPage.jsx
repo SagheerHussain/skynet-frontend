@@ -7,7 +7,7 @@ import GalleryModal from "../components/GallaryModal";
 import useGsapScroll from "../hooks/useGsapScroll";
 
 const AircraftDetailPage = () => {
-  useGsapScroll();
+  // useGsapScroll();
 
   const [modalOpen, setModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,17 +28,14 @@ const AircraftDetailPage = () => {
       <div className="container">
         <Navbar />
       </div>
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <AircraftDetail
-            onOpenModal={openModal}
-            currentIndex={currentIndex}
-            setCurrentIndex={setCurrentIndex}
-          />
-          <Footer />
-          <ScrollToTop />
-        </div>
-      </div>
+
+      <AircraftDetail
+        onOpenModal={openModal}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+      />
+      <Footer />
+      <ScrollToTop />
 
       <GalleryModal
         isOpen={modalOpen}

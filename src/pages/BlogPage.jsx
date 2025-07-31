@@ -5,19 +5,15 @@ import Footer from "../components/Footer";
 import useGsapScroll from "../hooks/useGsapScroll";
 
 const BlogPage = () => {
-  useGsapScroll();
+  // useGsapScroll();
 
   return (
     <>
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <div className="container bg-[#111218]">
-            <Navbar />
-          </div>
-          <BlogListing />
-          <Footer />
-        </div>
+      <div className="container bg-[#111218]">
+        <Navbar />
       </div>
+      <BlogListing />
+      <Footer />
     </>
   );
 };

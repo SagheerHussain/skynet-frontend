@@ -10,17 +10,16 @@ import useGsapScroll from "../hooks/useGsapScroll";
 
 const SkynetPage = () => {
   
-  useGsapScroll();
+  // useGsapScroll();
 
   return (
     <>
       <div className="container">
         <Navbar />
       </div>
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
+ 
           <section
-            className="relative w-full h-screen bg-cover bg-center z-[10]"
+            className="relative w-full h-screen md:-mt-[10vh] bg-cover bg-center z-[10]"
             style={{
               backgroundImage: `linear-gradient(to right, #15161c 40%, rgba(21, 22, 28,0.3)), url(https://cdn.prod.website-files.com/64c2db8601707a81c0d28ff5/64eb9b0110008b830a74c25a_SJ%20Recruiting%2032.webp)`,
               backgroundSize: "cover",
@@ -39,8 +38,7 @@ const SkynetPage = () => {
             <CTABanner />
           </div>
           <Footer />
-        </div>
-      </div>
+ 
       <ScrollToTop />
     </>
   );

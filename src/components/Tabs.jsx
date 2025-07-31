@@ -1,9 +1,14 @@
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 export default function Tabs({ categories, activeTab, setActiveTab, isAllTab = true }) {
+
+  const location = useLocation();
+
+
   return (
     <>
-      <div style={styles.navContainer} className="gap-[12px] md:gap-[24px] tabs-scroll w-full flex flex-row flex-wrap">
+      <div style={styles.navContainer} className={`gap-[12px] md:gap-[24px] tabs-scroll w-full  ${location.pathname !== "/showroom" ? "flex flex-row flex-wrap" : ""}`}>
         {isAllTab && (
           <div
             onClick={() => setActiveTab("all")}
@@ -31,7 +36,7 @@ export default function Tabs({ categories, activeTab, setActiveTab, isAllTab = t
               ...styles.tab,
               color: activeTab === tab.slug ? "white" : "#aaa",
             }}
-            className="md:w-auto w-[40%] text-center text-xs md:text-base mx-2"
+            className={`md:w-auto text-center text-xs md:text-base ${location.pathname !== "/showroom" ? "w-[40%] mx-2" : ""}`}
           >
             {activeTab === tab.slug && (
               <motion.div

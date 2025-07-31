@@ -8,7 +8,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 const ServiceBanner = ({ banner }) => {
   const location = useLocation();
 
-  const media = useMediaQuery("(max-width: 768px)");
+  const media = useMediaQuery("(max-width: 767px)");
 
   return (
     <>

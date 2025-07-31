@@ -9,13 +9,13 @@ const HeroSection = () => {
   return (
     <div
       className="
-            w-full h-full md:h-[90vh] lg:h-[100vh]
+            w-full h-full md:h-[90vh]
             flex justify-center
             relative p-0
           "
     >
       <div className="container z-10 px-4 py-4">
-        <div className="flex flex-col xl:gap-0 justify-end md:h-[90vh] lg:h-screen relative text-white my-auto">
+        <div className="flex flex-col xl:gap-0 justify-end md:h-[90vh] lg:h-[90vh] relative text-white my-auto">
           <div className="md:order-1 order-2 md:mt-0 mt-4">
             <GlassCard />
           </div>

@@ -7,26 +7,21 @@ import ScrollToTop from "../components/ScrollToTop";
 import useGsapScroll from "../hooks/useGsapScroll";
 
 const TestimonialPage = () => {
-  useGsapScroll();
+  // useGsapScroll();
   return (
     <>
-      <div className="container">
-        <Navbar />
-      </div>
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <section
-            className="relative w-full bg-cover bg-center flex justify-center z-[10]"
-            style={{ backgroundImage: `url(${bgPlane})` }}
-          >
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
-            <div className="container">
-              <Reviews />
-            </div>
-          </section>
-          <Footer />
+      <section
+        className="relative h-auto w-full bg-cover bg-center flex justify-center z-[10]"
+        style={{ backgroundImage: `url(${bgPlane})` }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
+        <div className="container">
+          <Navbar />
+          <Reviews />
         </div>
-      </div>
+      </section>
+      <Footer />
+
       <ScrollToTop />
     </>
   );

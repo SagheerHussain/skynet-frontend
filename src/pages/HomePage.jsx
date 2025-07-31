@@ -13,16 +13,15 @@ import LatestJets from "../components/LatestJets";
 import Navbar from "../components/Navbar";
 
 const HomePage = () => {
-  useGsapScroll();
+  // useGsapScroll();
 
   return (
     <>
-      <div className="container">
+      {/* <div className="container">
         <Navbar />
-      </div>
+      </div> */}
 
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
+     
           <Showcase />
           <main id="main">
             <Brands />
@@ -34,8 +33,7 @@ const HomePage = () => {
             <Contact />
           </main>
           <Footer />
-        </div>
-      </div>
+    
       <ScrollToTop />
     </>
   );

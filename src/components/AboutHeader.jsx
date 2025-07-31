@@ -20,7 +20,7 @@ const AboutHeader = () => {
                 initial={{ opacity: 0, y: 80 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ type: "spring", stiffness: 40, duration: 0.5 }}
-                className="text-white text-[1.7rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold leading-tight drop-shadow-xl mb-3 text-center"
+                className="text-white text-[1.7rem] md:text-[3rem] xl:text-6xl font-bold leading-tight drop-shadow-xl mb-3 text-center"
                 style={{ lineHeight: "1.2" }}
               >
                 Redefining Aviation with{" "}

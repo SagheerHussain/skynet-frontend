@@ -5,19 +5,15 @@ import Navbar from "../components/Navbar";
 import useGsapScroll from "../hooks/useGsapScroll";
 
 const BlogDetailPage = () => {
-  useGsapScroll();
+  // useGsapScroll();
 
   return (
     <>
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <div className="container">
-            <Navbar />
-          </div>
-          <BlogDetail />
-          <Footer />
-        </div>
+      <div className="container">
+        <Navbar />
       </div>
+      <BlogDetail />
+      <Footer />
     </>
   );
 };

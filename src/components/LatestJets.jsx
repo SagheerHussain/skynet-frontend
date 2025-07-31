@@ -133,7 +133,7 @@ const LatestJets = () => {
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1 }}
-                    className="text-lg md:text-xl font-medium text-black"
+                    className="text-base md:text-lg lg:text-xl font-normal md:font-medium text-black"
                   >
                     {item.title}
                   </motion.h4>
