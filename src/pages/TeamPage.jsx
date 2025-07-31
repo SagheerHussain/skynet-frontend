@@ -9,7 +9,7 @@ import CTABanner from "../components/CTABanner";
 import useGsapScroll from "../hooks/useGsapScroll";
 
 const TeamPage = () => {
-  useGsapScroll();
+  // useGsapScroll();
 
   return (
     <>
