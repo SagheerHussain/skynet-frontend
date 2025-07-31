@@ -8,7 +8,7 @@ import useGsapScroll from "../hooks/useGsapScroll";
 import { useLocation } from "react-router-dom";
 
 const ContactPage = () => {
-  useGsapScroll();
+  // useGsapScroll();
 
   const location = useLocation();
 
