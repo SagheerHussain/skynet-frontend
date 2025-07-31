@@ -9,8 +9,7 @@ const BlogDetail = () => {
         {/* Header */}
         <div className="flex md:flex-row flex-col md:items-center justify-between mb-6">
           <h3 className="max-w-4xl text-[1.3rem] md:text-3xl mb-4">
-            Having experience with creative studio and it’s the ultimate
-            creative factory version of this planet.
+            Unveiling the N252DA Diamond DA40 NG: A Next-Level Flying Experience
           </h3>
           <div className="tag-container mb-4">
             <div className="tag-left-arrow"></div>
@@ -51,49 +50,21 @@ const BlogDetail = () => {
 
           {/* Paragraph */}
           <p className="text-gray-700 leading-relaxed text-base mb-4">
-            Computer users and programmers have become so accustomed to windows,
-            even for the changing capabilities and the appearances of the
-            interface of the versions, therefore it has remained Microsoft’s
-            product. Although, Lycoris, Red Hat, Mandrake, Suse, Knoppix,
-            Slackware and Lindows make up some of the different versions of
-            LINUX. These companies release their own versions of the systems
-            with
+            Meet the N252DA — a 2020 Diamond DA40 NG that represents the perfect
+            harmony of innovation, efficiency, and elevated luxury in the world
+            of aviation. With its powerful Austro AE300 turbo-diesel engine and
+            FADEC technology, this aircraft offers an exceptional balance of
+            performance and pilot ease. Designed for modern aviators, its fuel
+            efficiency and reliable performance make it ideal for both
+            cross-country journeys and advanced IFR training.
           </p>
           <p className="text-gray-700 leading-relaxed text-base mb-4">
-            Computer users and programmers have become so accustomed to windows,
-            even for the changing capabilities and the appearances of the
-            interface of the versions, therefore it has remained Microsoft’s
-            product. Although, Lycoris, Red Hat, Mandrake, Suse, Knoppix,
-            Slackware and Lindows make up some of the different versions of
-            LINUX. These companies release their own versions of the systems
-            with
-          </p>
-          <p className="text-gray-700 leading-relaxed text-base mb-4">
-            Computer users and programmers have become so accustomed to windows,
-            even for the changing capabilities and the appearances of the
-            interface of the versions, therefore it has remained Microsoft’s
-            product. Although, Lycoris, Red Hat, Mandrake, Suse, Knoppix,
-            Slackware and Lindows make up some of the different versions of
-            LINUX. These companies release their own versions of the systems
-            with
-          </p>
-          <p className="text-gray-700 leading-relaxed text-base mb-4">
-            Computer users and programmers have become so accustomed to windows,
-            even for the changing capabilities and the appearances of the
-            interface of the versions, therefore it has remained Microsoft’s
-            product. Although, Lycoris, Red Hat, Mandrake, Suse, Knoppix,
-            Slackware and Lindows make up some of the different versions of
-            LINUX. These companies release their own versions of the systems
-            with
-          </p>
-          <p className="text-gray-700 leading-relaxed text-base mb-4">
-            Computer users and programmers have become so accustomed to windows,
-            even for the changing capabilities and the appearances of the
-            interface of the versions, therefore it has remained Microsoft’s
-            product. Although, Lycoris, Red Hat, Mandrake, Suse, Knoppix,
-            Slackware and Lindows make up some of the different versions of
-            LINUX. These companies release their own versions of the systems
-            with
+            Inside the cockpit, Garmin’s G1000 NXi avionics suite paired with
+            GFC700 autopilot ensures advanced navigation and a seamless flight
+            experience. Beyond performance, comfort is front and center — from
+            panoramic canopy views to climate control that adapts to every
+            season. Whether you’re flying for business, training, or leisure,
+            the N252DA proves that flying smarter can also mean flying in style.
           </p>
         </div>
       </div>

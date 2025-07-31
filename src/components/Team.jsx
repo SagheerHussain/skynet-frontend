@@ -40,6 +40,9 @@ const partners = [
     instagram: "https://www.instagram.com/masonamelia.aircraftsales/",
     linkedin: "https://www.linkedin.com/in/melissa-patterson-7aa10235/",
   },
+];
+
+const team = [
   {
     name: "Donny Gabriel",
     phone: "(678) 570-8155",
@@ -52,9 +55,6 @@ const partners = [
     instagram: "https://www.instagram.com/masonamelia.aircraftsales/",
     linkedin: "https://www.linkedin.com/in/donnygabriel1/",
   },
-];
-
-const team = [
   {
     name: "Peyton Lindbloom",
     phone: "(720) 300-2145",
@@ -123,11 +123,11 @@ const TeamSection = () => {
 
   return (
     <section id="team" className="text-white pb-20 pt-40 px-4 md:px-10">
-      <div className="container px-5">
-        <div className="lg:h-[90vh] flex items-center">
-          <div className="lg:flex flex-row justify-center md:mb-20 gap-4">
+     
+        <div className="container lg:h-[90vh] flex items-center">
+          <div className="lg:flex flex-row justify-center mx-auto md:mb-20 gap-4">
             <div
-              className={`lg:w-[30%] xl:w-[40%] glass-container md:mb-0 mb-4`}
+              className={`lg:w-[30%] xl:w-[50%] glass-container md:mb-0 mb-4 lg:min-h-[375px] flex items-center`}
               style={{
                 borderRadius: "20px",
                 boxShadow:
@@ -146,7 +146,7 @@ const TeamSection = () => {
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-[2rem] md:text-[1.4rem] xl:text-[2rem] 2xl:text-5xl font-bold text-[#fff]"
+                  className="text-[2rem] lg:text-[1.4rem] xl:text-[2rem] 2xl:text-6xl font-bold text-[#fff]"
                   style={{ lineHeight: "1.2" }}
                 >
                   A Team of Pilots and{" "}
@@ -166,7 +166,7 @@ const TeamSection = () => {
                 </motion.p>
               </div>
             </div>
-            <div className="lg:w-[70%] xl:w-[60%] w-full partners grid md:grid-cols-3 gap-4 mt-4 lg:mt-0">
+            <div className="lg:w-[70%] xl:w-[50%] w-full partners grid md:grid-cols-2 gap-4 mt-4 lg:mt-0">
               {partners.map((member, idx) => (
                 <div className="relative team-card rounded-xl overflow-hidden group mb-4">
                   <Link to={`/team/${idx}`}>
@@ -176,13 +176,13 @@ const TeamSection = () => {
                         alt={member.name}
                         className="w-full h-[375px] object-cover"
                       />
-                      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 md:opacity-50 z-[0]"></div>
+                      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 lg:opacity-50 z-[0]"></div>
                     </div>
                   </Link>
                   {/* <div className="absolute top-[-20%] group-hover:top-[20%] transition-all duration-500 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <Button buttonLabel="View" onClick={`/team/2`} />
               </div> */}
-                  <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[180px] md:h-[120px] group-hover:h-[185px] transition-all duration-500">
+                  <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[180px] lg:h-[120px] group-hover:h-[185px] transition-all duration-500">
                     <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3">
                       <div className="glass-filter"></div>
                       <div className="glass-overlay"></div>
@@ -222,7 +222,11 @@ const TeamSection = () => {
             </div>
           </div>
         </div>
-
+   
+      <div className="container">
+        <div className="mx-auto">
+          <h5 className="text-6xl font-semibold text-center mb-12 md:block hidden">Our Team</h5>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {team.map((member, idx) => (
             <div className="relative team-card rounded-xl overflow-hidden group">
@@ -233,13 +237,13 @@ const TeamSection = () => {
                     alt={member.name}
                     className="w-full h-[400px] object-cover"
                   />
-                  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 md:opacity-50 z-[0]"></div>
+                  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 lg:opacity-50 z-[0]"></div>
                 </div>
               </Link>
               {/* <div className="absolute top-[-20%] group-hover:top-[20%] transition-all duration-500 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <Button buttonLabel="View" onClick={`/team/2`} />
               </div> */}
-              <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[190px] md:h-[130px] md:group-hover:h-[190px] transition-all duration-500">
+              <div className="absolute bottom-0 left-0 right-0 rounded-[100px] h-[190px] md:h-[130px] lg:group-hover:h-[190px] transition-all duration-500">
                 <div className="glass-container rounded-xl flex items-center justify-center glass-container--rounded px-4 py-3">
                   <div className="glass-filter"></div>
                   <div className="glass-overlay"></div>

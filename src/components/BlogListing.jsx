@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const categories = [
@@ -96,6 +96,9 @@ const gradient = categoryGradients[categoryName] || [
 ];
 
 const BlogListing = () => {
+
+  const [selectedCategories, setSelectedCategories] = useState([]);
+
   return (
     <section className="bg-white px-6 md:px-16 pb-20 pt-32">
       <div className="container px-5">
@@ -115,14 +118,54 @@ const BlogListing = () => {
             <div>
               <h3 className="text-sm font-semibold mb-3">Categories</h3>
               <ul className="flex flex-wrap lg:gap-0 gap-4 lg:space-y-2 text-sm text-[#111218] font-medium">
-                {categories.map((cat, idx) => (
-                  <div className="flex items-center w-full md:w-auto lg:w-full">
-                    <input type="checkbox" />
-                    <li key={idx} className="ms-2">
-                      {cat}
-                    </li>
-                  </div>
-                ))}
+                {categories.map((cat, idx) => {
+                  return (
+                    <div className="flex items-center w-full md:w-auto lg:w-full">
+                      <label className="relative flex items-center cursor-pointer group">
+                        <input
+                          type="checkbox"
+                          checked={selectedCategories.includes(cat)}
+                          onChange={() =>
+                            setSelectedCategories((prev) =>
+                              prev.includes(cat)
+                                ? prev.filter((item) => item !== cat)
+                                : [...prev, cat]
+                            )
+                          }
+                          className="sr-only"
+                        />
+                        <div
+                          className={`w-6 h-6 border border-black/30 rounded-sm overflow-hidden relative transition-colors duration-300 ${
+                            selectedCategories.includes(cat) ? "border-white" : ""
+                          }`}
+                        >
+                          <div
+                            className={`absolute bottom-0 left-0 w-full bg-tertiary_color transition-all duration-700 ease-out ${
+                              selectedCategories.includes(cat) ? "h-full" : "h-0"
+                            }`}
+                          />
+                          {selectedCategories.includes(cat) && (
+                            <svg
+                              className="absolute w-4 h-4 text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth={5}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              viewBox="0 0 24 24"
+                            >
+                              <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                          )}
+                        </div>
+
+                        <li key={idx} className="ms-2">
+                          {cat}
+                        </li>
+                      </label>
+                    </div>
+                  );
+                })}
               </ul>
             </div>
           </aside>
