@@ -154,7 +154,7 @@ const SkynetTimeline = () => {
                     duration: 0.5,
                     delay: 0.6,
                   }}
-                  className="text-gray-600 text-lg leading-relaxed text-justify"
+                  className="text-gray-600 md:text-lg leading-relaxed px-5 text-justify"
                 >
                   {item.description}
                 </motion.p>
