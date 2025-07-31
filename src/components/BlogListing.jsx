@@ -96,7 +96,6 @@ const gradient = categoryGradients[categoryName] || [
 ];
 
 const BlogListing = () => {
-
   const [selectedCategories, setSelectedCategories] = useState([]);
 
   return (
@@ -116,7 +115,15 @@ const BlogListing = () => {
           {/* Left Sidebar */}
           <aside className="lg:mb-0 mb-4 w-full lg:w-[20%] h-full p-4 border-[1px] border-[#00000040]">
             <div>
-              <h3 className="text-sm font-semibold mb-3">Categories</h3>
+              <div className="flex justify-between mb-4">
+                <h3 className="text-[#111218] font-medium">Filter Options</h3>
+                <button
+                  onClick={() => setSelectedCategories([])}
+                  className="text-[#111218] font-medium text-xs hover:text-tertiary_color"
+                >
+                  Clear All
+                </button>
+              </div>
               <ul className="flex flex-wrap lg:gap-0 gap-4 lg:space-y-2 text-sm text-[#111218] font-medium">
                 {categories.map((cat, idx) => {
                   return (
@@ -136,12 +143,16 @@ const BlogListing = () => {
                         />
                         <div
                           className={`w-6 h-6 border border-black/30 rounded-sm overflow-hidden relative transition-colors duration-300 ${
-                            selectedCategories.includes(cat) ? "border-white" : ""
+                            selectedCategories.includes(cat)
+                              ? "border-white"
+                              : ""
                           }`}
                         >
                           <div
                             className={`absolute bottom-0 left-0 w-full bg-tertiary_color transition-all duration-700 ease-out ${
-                              selectedCategories.includes(cat) ? "h-full" : "h-0"
+                              selectedCategories.includes(cat)
+                                ? "h-full"
+                                : "h-0"
                             }`}
                           />
                           {selectedCategories.includes(cat) && (

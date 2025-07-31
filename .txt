@@ -1,3 +1,2 @@
-inside filter "clear all" text with hover
 
 

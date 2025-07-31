@@ -38,7 +38,11 @@ export default function FilterCheckboxList({
 
   return (
     <div className="p-6 rounded-2xl border border-[#ffffff48]">
-      <h3 className="text-white font-medium mb-4">Filter Options</h3>
+
+      <div className="flex justify-between">
+        <h3 className="text-white font-medium">Filter Options</h3>
+        <button onClick={() => setSelected([])} className="text-white font-medium text-xs hover:text-tertiary_color">Clear All</button>
+      </div>
 
       <CheckBoxGroup
         title="Categories"
