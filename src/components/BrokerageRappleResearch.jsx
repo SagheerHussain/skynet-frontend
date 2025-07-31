@@ -36,7 +36,7 @@ const BrokerageRappleResearch = ({
                 y: 0,
               }}
               transition={{ duration: 0.8 }}
-              className="text-4xl xl:text-7xl font-bold text-white mb-4"
+              className="text-center md:text-start text-4xl xl:text-7xl font-bold text-white mb-4"
               style={{ lineHeight: "1.1" }}
             >
               <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
@@ -54,7 +54,7 @@ const BrokerageRappleResearch = ({
                 y: 0,
               }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-[#eee] text-base md:text-lg lg:text-xl font-light"
+              className="text-center md:text-start text-[#eee] text-base md:text-lg lg:text-xl font-light"
             >
               {description}
             </motion.p>
