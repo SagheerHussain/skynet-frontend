@@ -54,7 +54,7 @@ const BrokerageRappleResearch = ({
                 y: 0,
               }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-[#eee] text-xl font-light"
+              className="text-[#eee] text-base md:text-lg lg:text-xl font-light"
             >
               {description}
             </motion.p>
