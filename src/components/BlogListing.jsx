@@ -116,10 +116,10 @@ const BlogListing = () => {
           <aside className="lg:mb-0 mb-4 w-full lg:w-[20%] h-full p-4 border-[1px] border-[#00000040]">
             <div>
               <div className="flex justify-between mb-4">
-                <h3 className="text-[#111218] font-medium">Filter Options</h3>
+                <h3 className="text-[#111218] font-medium xl:text-base lg:text-xs">Filter Options</h3>
                 <button
                   onClick={() => setSelectedCategories([])}
-                  className="text-[#111218] font-medium text-xs hover:text-tertiary_color"
+                  className="text-[#111218] font-medium xl:text-base lg:text-xs hover:text-tertiary_color"
                 >
                   Clear All
                 </button>
