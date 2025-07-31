@@ -181,7 +181,7 @@ const Listing = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="showroom" className="py-20">
+    <section id="showroom">
       <div className="container px-6">
         <div className="text-center mb-20">
           <h1 className="text-4xl font-bold text-white pt-10">

@@ -174,7 +174,7 @@ const TeamSection = () => {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-[375px] object-cover"
+                        className="w-full"
                       />
                       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 lg:opacity-50 z-[0]"></div>
                     </div>
@@ -227,7 +227,7 @@ const TeamSection = () => {
         <div className="mx-auto">
           <h5 className="text-6xl font-semibold text-center mb-12 md:block hidden">Our Team</h5>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {team.map((member, idx) => (
             <div className="relative team-card rounded-xl overflow-hidden group">
               <Link to={`/team/${idx}`}>
@@ -235,7 +235,7 @@ const TeamSection = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-[400px] object-cover"
+                    className="w-full"
                   />
                   <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 lg:opacity-50 z-[0]"></div>
                 </div>
@@ -251,12 +251,12 @@ const TeamSection = () => {
 
                   <div className="glass-content glass-content--inline justify-center">
                     <div className="relative w-full py-5 px-2">
-                      <h2 className="text-2xl font-semibold text-white">
+                      <h2 className="text-lg md:text-xl xl:text-2xl font-semibold text-white">
                         {member.name}
                       </h2>
-                      <h2 className="text-sm py-2 font-semibold text-white">
+                      <p className="text-sm py-2 text-gray-400">
                         {member.email}
-                      </h2>
+                      </p>
                       <p className="text-sm text-gray-400 mb-4">
                         {member.title}
                       </p>

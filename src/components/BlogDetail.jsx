@@ -1,6 +1,8 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { BsCalendarDate } from "react-icons/bs";
+import ReviewForm from "./ReviewForm";
+import Comments from "./Comments";
 
 const BlogDetail = () => {
   return (
@@ -67,6 +69,9 @@ const BlogDetail = () => {
             the N252DA proves that flying smarter can also mean flying in style.
           </p>
         </div>
+
+        <ReviewForm />
+        <Comments />
       </div>
     </div>
   );

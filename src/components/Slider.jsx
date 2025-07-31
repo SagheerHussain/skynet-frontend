@@ -124,12 +124,12 @@ const Slider = () => {
           onSlideChange={(swiper) => {
             setActiveIndex(swiper.activeIndex);
           }}
-          className="mySwiper z-[-1]"
+          className="mySwiper z-[0]"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <div
-                className="w-full h-[500px] md:h-[650px] flex flex-col justify-center p-8 relative overflow-hidden rounded-[25px] z-[0]"
+                className="w-full h-[500px] md:h-[650px] flex flex-col justify-center p-8 relative overflow-hidden rounded-[25px] z-[1]"
                 style={{
                   backgroundImage: `url(${slide.image})`,
                   backgroundSize: "cover",

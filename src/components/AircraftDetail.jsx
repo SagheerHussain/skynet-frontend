@@ -292,7 +292,7 @@ const AircraftDetail = ({ onOpenModal, currentIndex, setCurrentIndex }) => {
 
   return (
     <>
-      <section id="showroom" className="py-20">
+      <section id="showroom" className="pb-20 pt-[150px] md:py-20">
         <div className="container px-5">
           <div className="lg:flex items-center justify-between">
             <h1 className="text-3xl font-bold mb-4 lg:mb-8 text-white">

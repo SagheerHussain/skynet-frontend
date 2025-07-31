@@ -3,6 +3,7 @@ import BlogDetail from "../components/BlogDetail";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import useGsapScroll from "../hooks/useGsapScroll";
+import ReviewForm from "../components/ReviewForm";
 
 const BlogDetailPage = () => {
   // useGsapScroll();
@@ -13,6 +14,7 @@ const BlogDetailPage = () => {
         <Navbar />
       </div>
       <BlogDetail />
+
       <Footer />
     </>
   );
