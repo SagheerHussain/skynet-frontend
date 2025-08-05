@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 
 const SearchBox = () => {
   return (
-    <div className="">
+    <div className="px-6">
       {/* SVG filter definition */}
       <svg style={{ display: "none" }}>
         <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">

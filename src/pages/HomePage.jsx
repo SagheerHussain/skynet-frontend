@@ -25,10 +25,10 @@ const HomePage = () => {
           <Showcase />
           <main id="main">
             <Brands />
-            <Intro />
+            {/* <Intro /> */}
             <MeetTheTeam />
             <SliderWrapper />
-            <LatestJets />
+            {/* <LatestJets /> */}
             <Gallary />
             <Contact />
           </main>

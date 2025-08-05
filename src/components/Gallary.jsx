@@ -6,6 +6,7 @@ import {
   Pagination,
   Thumbs,
   FreeMode,
+  Keyboard,
   Navigation,
 } from "swiper/modules";
 import "swiper/css";
@@ -13,6 +14,8 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
+import "swiper/css/keyboard";
+import "swiper/css/navigation";
 
 import GallaryOne from "/images/gallary/image 1.png";
 import GallaryTwo from "/images/gallary/image 2.png";
@@ -21,6 +24,7 @@ import GallaryFour from "/images/gallary/image 4.png";
 import GallaryFive from "/images/gallary/image 5.png";
 import GallarySix from "/images/gallary/image 6.png";
 import { motion } from "framer-motion";
+import { HeroParallax } from "./ui/hero-parallex";
 
 Modal.setAppElement("#root");
 
@@ -74,141 +78,187 @@ const Gallary = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openModal = (index) => {
+  const openHeroModal = (index) => {
+    console.log(index);
     setCurrentIndex(index);
     setModalOpen(true);
   };
 
   const closeModal = () => {
     setModalOpen(false);
+    setCurrentIndex(0);
   };
 
   return (
     <>
-      <section id="gallary" className="w-full pt-20">
-        <div className="container px-5">
-          <div className="text-center text-white">
-            <motion.h1
-              initial={{ opacity: 0, y: 70 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-6xl font-bold"
-            >
-              A Bespoke{" "}
-              <span className="bg-gradient-to-r from-[#1777cb] to-tertiary_color bg-clip-text text-transparent">
-                Approach to Brokerage
-              </span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 70 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-sm md:text-lg max-w-5xl mx-auto mt-4 font-light"
-            >
-              Explore our curated video library showcasing real-world
-              performance, cockpit experiences, and expert reviews of the
-              aircraft we represent. Whether you're looking to buy, sell, or
-              simply understand the true value of each model, our videos offer
-              unmatched transparency and insight into the world of
-              high-performance aviation.
-            </motion.p>
+      <HeroParallax portfolio={products} onImageClick={openHeroModal} />
+
+      {/* Modal */}
+      <Modal
+        isOpen={modalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Video Gallery Modal"
+        className="fixed inset-0 flex items-center justify-center bg-black/90 z-[9999]"
+        overlayClassName="z-[9999]"
+      >
+        <div className="bg-black p-4 rounded-lg w-[95%] md:w-[80%] max-w-5xl">
+          <button
+            onClick={closeModal}
+            className="text-white text-3xl font-bold absolute top-5 right-8"
+          >
+            &times;
+          </button>
+
+          {/* Main Video */}
+          <div className="aspect-video">
+            <iframe
+              src={products[currentIndex].videoUrl}
+              title={products[currentIndex].src}
+              allowFullScreen
+              className="w-full h-full mt-10 rounded"
+            ></iframe>
           </div>
 
+          {/* Thumbnails */}
           <Swiper
-            effect="coverflow"
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView="auto"
-            loop={true}
+            onSwiper={setThumbsSwiper}
+            spaceBetween={10}
+            slidesPerView={4}
             navigation={true}
-            coverflowEffect={{
-              rotate: 60,
-              stretch: 0,
-              depth: 200,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            modules={[EffectCoverflow, Navigation]}
+            loop={true}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Thumbs, Navigation, Keyboard]}
             className="mySwiper"
+            keyboard={true}
           >
-            {videoList.map((video, index) => (
-              <SwiperSlide
-                key={video.id}
-                className="relative w-[200px] cursor-pointer"
-                onClick={() => openModal(index)}
-              >
+            {products?.map((video, i) => (
+              <SwiperSlide key={video.id} className="cursor-pointer">
                 <img
-                  src={video.thumbnail}
+                  src={video.src}
                   alt={video.title}
-                  className="rounded-lg object-contain w-full"
+                  className={`rounded w-full 2xl:min-h-[300px] lg:max-h-[90px] 2xl:object-cover lg:object-contain border-2 ${
+                    currentIndex === i
+                      ? "border-blue-500"
+                      : "border-transparent"
+                  }`}
+                  onClick={() => setCurrentIndex(i)}
                 />
-                {/* <div className="absolute bottom-2 right-2 bg-black text-white text-xs px-2 py-1 rounded">
-                  {video.duration}
-                </div>
-                <div className="absolute bottom-2 left-2 bg-black text-white text-sm font-bold px-2 py-1 rounded">
-                  {video.title}
-                </div> */}
               </SwiperSlide>
             ))}
           </Swiper>
-
-          {/* Modal */}
-          <Modal
-            isOpen={modalOpen}
-            onRequestClose={closeModal}
-            contentLabel="Video Gallery Modal"
-            className="fixed inset-0 flex items-center justify-center bg-black/90 z-[9999]"
-            overlayClassName="z-[9999]"
-          >
-            <div className="bg-black p-4 rounded-lg w-[95%] md:w-[80%] max-w-5xl">
-              <button
-                onClick={closeModal}
-                className="text-white text-3xl font-bold absolute top-5 right-8"
-              >
-                &times;
-              </button>
-
-              {/* Main Video */}
-              <div className="aspect-video mb-6">
-                <iframe
-                  src={videoList[currentIndex].videoUrl}
-                  title={videoList[currentIndex].title}
-                  allowFullScreen
-                  className="w-full h-full rounded"
-                ></iframe>
-              </div>
-
-              {/* Thumbnails */}
-              <Swiper
-                onSwiper={setThumbsSwiper}
-                spaceBetween={10}
-                slidesPerView={4}
-                freeMode={true}
-                watchSlidesProgress={true}
-                modules={[FreeMode, Thumbs]}
-                className="mySwiper"
-              >
-                {videoList.map((video, i) => (
-                  <SwiperSlide key={video.id} className="cursor-pointer">
-                    <img
-                      src={video.thumbnail}
-                      alt={video.title}
-                      className={`rounded w-full h-[80px] object-cover border-2 ${
-                        currentIndex === i
-                          ? "border-blue-500"
-                          : "border-transparent"
-                      }`}
-                      onClick={() => setCurrentIndex(i)}
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </Modal>
         </div>
-      </section>
+      </Modal>
     </>
   );
 };
 
 export default Gallary;
+
+export const products = [
+  {
+    _id: 1,
+    title: "Moonbeam",
+    category: "",
+    src: GallaryOne,
+    videoUrl: "https://www.youtube.com/embed/AHF7354Fr1w?si=i_KCQVf8MgJ10GZe",
+  },
+  {
+    _id: 2,
+    title: "Moonbeam",
+    category: "",
+    src: GallaryTwo,
+    videoUrl: "https://www.youtube.com/embed/Bux2lUoqEow?si=NqzvBBzWuRn8i2T8",
+  },
+  {
+    _id: 3,
+    title: "Moonbeam",
+    category: "",
+    src: GallaryThree,
+    videoUrl: "https://www.youtube.com/embed/2SUY8ULXEl0?si=sSvG5KRPgp_8fq_2",
+  },
+  {
+    _id: 4,
+    title: "Moonbeam",
+    category: "",
+    src: GallaryFour,
+    videoUrl: "https://www.youtube.com/embed/YOYnQA1hN6s?si=Jafjza6UqlIRIAUO",
+  },
+  {
+    _id: 5,
+    title: "Moonbeam",
+    category: "",
+    src: GallaryFive,
+    videoUrl: "https://www.youtube.com/embed/pjHfNN-oKoA?si=jE3m0m-7rbRR0NIF",
+  },
+  {
+    _id: 6,
+    title: "Moonbeam",
+    category: "",
+    src: GallarySix,
+    videoUrl: "https://www.youtube.com/embed/86xFD4jn-MU?si=W_boDwDqvDYmHEen",
+  },
+  {
+    _id: 7,
+    title: "Moonbeam",
+    category: "",
+    src: GallaryOne,
+    videoUrl: "https://www.youtube.com/embed/AHF7354Fr1w?si=i_KCQVf8MgJ10GZe",
+  },
+  {
+    _id: 8,
+    title: "Moonbeam",
+    category: "",
+    src: GallaryTwo,
+    videoUrl: "https://www.youtube.com/embed/Bux2lUoqEow?si=NqzvBBzWuRn8i2T8",
+  },
+  {
+    _id: 9,
+    title: "Moonbeam",
+    category: "",
+    src: GallaryThree,
+    videoUrl: "https://www.youtube.com/embed/2SUY8ULXEl0?si=sSvG5KRPgp_8fq_2",
+  },
+  {
+    _id: 10,
+    title: "Moonbeam",
+    category: "",
+    src: GallaryFour,
+    videoUrl: "https://www.youtube.com/embed/YOYnQA1hN6s?si=Jafjza6UqlIRIAUO",
+  },
+  {
+    _id: 11,
+    title: "Moonbeam",
+    category: "",
+    src: GallaryFive,
+    videoUrl: "https://www.youtube.com/embed/pjHfNN-oKoA?si=jE3m0m-7rbRR0NIF",
+  },
+  {
+    _id: 12,
+    title: "Moonbeam",
+    category: "",
+    src: GallarySix,
+    videoUrl: "https://www.youtube.com/embed/86xFD4jn-MU?si=W_boDwDqvDYmHEen",
+  },
+  {
+    _id: 13,
+    title: "Moonbeam",
+    category: "",
+    src: GallaryFour,
+    videoUrl: "https://www.youtube.com/embed/YOYnQA1hN6s?si=Jafjza6UqlIRIAUO",
+  },
+  {
+    _id: 14,
+    title: "Moonbeam",
+    category: "",
+    src: GallaryFive,
+    videoUrl: "https://www.youtube.com/embed/pjHfNN-oKoA?si=jE3m0m-7rbRR0NIF",
+  },
+  {
+    _id: 15,
+    title: "Moonbeam",
+    category: "",
+    src: GallarySix,
+    videoUrl: "https://www.youtube.com/embed/86xFD4jn-MU?si=W_boDwDqvDYmHEen",
+  },
+];

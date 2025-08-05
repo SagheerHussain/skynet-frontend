@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`xl:pt-0 lg:pt-4 z-[9999] fixed md:static top-0 w-full px-6 text-white flex items-center justify-between h-[10vh] transition-colors duration-300 ${
+      className={`xl:pt-0 lg:pt-4 z-[9999] border-b-[1px] border-[#ffffff33] fixed md:static top-0 w-full text-white flex items-center justify-between  transition-colors duration-300 ${
         scrolled
           ? "bg-black/70"
           : location.pathname === "/blogs"
@@ -33,13 +33,14 @@ const Navbar = () => {
           : "bg-transparent"
       } md:bg-transparent`}
     >
-      <div className="logo z-[99999]">
+      <div className="logo z-[999999] border-r-[1px] border-[#ffffff33] h-full py-4 group relative">
         <Link to={"/"}>
+          <div className="overlay absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-[#111218] transition-all duration-300 z-[-1]"></div>
           <img
             src={
               "https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_180,h_65,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png%201x,%20https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_360,h_130,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png%202x"
             }
-            className="w-32 md:w-40"
+            className="w-36 md:w-40 mx-6 z-[10]"
             alt="logo"
           />
         </Link>

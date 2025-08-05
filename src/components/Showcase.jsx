@@ -33,10 +33,8 @@ const Showcase = () => {
         </div>
       </div>
 
-      <div className="container">
-        <Navbar />
-      </div>
-     
+      <Navbar />
+
       <HeroSection />
     </header>
   );

@@ -3,7 +3,7 @@ import "../glass.css";
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
 
-const GlassPlayer = () => {
+const GlassNavbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null); // null | 'services' | 'about'
   const [isClosing, setIsClosing] = useState(false);
 
@@ -44,7 +44,10 @@ const GlassPlayer = () => {
         className={`relative container py-10 flex justify-center`}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="glass-container flex items-center justify-center glass-container--rounded px-4 py-3">
+        <div
+          className="glass-container flex items-center justify-center glass-container--rounded px-4 py-3"
+          style={{ borderRadius: "5px" }}
+        >
           <div
             className="glass-filter"
             style={{ filter: "url(#lg-dist)" }}
@@ -65,12 +68,21 @@ const GlassPlayer = () => {
                 </li>
 
                 <li>
-                  <button
-                    onMouseEnter={() => toggleDropdown("services")}
-                    className={`uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color`}
+                  <Link
+                    to="/acquisition"
+                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
-                    Services +
-                  </button>
+                    Acquisition
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/brokerage"
+                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                  >
+                    Brokerage
+                  </Link>
                 </li>
 
                 <li>
@@ -139,4 +151,4 @@ const GlassPlayer = () => {
   );
 };
 
-export default GlassPlayer;
+export default GlassNavbar;

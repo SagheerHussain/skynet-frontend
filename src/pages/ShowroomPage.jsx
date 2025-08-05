@@ -10,7 +10,7 @@ const ShowroomPage = () => {
   return (
     <>
       <Banner url="/images/showroom/Banner.png" />
-      <Slider />
+      {/* <Slider /> */}
       <Listing />
       <CTA />
       <Footer />
