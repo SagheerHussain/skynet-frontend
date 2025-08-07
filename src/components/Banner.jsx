@@ -7,19 +7,19 @@ const Banner = () => {
   return (
     <>
       <div
-        className="bg-img w-full h-[50vh] md:h-[70vh] relative z-[1]"
+        className="bg-img w-full h-full md:h-screen relative z-[1]"
         style={{
-          backgroundImage: "url('/images/showroom/Banner.png')",
+          backgroundImage: "linear-gradient(to right, #15161c 20%, rgba(0, 0, 0, 0.05)), url('/images/showroom/Banner.png')",
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
-          backgroundPosition: "40% -100px",
+          backgroundPosition: "40%-100px",
           backgroundRepeat: "no-repeat",
         }}
       >
         <div className="overlay bg-black opacity-60 absolute top-0 left-0 w-full h-full z-[-1]"></div>
         <Navbar />
-        <div className="container">
-          <div className="banner-content flex flex-col items-center justify-center h-[55vh] z-[2] px-5">
+        <div className="container flex flex-col justify-center h-full md:items-start items-center">
+          <div className="banner-content -mt-[10vh]">
             {/* <h1 className="text-white text-6xl font-bold">Discover the Future of Flight</h1> */}
             <BlurText
               text="Discover the Future of Flight"
@@ -29,10 +29,10 @@ const Banner = () => {
               className="text-[36px] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white"
             />
             <ShinyText
-              text="Experience the thrill of aviation like never before"
+              text="Experience the unmatched thrill of aviation like never before. Feel the power, precision, and freedom as you conquer the skies."
               disabled={false}
               speed={5}
-              className="custom-class text-[16px] md:text-2xl mt-4"
+              className="custom-class text-[16px] md:text-xl mt-4 max-w-4xl text-start"
             />
           </div>
         </div>

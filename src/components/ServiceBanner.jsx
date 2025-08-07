@@ -27,7 +27,7 @@ const ServiceBanner = ({ banner }) => {
         }}
       >
         <Navbar />
-        <div className="px-5 container flex flex-col justify-center h-full md:items-start items-center">
+        <div className="px-5 container flex flex-col justify-center h-[90vh] md:items-start items-center">
           <motion.h1
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -60,8 +60,8 @@ const ServiceBanner = ({ banner }) => {
               isTextCenter={media ? true : false}
               text={
                 location.pathname === "/brokerage"
-                  ? "At Mason Amelia, we simplify the complexities of aircraft brokerage. Whether you're listing or buying, our experts ensure every step is precise, strategic, and transparent. With deep industry insight and relentless execution, we guide high-stakes deals to successful closures—so you can focus on the results, not the process."
-                  : "At Mason Amelia, we bring clarity to the complexities of aircraft transactions. Whether you're buying or selling, our experts ensure every step is smooth, transparent, and strategic. With decades of aviation insight, we turn challenges into confident decisions — seamlessly. Let us handle the details, so you can focus on what truly matters."
+                  ? "Mason Amelia makes aircraft deals seamless and strategic. We handle the process—so you can focus on results."
+                  : "Mason Amelia streamlines aircraft deals with clarity and confidence. Buy or sell, we make it seamless."
               }
               disabled={false}
               speed={5}

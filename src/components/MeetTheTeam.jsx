@@ -1,8 +1,9 @@
 import React from "react";
-import teamBanner from "/images/meet-team.png"; // Adjust your path
+// import teamBanner from "/images/meet-team.png"; // Adjust your path
 import { motion } from "framer-motion";
 import Button from "./Button";
 import { FiPhoneCall } from "react-icons/fi";
+import meetTheTeam from "/images/team.png"
 
 const MeetTheTeam = () => {
   return (
@@ -137,7 +138,7 @@ const MeetTheTeam = () => {
               initial={{ opacity: 0, x: 70 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              src="https://bracketweb.com/jetlywp/wp-content/uploads/2023/01/about-one-img-1.jpg"
+              src={meetTheTeam}
               alt="Team Banner"
               className="rounded-3xl shadow-2xl z-[20] lg:mt-[25px] xl:mt-[100px] lg:ml-[50px]"
             />

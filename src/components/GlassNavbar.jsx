@@ -41,7 +41,7 @@ const GlassNavbar = () => {
       </svg>
 
       <div
-        className={`relative container py-10 flex justify-center`}
+        className={`relative container flex justify-center`}
         onMouseLeave={handleMouseLeave}
       >
         <div
@@ -61,7 +61,7 @@ const GlassNavbar = () => {
                 <li>
                   <Link
                     to="/showroom"
-                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                    className="uppercase text-[.7rem] xl:text-[.8rem] 2xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     Showroom
                   </Link>
@@ -70,7 +70,7 @@ const GlassNavbar = () => {
                 <li>
                   <Link
                     to="/acquisition"
-                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                    className="uppercase text-[.7rem] xl:text-[.8rem] 2xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     Acquisition
                   </Link>
@@ -79,7 +79,7 @@ const GlassNavbar = () => {
                 <li>
                   <Link
                     to="/brokerage"
-                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                    className="uppercase text-[.7rem] xl:text-[.8rem] 2xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     Brokerage
                   </Link>
@@ -88,7 +88,7 @@ const GlassNavbar = () => {
                 <li>
                   <Link
                     to="/skynet"
-                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                    className="uppercase text-[.7rem] xl:text-[.8rem] 2xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     Skynet
                   </Link>
@@ -98,7 +98,7 @@ const GlassNavbar = () => {
                   <Link
                     to="/about"
                     onMouseEnter={() => toggleDropdown("about")}
-                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                    className="uppercase text-[.7rem] xl:text-[.8rem] 2xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     About MA +
                   </Link>
@@ -107,7 +107,7 @@ const GlassNavbar = () => {
                 <li>
                   <Link
                     to="/contact"
-                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                    className="uppercase text-[.7rem] xl:text-[.8rem] 2xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     Contact
                   </Link>
@@ -115,7 +115,7 @@ const GlassNavbar = () => {
                 <li>
                   <Link
                     to="/blogs"
-                    className="uppercase text-[.7rem] xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
+                    className="uppercase text-[.7rem] xl:text-[.8rem] 2xl:text-[.9rem] font-semibold transition hover:text-tertiary_color"
                   >
                     Blogs
                   </Link>

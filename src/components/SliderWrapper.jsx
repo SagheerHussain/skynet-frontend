@@ -55,7 +55,7 @@ const SliderWrapper = () => {
 
   return (
     <>
-      <section className="relative z-[0] w-screen py-20 overflow-x-hidden">
+      <section className="relative z-[0] w-screen py-40 overflow-x-hidden">
         <div className="absolute w-screen top-0 left-0 h-full">
           <div className="absolute w-screen h-full bg-black opacity-80 md:opacity-50 z-[10]"></div>
           <Swiper
@@ -134,13 +134,10 @@ const SliderWrapper = () => {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-sm md:text-lg max-w-5xl text-white font-light mx-auto text-center pt-4 pb-8"
               >
-                At Mason Amelia, we don’t just broker aircraft — we curate
-                tailored aviation experiences that prioritize precision, trust,
-                and performance. From initial consultation to final delivery,
-                every step is guided by expert insight and a relentless focus on
-                your goals. Our global reach, regulatory expertise, and
-                client-first approach ensure seamless transactions and enduring
-                partnerships across borders.
+                At Mason Amelia, we curate bespoke aviation experiences with
+                precision, trust, and performance at the core. From consultation
+                to delivery, our expert team ensures seamless transactions and
+                lasting partnerships worldwide.
               </motion.p>
             </div>
 

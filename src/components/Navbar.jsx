@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`xl:pt-0 lg:pt-4 z-[9999] border-b-[1px] h-[10vh] border-[#ffffff33] fixed md:static top-0 w-full text-white flex items-center justify-between  transition-colors duration-300 ${
+      className={`z-[9999] md:p-0 p-2 border-b-[1px] border-[#ffffff33] fixed md:static top-0 w-full text-white flex items-center justify-between  transition-colors duration-300 ${
         scrolled
           ? "bg-black/70"
           : location.pathname === "/blogs"
@@ -33,14 +33,14 @@ const Navbar = () => {
           : "bg-transparent"
       } md:bg-transparent`}
     >
-      <div className="logo z-[999999] border-r-[1px] border-[#ffffff33] h-full py-4 group relative">
+      <div className="ms-2 logo z-[999999] after:content-[''] after:absolute after:bottom-0 after:right-[-10px] after:w-[1px] after:h-full after:bg-[#ffffff33] after:z-[10] group relative">
         <Link to={"/"}>
-          <div className="overlay absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-[#111218] transition-all duration-300 z-[-1]"></div>
+          {/* <div className="overlay absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-[#111218] transition-all duration-300 z-[-1]"></div> */}
           <img
             src={
               "https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_180,h_65,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png%201x,%20https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_360,h_130,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png%202x"
             }
-            className="w-36 md:w-40 mx-6 z-[10]"
+            className="w-36 md:w-40 z-[10]"
             alt="logo"
           />
         </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
       <div className="flex items-center justify-end call-to-action z-[9999] ">
         <SearchBox />
         <div
-          className="flex items-center ms-4 xl:hidden"
+          className="flex items-center xl:hidden"
           onClick={() => setIsOpen(true)}
         >
           <span className="text-white me-2">MENU</span>

@@ -3,7 +3,8 @@ import { FaSearch } from "react-icons/fa";
 
 const SearchBox = () => {
   return (
-    <div className="px-6">
+    <div className="
+    ">
       {/* SVG filter definition */}
       <svg style={{ display: "none" }}>
         <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">
@@ -25,8 +26,8 @@ const SearchBox = () => {
         </filter>
       </svg>
 
-      <div className="container py-4 md:flex hidden justify-center">
-        <div className="glass-container glass-container--rounded p-1">
+      <div className="container py-4 md:flex hidden justify-center pe-6">
+        <div className="glass-container glass-container--rounded py-1" style={{ borderRadius: "5px" }}>
           <div className="glass-filter"></div>
           <div className="glass-overlay"></div>
           <div className="glass-specular"></div>
