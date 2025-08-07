@@ -106,15 +106,16 @@ const AboutPage = () => {
       <section
         className="relative w-screen h-screen bg-[#10121A]"
         style={{
-          backgroundImage: `url(${bgPlane})`,
+          backgroundImage: `linear-gradient(to right, #15161c 30%, rgba(0, 0, 0,0.3)), url(${bgPlane})`,
           backgroundSize: "cover", // <--- THIS
           backgroundPosition: "30% 85%",
           backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
           // Optionally, add a backgroundColor as fallback
           backgroundColor: "#10121A",
         }}
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-[0]"></div>
+        {/* <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-[0]"></div> */}
 
         <Navbar />
 

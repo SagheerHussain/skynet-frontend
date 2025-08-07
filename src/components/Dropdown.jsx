@@ -13,7 +13,7 @@ const Dropdown = ({ items = [], className, onMouseLeave }) => {
 
   return (
     <div
-      className={`absolute top-[105%] ${className} mt-2 rounded-lg min-w-[200px] ${
+      className={`absolute top-[180%] ${className} mt-2 rounded-lg min-w-[200px] ${
         isClosing ? "dropdown-animate-out" : "dropdown-animate-in"
       }`}
       onMouseLeave={handleMouseLeave}

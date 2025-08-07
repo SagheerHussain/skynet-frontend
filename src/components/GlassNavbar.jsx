@@ -42,7 +42,7 @@ const GlassNavbar = () => {
 
       <div
         className={`relative container flex justify-center`}
-        onMouseLeave={handleMouseLeave}
+        // onMouseLeave={handleMouseLeave}
       >
         <div
           className="glass-container flex items-center justify-center glass-container--rounded px-4 py-3"

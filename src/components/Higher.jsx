@@ -8,7 +8,7 @@ const Higher = () => {
   const media = useMediaQuery("(max-width: 767px)");
 
   return (
-    <div className="flex items-center h-screen md:h-[80vh] lg:h-[90vh] xl:h-[60vh]">
+    <div className="flex items-center h-[90vh]">
       {/* Overlay card */}
       <div className="md:p-8 py-8 px-2 text-whitetext-start">
         <motion.h2
@@ -49,7 +49,7 @@ const Higher = () => {
           <ShinyText
             isTextCenter={media ? true :false}
             text={
-              "Dive into real-world aviation stories that go beyond aircraft specs and listings. At Mason Amelia, we capture the passion, process, and people behind every deal. Through immersive video storytelling, we bring aviation to life—connecting aircraft with purpose and buyers with clarity."
+              "At Mason Amelia, we tell aviation stories beyond the specs. Through powerful videos, we connect aircraft with purpose and people."
             }
             disabled={false}
             speed={5}

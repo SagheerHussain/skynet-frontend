@@ -14,7 +14,7 @@ const HigherPage = () => {
   return (
     <>
       <section
-        className="relative w-full bg-cover h-screen md:h-[70vh] lg:h-[80vh] xl:h-[70vh] bg-center z-[10]"
+        className="relative w-full bg-cover h-screen bg-center z-[10]"
         style={{ backgroundImage: `url(${bgPlane})` }}
       >
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
