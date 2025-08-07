@@ -16,8 +16,8 @@ const MemberDetailPage = () => {
         style={{ backgroundImage: `url(${bgPlane})` }}
       >
         <div className="absolute top-0 left-0 w-full bg-black h-full opacity-90 z-[-1]"></div>
+        <Navbar />
         <div className="container">
-          <Navbar />
           <TeamDetail />
         </div>
       </section>

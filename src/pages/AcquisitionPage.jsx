@@ -69,10 +69,6 @@ const AcquisitionPage = () => {
 
   return (
     <>
-      <div className="container">
-        <Navbar />
-      </div>
-
       <ServiceBanner banner={banner} />
 
       <main id="acquisition" className="relative">

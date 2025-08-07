@@ -103,12 +103,8 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className="container">
-        <Navbar />
-      </div>
-
-      <div
-        className="relative w-full flex justify-center h-screen md:-mt-[10vh] bg-[#10121A]"
+      <section
+        className="relative w-screen h-screen bg-[#10121A]"
         style={{
           backgroundImage: `url(${bgPlane})`,
           backgroundSize: "cover", // <--- THIS
@@ -119,10 +115,14 @@ const AboutPage = () => {
         }}
       >
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-[0]"></div>
+
+        <Navbar />
+
         <div className="container px-5">
           <About />
         </div>
-      </div>
+      </section>
+
       <main>
         <WhatSetsUsApart />
 

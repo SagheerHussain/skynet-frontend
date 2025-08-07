@@ -48,7 +48,7 @@ export const HeroParallax = ({ portfolio, onImageClick }) => {
   return (
     <div
       ref={ref}
-      className={`${media ? "h-[300vh]" : media2 ? "h-[250vh]" : "h-[220vh]"} md:h-[200vh] lg:h-[350vh] xl:h-[270vh] 2xl:h-[220vh] overflow-hidden bg-[#111218] flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]`}
+      className={`h-[130rem] overflow-hidden bg-[#111218] flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]`}
     >
       <Header />
 

@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`xl:pt-0 lg:pt-4 z-[9999] border-b-[1px] border-[#ffffff33] fixed md:static top-0 w-full text-white flex items-center justify-between  transition-colors duration-300 ${
+      className={`xl:pt-0 lg:pt-4 z-[9999] border-b-[1px] h-[10vh] border-[#ffffff33] fixed md:static top-0 w-full text-white flex items-center justify-between  transition-colors duration-300 ${
         scrolled
           ? "bg-black/70"
           : location.pathname === "/blogs"

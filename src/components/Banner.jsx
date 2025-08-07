@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import BlurText from "./ui/BlurText";
 import ShinyText from "./ui/ShinyText";
 
-const  Banner = () => {
+const Banner = () => {
   return (
     <>
       <div
@@ -17,8 +17,8 @@ const  Banner = () => {
         }}
       >
         <div className="overlay bg-black opacity-60 absolute top-0 left-0 w-full h-full z-[-1]"></div>
+        <Navbar />
         <div className="container">
-          <Navbar />
           <div className="banner-content flex flex-col items-center justify-center h-[55vh] z-[2] px-5">
             {/* <h1 className="text-white text-6xl font-bold">Discover the Future of Flight</h1> */}
             <BlurText

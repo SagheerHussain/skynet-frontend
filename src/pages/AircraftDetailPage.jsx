@@ -25,9 +25,7 @@ const AircraftDetailPage = () => {
 
   return (
     <>
-      <div className="container">
-        <Navbar />
-      </div>
+      <Navbar />
 
       <AircraftDetail
         onOpenModal={openModal}

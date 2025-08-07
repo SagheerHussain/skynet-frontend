@@ -152,10 +152,6 @@ const BrokeragePage = () => {
 
   return (
     <>
-      <div className="container">
-        <Navbar />
-      </div>
-
       <ServiceBanner banner={banner} />
       <main id="brokerage" className="relative">
         <BrokerageRappleResearch

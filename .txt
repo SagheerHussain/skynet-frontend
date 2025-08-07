@@ -121,3 +121,6 @@
         </div>
       </section>
 
+
+
+${media ? "h-[300vh]" : media2 ? "h-[250vh]" : "h-[220vh]"} md:h-[200vh] lg:h-[350vh] xl:h-[270vh] 2xl:h-[220vh]

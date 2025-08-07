@@ -11,12 +11,12 @@ const TestimonialPage = () => {
   return (
     <>
       <section
-        className="relative h-auto w-full bg-cover bg-center flex justify-center z-[10]"
+        className="relative h-screen w-full bg-cover bg-center z-[10]"
         style={{ backgroundImage: `url(${bgPlane})` }}
       >
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[-1]"></div>
+        <Navbar />
         <div className="container">
-          <Navbar />
           <Reviews />
         </div>
       </section>

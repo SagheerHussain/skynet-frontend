@@ -8,7 +8,7 @@ const BlogPage = () => {
 
   return (
     <>
-      <div className="container bg-[#111218]">
+      <div className="bg-[#111218]">
         <Navbar />
       </div>
       <BlogListing />

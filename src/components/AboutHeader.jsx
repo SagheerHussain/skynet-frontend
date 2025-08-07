@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const AboutHeader = () => {
   return (
     <>
-      <div className="relative w-full h-screen rounded-2xl overflow-hidden flex">
+      <div className="relative w-full h-[90vh] rounded-2xl flex">
         {/* Content */}
         <div className="relative z-10 flex flex-col justify-center items-center h-full w-full">
           <div className={`glass-container w-full  max-w-4xl mx-auto`}>
